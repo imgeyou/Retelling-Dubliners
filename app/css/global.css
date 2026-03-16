@@ -91,6 +91,8 @@ header nav ul a:hover{
 }
 
 .toggle.active::before {
+    background-color: var(--dark-base-color);
+    color: var(--accent-cream);
     left: calc(100% - 45px);
 }
 
