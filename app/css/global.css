@@ -22,6 +22,10 @@ body {
     gap: var(--sp-xl);
 }
 
+
+body.dark{
+    
+}
 /* header */
 header {
     padding: 1.4rem 0;
@@ -59,6 +63,34 @@ header nav ul a {
 
 header nav ul a:hover{
     color: var(--accent-red);
+}
+
+/* light mode + dark mode toggle */
+.toggle {
+    height: 50px;
+    width: 150px;
+    background-color: var(--light-base-color);
+    border: 2px solid var(--accent-navy);
+    position: relative;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.toggle::before {
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: var(--accent-navy);
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+}
+
+.toggle.active::before {
+    left: calc(100% - 45px);
 }
 
 

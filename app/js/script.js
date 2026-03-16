@@ -11,6 +11,11 @@ document.querySelectorAll('.slider').forEach(slider => {
 const body = document.querySelector("body");
 toggle = document.querySelector(".toggle");
 
+
+toggle.addEventListener("click", () =>{
+    body.classList.toggle("dark");
+})
+
 // activating toggle on click
 toggle.addEventListener("click", () => toggle.classList.toggle("active"));
 
