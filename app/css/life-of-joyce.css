@@ -138,3 +138,8 @@ section[aria-label="Works by James Joyce"] article a{
     width: 80%;
     white-space: nowrap;
 }
+
+#quote{
+    font-size: var(--fs-h3);
+    text-align: center;
+}
