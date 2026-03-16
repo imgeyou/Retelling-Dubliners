@@ -24,7 +24,8 @@ body {
 
 
 body.dark{
-    
+    background-color: var(--dark-base-color);
+    color: var(--dark-text-color);
 }
 /* header */
 header {

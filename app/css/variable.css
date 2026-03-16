@@ -1,11 +1,15 @@
-@import './colors.css';
+@import './global.css';
 
 :root {
-    /* Colors */
+    /* Light Mode Colors */
     --light-base-color: #fdfff5;
-    /*BG*/
     --light-text-color: #37465E;
     --light-audio-bar: #D3D3C7;
+    
+/* Dark Mode Colors */
+    --dark-base-color:#37465E;
+    --dark-text-color: #fdfff5;
+    --dark-audio-bar: #D3D3C7;
 
 
     --footer-faded-color: #37465Ecc;
