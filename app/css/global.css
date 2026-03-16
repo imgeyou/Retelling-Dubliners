@@ -45,6 +45,7 @@ header nav ul {
     list-style: none;
     display: flex;
     gap: 1.5rem;
+    align-items: center;
 
     font-size: var(--fs-nav);
     font-weight: var(--fw-semibold);

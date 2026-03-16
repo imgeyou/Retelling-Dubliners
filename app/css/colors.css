@@ -1,55 +1,30 @@
-/* :root {
-    --light-base-color: #fdfff5;
-    --light-text-color: #37465E;
-    --light-button-color: #37465E;
-    --light-button-hover: #e2fdff;
-
-    --pure-black:#000000;
-} */
+@import './variable.css';
 
 /* light mode + dark mode toggle */
+.toggle {
+    height: 50px;
+    width: 150px;
+    background-color: var(--light-base-color);
+    border: 2px solid var(--accent-navy);
+    position: relative;
+    border-radius: 100px;
+    cursor: pointer;
+}
 
-#theme-switch {
+.toggle::before {
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 40px;
     background-color: var(--accent-navy);
-    max-width: 50px;
-    max-height: 50px;
-    margin: 0;
-    padding: 5px;
     border-radius: 50%;
-    border: var(--accent-navy) solid 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
 }
 
-/* light dark toggle styles */
+.toggle.active::before {
+    left: calc(100% - 45px);
 
-#theme-switch svg:last-child {
-    display: none;
-}
-
-.darkmode #theme-switch svg:first-child {
-    display: none;
-}
-
-.darkmode #theme-switch svg:last-child {
-    display: block;
-}
-
-#logo img:last-child {
-    display: none;
-}
-
-.darkmode #logo img:first-child {
-    display: none;
-}
-
-.darkmode #logo img:last-child {
-    display: block;
-}
-
-.darkmode {
-    --dark-base-color: #37465E;
-    --dark-text-color: #fdfff5;
-    --dark-audio-bar: #0E1D34;
 }
