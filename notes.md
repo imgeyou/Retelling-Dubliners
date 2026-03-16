@@ -8,3 +8,5 @@ Group Notes for Dubliners Website (Last Updated: 15/03)
 - add all other locations
 - add photos to the location and all the paragraph information
 - edit card styles to fit all the content we will have (please dont edit class names as those are now linked to JS files)
+- button HTML not on filter or form elements need to be switched to link syntax because buttons can't be linked properly
+    - add "target=_blank" so it opens the link in a new page
