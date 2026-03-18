@@ -8,9 +8,7 @@
     line-height: var(--lh-body);
 }
 
-/* default values not listed: 
-    font-weight: var(--fw-regular);
-*/
+/* light mode color styles */
 
 body {
     background-color: var(--light-base-color);
@@ -64,7 +62,7 @@ body {
 
 }
 
-
+/* dark mode color styles */
 body.dark {
     background-color: var(--dark-base-color);
     color: var(--dark-text-color);
