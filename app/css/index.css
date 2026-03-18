@@ -65,6 +65,12 @@ section[aria-label="About James Joyce"] {
     grid-template-columns: 1fr 1fr; /* !!change this to 1fr in mobile mode */
     gap: var(--sp-xl);
 }
+@media (max-width: 1440px) {
+    section[aria-label="About James Joyce"] {
+        margin: var(--sp-md) var(--sp-2xl);
+    }
+}
+
 section[aria-label="About James Joyce"] p {
     font-size: var(--fs-body);
     font-weight: var(--fw-medium);

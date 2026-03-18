@@ -68,3 +68,54 @@
     /* Element Sizes */
     --slider-size: 3rem;
 }
+
+/* Tablet (<= 1440px) */
+@media (max-width: 1440px) {
+    :root {
+        /* font sizes */
+        --fs-h1: 3.5rem;
+        --fs-h2: 2.5rem;
+        --fs-h3: 2.3rem;
+        --fs-h4: 1.4rem;
+        --fs-h5: 1.2rem;
+        --fs-h6: 1.1rem;
+        --fs-body: 1rem;
+        --fs-small: 0.8rem;
+        --fs-button: 1rem;
+        --fs-nav: 1rem;
+        --fs-tag: 1rem;
+    
+    /* Spacing - subject to change */
+    --sp-xs: 0.25rem;
+    --sp-sm: 0.5rem;
+    --sp-md: 1rem;
+    --sp-lg: 1.5rem;
+    --sp-xl: 2rem;
+    /* for spacing between navLinks, sections, text-columns */
+    --sp-2xl: 3rem;
+    /* for spacing between header and text below */
+    --sp-3xl: 7rem;
+    /* for paragraph padding */
+
+    /* Element Sizes */
+    --slider-size: 3rem;
+    }
+}
+
+/* Mobile (<= 640px) */
+/* font sizes */
+@media (max-width: 640px) {
+    :root {
+        --fs-h1: 3rem;
+        --fs-h2: 2.4rem;
+        --fs-h3: 2rem;
+        --fs-h4: 1.7rem;
+        --fs-h5: 1.4rem;
+        --fs-h6: 1.2rem;
+        --fs-body: 1rem;
+        --fs-small: 0.5rem;
+        --fs-button: 0.8rem;
+        --fs-nav: 0.8rem;
+        --fs-tag: 0.8rem;
+    }
+}
