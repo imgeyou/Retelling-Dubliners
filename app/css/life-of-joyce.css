@@ -121,12 +121,12 @@ section[aria-label="Works by James Joyce"] article div{
 section[aria-label="Works by James Joyce"] h3{
     font-size: var(--fs-h5);
     font-weight: var(--fw-bold);
-    color: black;
+    /* color: black; */
     text-align:center;
 }
 section[aria-label="Works by James Joyce"] p{
     font-size: var(--fs-p);
-    color: black;
+    /* color: black; */
     text-align:center;
 }
 section[aria-label="Works by James Joyce"] article a{

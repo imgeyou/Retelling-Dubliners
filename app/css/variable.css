@@ -12,7 +12,8 @@
     --dark-audio-bar: #D3D3C7;
 
 
-    --footer-faded-color: #37465Ecc;
+    --footer-faded-dark: #37465Ecc;
+    --footer-faded-light:#F2B769cc;
     --faded-navy: #5a687fcc;
     /* location card border */
 
@@ -21,6 +22,9 @@
     --accent-navy: #37465E;
     --accent-red: #942823;
     --accent-gold: #F2B769;
+
+    --pure-black: black;
+    --pure-white: white;
 
     /* Font */
     --font-primary: "Epilogue", sans-serif;
