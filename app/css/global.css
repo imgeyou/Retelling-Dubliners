@@ -49,7 +49,27 @@ body {
     }
 
     a{
-        color: var(--light-text-color);
+        color: var(--accent-green);
+    }
+    a:hover{
+        color: var(--accent-red);
+    }
+
+    a:visited{
+        color: var(--accent-navy);
+    }
+
+    .slider-line{
+        background-color: var(--light-text-color);
+    }
+
+    .ph-arrows-out-line-horizontal{
+        color: var(--light-base-color);
+    }
+
+    .slider-btn{
+        background-color: var(--light-text-color);
+        box-shadow: 1px 1px 1px var(--light-text-color);
     }
 
     footer{
@@ -102,9 +122,28 @@ body.dark {
         background-color: var(--accent-gold);
     }
 
-
     a{
+        color: var(--accent-gold);
+    }
+    a:hover{
         color: var(--dark-text-color);
+    }
+
+    a:visited{
+        color: var(--accent-gold);
+    }
+
+    .slider-line{
+        background-color: var(--dark-text-color);
+    }
+
+    .ph-arrows-out-line-horizontal{
+        color: var(--dark-base-color);
+    }
+
+    .slider-btn{
+        background-color: var(--dark-text-color);
+        box-shadow: 1px 1px 1px var(--dark-text-color);
     }
 
     footer{

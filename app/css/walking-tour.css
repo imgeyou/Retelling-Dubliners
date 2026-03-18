@@ -174,7 +174,6 @@ section[aria-label="Tour stops"] hr{
     inset: 0;
     height: 100%;
     width: 0.3rem;
-    background-color: var(--light-text-color);
     z-index: 10;
     left: var(--position, 50%);
     transform: translateX(-50%);
@@ -183,7 +182,6 @@ section[aria-label="Tour stops"] hr{
 /* slider icon */
 .ph-arrows-out-line-horizontal{
     font-size: var(--slider-size); 
-    color: var(--light-base-color);
     display: block;
 }
 .slider-btn { 
@@ -191,12 +189,10 @@ section[aria-label="Tour stops"] hr{
     top: 50%;
     left: var(--position, 50%);
     z-index: 11; 
-    background-color: var(--light-text-color);
     padding: 0.5rem;
     border-radius: 2rem;  
     transform: translate(-50%, -50%);
     pointer-events: none; 
-    box-shadow: 1px 1px 1px var(--light-text-color);
 }
 /* make slider keyboard-select visible */
 .slider:focus-visible ~ .slider-btn{
