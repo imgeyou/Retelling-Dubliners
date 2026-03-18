@@ -48,15 +48,18 @@ body {
         background-color: var(--accent-red);
     }
 
+    div[aria-label="Location category filter"] button{
+        color: var(--light-text-color);
+    }
+    div[aria-label="Location category filter"] button:hover{
+        color: var(--accent-red);
+    }
+
     a{
         color: var(--accent-green);
     }
     a:hover{
         color: var(--accent-red);
-    }
-
-    a:visited{
-        color: var(--accent-navy);
     }
 
     .slider-line{
@@ -70,6 +73,18 @@ body {
     .slider-btn{
         background-color: var(--light-text-color);
         box-shadow: 1px 1px 1px var(--light-text-color);
+    }
+
+    div[aria-label="Location category filter"] button:hover {
+        text-decoration: solid 2px var(--accent-navy);
+    }
+
+    div[aria-label="Location category filter"] button .active {
+        text-decoration: solid 2px var(--accent-navy);
+    }
+
+    div[aria-label="Location category filter"] article:first-of-type button {
+     border-right: solid var(--light-text-color) 2px;
     }
 
     footer{
@@ -88,7 +103,7 @@ body.dark {
     color: var(--dark-text-color);
 
 
-        header nav ul a{
+    header nav ul a{
         color: var(--dark-text-color);
     }
 
@@ -127,10 +142,6 @@ body.dark {
     }
     a:hover{
         color: var(--dark-text-color);
-    }
-
-    a:visited{
-        color: var(--accent-gold);
     }
 
     .slider-line{

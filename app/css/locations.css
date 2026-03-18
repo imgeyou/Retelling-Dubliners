@@ -34,24 +34,14 @@ div[aria-label="Location category filter"] article {
 
 div[aria-label="Location category filter"] button {
     font-size: var(--fs-nav);
-    color: var(--light-text-color);
     background: none;
     border: none;
     padding-right: 1.5rem;
     margin-bottom: 1.75rem;
 }
 
-div[aria-label="Location category filter"] button:hover {
-    text-decoration: solid 2px var(--accent-navy);
-}
-
-div[aria-label="Location category filter"] button .active {
-    text-decoration: solid 2px var(--accent-navy);
-}
-
 div[aria-label="Location category filter"] article:first-of-type button {
     margin-left: 0.9rem;
-    border-right: solid var(--light-text-color) 2px;
 }
 
 /* main - section 1 - location card */
