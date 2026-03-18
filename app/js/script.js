@@ -2,10 +2,26 @@ console.log("HELLO");
 
 /* past-present image slider script. reference code: https://codepen.io/Coding-in-Public/pen/NWyjZwO */
 document.querySelectorAll('.slider').forEach(slider => {
-    slider.addEventListener('input', (e) => {
+    slider.addEventListener('input', e => {
         e.target.closest('.img-column').style.setProperty('--position', `${e.target.value}%`);
     });
 })
+
+/* jump-to-top btn */
+let toTopBtn = document.querySelector('.back-to-top');
+
+window.addEventListener('scroll', e => {
+    if (window.scrollY > 300) {
+        toTopBtn.classList.add('show');
+    } else {
+        toTopBtn.classList.remove('show');
+    }
+});
+
+toTopBtn.addEventListener('click', e => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
 //light mode + dark mode toggle
 const body = document.querySelector("body");
