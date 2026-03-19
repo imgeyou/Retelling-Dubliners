@@ -113,3 +113,11 @@ section[aria-label="Joyce's Dublin photo gallery"] figure:nth-child(5) {
 section[aria-label="Joyce's Dublin photo gallery"] figure:nth-child(6) {
   grid-row: span 2;
 }
+
+section[aria-label="Joyce's Dublin photo gallery"] figure:nth-child(9) {
+    grid-row: span 2;
+}
+  
+  section[aria-label="Joyce's Dublin photo gallery"] figure:nth-child(10) {
+    grid-column: span 2;
+}
