@@ -1,588 +1,1185 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dubliner's Locations</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../app/css/variable.css">
-    <link rel="stylesheet" href="../app/css/global.css">
-    <link rel="stylesheet" href="../app/css/locations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../app/css/variable.css" />
+    <link rel="stylesheet" href="../app/css/global.css" />
+    <link rel="stylesheet" href="../app/css/locations.css" />
     <script src="../app/js/locations.js" defer></script>
     <script src="../app/js/script.js" defer></script>
   </head>
   <body>
     <!-- Back to top button -->
-    <a class="back-to-top" aria-label="back-to-top Button"><img src="assets/toTopBtn.svg"></img></a>
+    <a class="back-to-top" aria-label="back-to-top Button"
+      ><img src="assets/toTopBtn.svg"
+    /></a>
 
     <!-- HEADER / NAVIGATION -->
     <header>
-        <a href="index.html" aria-label="Retellings - Home" class="logo-container">
-            <img src="assets/logo_navy.png" alt="Retellings Logo" class="logo">
-            <img src="assets/logo_offwhite.png" alt="Retellings Logo" class="logo">
-        </a>
-        <nav aria-label="Main navigation">
-            <ul>
-                <li><a href="life-of-joyce.html">Life of James Joyce</a></li>
-                <li><a href="walking-tour.html">Dubliner's Walking Tour</a></li>
-                <li><a href="locations.html">Dubliner's Locations</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><div class="toggle"></div></li>
-            </ul>
-        </nav>
+      <a
+        href="index.html"
+        aria-label="Retellings - Home"
+        class="logo-container"
+      >
+        <img src="assets/logo_navy.png" alt="Retellings Logo" class="logo" />
+        <img
+          src="assets/logo_offwhite.png"
+          alt="Retellings Logo"
+          class="logo"
+        />
+      </a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="life-of-joyce.html">Life of James Joyce</a></li>
+          <li><a href="walking-tour.html">Dubliner's Walking Tour</a></li>
+          <li><a href="locations.html">Dubliner's Locations</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><div class="toggle"></div></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
+      <!-- SECTION 1 - LOCATIONS LISTING WITH FILTER -->
+      <section aria-label="Following the Dubliners locations">
+        <h1>Following the Dubliners</h1>
+        <p class="page-lead">
+          Lorem ipsum dolor sit amet consectetur. Pharetra ac et et facilisi
+          lectus ut augue tincidunt. Posuere turpis pretium posuere risus amet
+          purus sodales id. Nisi nisl purus dui massa faucibus vitae sit. Sit
+          ornare amet congue nunc id cursus vestibulum pellentesque orci.
+          Pharetra sapien sollicitudin urna dictumst et quam tincidunt a nullam.
+          Imperdiet enim.
+        </p>
+        <!-- FILTER / CATEGORY NAV -->
+        <div aria-label="Location category filter">
+          <div class="filter-buttons">
+            <button class="active" data-name="all">View All</button>
+            <button data-name="food">Restaurants &amp; Pubs</button>
+            <button data-name="museum">Museums</button>
+            <button data-name="street">Streets</button>
+            <button data-name="waterway">Rivers &amp; Canals</button>
+            <button data-name="building">Historic Buildings</button>
+            <button data-name="park">Parks</button>
+            <button data-name="shopping">Shopping</button>
+          </div>
+        </div>
 
-        <!-- SECTION 1 - LOCATIONS LISTING WITH FILTER -->
-        <section aria-label="Following the Dubliners locations">
-            <h1>Following the Dubliners</h1>
-            <p class="page-lead">Lorem ipsum dolor sit amet consectetur. Pharetra ac et et facilisi lectus ut augue tincidunt. Posuere turpis pretium posuere risus amet purus sodales id. Nisi nisl purus dui massa faucibus vitae sit. Sit ornare amet congue nunc id cursus vestibulum pellentesque orci. Pharetra sapien sollicitudin urna dictumst et quam tincidunt a nullam. Imperdiet enim.</p>
-            <!-- FILTER / CATEGORY NAV -->
-            <div aria-label="Location category filter">
-                <div class="filter-buttons">
-                    <button class="active" data-name="all">View All</button>
-                    <button  data-name="food">Restaurants &amp; Pubs</button>
-                    <button  data-name="museum">Museums</button>
-                    <button  data-name="street">Streets</button>
-                    <button  data-name="waterway">Rivers &amp; Canals</button>
-                    <button  data-name="building">Historic Buildings</button>
-                    <button data-name="park">Parks</button>
-                    <button data-name="shopping">Shopping</button>
-                </div>
+        <!-- LOCATION CARDS -->
+        <div class="filterable-cards">
+          <!-- copy the article HTML and keep the data-name structure + class names for everything -->
+          <article data-name="street" class="card">
+            <img src="assets/GreatBritainSt.png" alt="Great Britain Street" />
+            <div>
+              <p><a>#Street</a></p>
+              <h2>Great Britain Street</h2>
+              <p>The Sisters</p>
+              <p>
+                After the 1891 death of Charles Stewart Parnell, a leading Irish
+                Nationalist, the name was changed from “Great Britain” to
+                “Parnell” Street.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/fqU3AMzcZndKzYGP6"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
             </div>
+          </article>
 
-            <!-- LOCATION CARDS -->
-            <div class="filterable-cards">
-<!-- copy the article HTML and keep the data-name structure + class names for everything -->
-                    <article  data-name="street" class="card">
-                        <img src="assets/GreatBritainSt.png" alt="Great Britain Street">
-                        <div>
-                            <h2>Great Britain Street</h2>
-                            <p>The Sisters | <a>Street</a></p>
-                            <p>After the 1891 death of Charles Stewart Parnell, a leading Irish Nationalist, the name was changed from “Great Britain” to “Parnell” Street.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/fqU3AMzcZndKzYGP6" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article  data-name="waterway" class="card">
-                        <img src="assets/CanalBridge.png" alt="Canal Bridge">
-                        <div>
-                            <h2>Canal Bridge</h2>
-                            <p>An Encounter | <a>Rivers &amp; Canals</a></p>
-                            <p>It’s a bridge crossing the Royal Canal and is generally identified as Newcomen Bridge, in the North Strand area (Nuimgeography, 2019).</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/1VkVjncdrfNuaX1w6" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="building" class="card">
-                        <img src="assets/PigeonHouse.png" alt="Pigeon House">
-                        <div>
-                            <h2>Pigeon House</h2>
-                            <p>An Encounter | <a>Historic Building</a></p>
-                            <p>The Pigeon House was the electricity and power station which served the city of Dublin. It is now a deserted port (O’Connor, 1990).</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/2M1dDt8zis3TRbtp9" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="street" class="card">
-                        <img src="assets/NorthStrand.png" alt="North Strand Road">
-                        <div>
-                            <h2>North Strand Road</h2>
-                            <p>An Encounter | <a>Street</a></p>
-                            <p>North Strand Road is a street in the Northside of Dublin.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/UaiCTewAjNrN45FF8" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="street" class="card">
-                        <img src="assets/WharfRoad.png" alt="Wharf Road">
-                        <div>
-                            <h2>Wharf Road</h2>
-                            <p>An Encounter | <a>Street</a></p>
-                            <p>The Wharf Road, now East Wall Road, is a road that runs along the top of the wall built to keep the River Tolka on course on its way to the sea so that it doesn’t flood the city’s northern-eastern neighborhoods and industrial complexes.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/xeFEZh6ypFLhLqCa6" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="street" class="card">
-                        <img src="assets/RiverLiffey.png" alt="River Liffey">
-                        <div>
-                            <h2>North Richmond Street</h2>
-                            <p>Araby | <a>Street</a></p>
-                            <p>North Richmond Street is a quiet cul-de-sac on Dublin’s north side and forms the opening setting of Araby. Joyce uses the street to establish the confined domestic world of the narrator before his journey toward the bazaar begins.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/WMqrf22SxW1bbe7j7" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                     <article data-name="building" class="card">
-                        <img src="assets/virtiolworks.png" alt="section of the 'Plan of the City of Dublin' map showing were the Virtiol Works building used to be.">
-                        <div>
-                            <h2>Virtiol Works</h2>
-                            <p>An Encounter | <a>Historic Buildings</a></p>
-                            <p>Vitriol (sulphuric acid) was used for bleaching linen cloth from the mid-18th century onward.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/UaiCTewAjNrN45FF8" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="waterway" class="card">
-                        <img src="assets/RiverLiffey.png" alt="River Liffey">
-                        <div>
-                            <h2>River Liffey</h2>
-                            <p>An Encounter, A Little Cloud, A Painful Case | <a>Rivers &amp; Canals</a></p>
-                            <p>The Liffey is Dublin's main river, cutting through the heart of the city and splitting it into a northern and southern half.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/v3opxChXTQK1Joyw9" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="building" class="card">
-                        <img src="assets/christianbrothersschool.jpg" alt="River Liffey">
-                        <div>
-                            <h2>Christian Brothers School</h2>
-                            <p>Araby | <a>Historic Buildings</a></p>
-                            <p>The Christian Brothers’ School on North Richmond Street is mentioned in Araby and also appears in Ivy Day in the Committee Room. It reflects the strong presence of Catholic education in everyday Dublin life during Joyce’s time.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/9sJfv4pR14egPqmY8" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="street" class="card">
-                        <img src="assets/buckinghamstreet.png" alt="Section of Letts, Son & Co. 1883 Plan of the city of Dublin map showing the entire length of Buckingham Street and the Railway Terminus. Made available at the David Rumsey Map Collection online">
-                        <div>
-                            <h2>Buckingham Street</h2>
-                            <p>An Encounter, Araby | <a>Streets</a></p>
-                            <p>Buckingham Street lies on the north side of Dublin and forms part of the boy’s route toward the bazaar in Araby. The street helps trace his movement from a quiet residential neighborhood into the wider city.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/nZrJ7tstfd4RpQj29" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="buidling" class="card">
-                        <img src="assets/westlandrowstation.jpg" alt="A modern-day photo of the former Westland Row train station">
-                        <div>
-                            <h2>Westland Row Station</h2>
-                            <p>After the Race | <a>Historic Buildings</a></p>
-                            <p>Westland Row Station appears in both Araby and After the Race as a point of travel and departure. It represents Dublin’s growing modern transport network at the turn of the twentieth century.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/moShyem36XMLYs5g6" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="street" class="card">
-                        <img src="assets/naasroad.jpg" alt="A modern-day photo of Naas road">
-                        <div>
-                            <h2>Naas Road</h2>
-                            <p>After the Race | <a>Streets</a></p>
-                            <p>Naas Road forms the western approach into Dublin and is mentioned in After the Race. The racing cars travel along this road as they speed toward the city, symbolizing modernity and excitement.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/AFq6dy5kSrfu6t3N7" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="street" class="card">
-                        <img src="assets/damestreet.jpg" alt="A modern-day photo of Dame street.">
-                        <div>
-                            <h2>Dame Street</h2>
-                            <p>Two Gallants, A Little Cloud, Counterpart | <a>Streets</a></p>
-                            <p>Dame Street is one of Dublin’s major city-centre streets and a hub of commercial activity. In Two Gallants and A Little Cloud, it forms part of the busy urban landscape through which the characters move.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/GPGYjr6VuWb1AWgo7" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="park" class="card">
-                        <img src="assets/stephensgreen.png" alt="Detroit Publishing Co. St Stephen’s Green Park, Dublin, County Dublin, Ireland (LC-DIG-ppmsc-009877), c. 1890-1900. Library of Congress, Washington, D.C.">
-                        <div>
-                            <h2>St Stephen’s Green</h2>
-                            <p>Two Gallants, After the Raceste| <a>Parks</a></p>
-                            <p>St Stephen’s Green is Dublin’s best-known public park and a landmark in the city centre. In Two Gallants, Lenehan passes through the park during his wanderings across Dublin.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/m1fxGSbXZyt5tp2F8" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="park" class="card">
-                        <img src="assets/rutlandsquare.jpg" alt="Rutland Square and Rutland Square Church in black and white.">
-                        <div>
-                            <h2>Rutland Square</h2>
-                            <p>Two Gallants| <a>Park</a></p>
-                            <p>Rutland Square, now known as Parnell Square, is the first location mentioned in Two Gallants. Its Georgian setting reflects the faded elegance of nineteenth-century Dublin. It was renamed to Parnell Square in 1933 and features the Garden of Rememberance park. </p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/zagjrejDbUT7pxSE9" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="street" class="card">
-                        <img src="assets/dorsetstreet.jpg" alt="Eason & Son. View of a Dublin Street (Dorset Street), Drumcondra, Co. Dublin. 1900.">
-                        <div>
-                            <h2>Dorset Street</h2>
-                            <p>Two Gallants, Clay | <a>Streets</a></p>
-                            <p>Dorset Street is a busy northside street in Dublin and appears early in Two Gallants. It forms part of the route taken by the characters as they walk through the city.</p>
-                            <a class="location-btn"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="street" class="card">
-                        <img src="assets/baggotstreet.jpg" alt="A row of houses in Lower Baggot Street, Dublin">
-                        <div>
-                            <h2>Baggot Street</h2>
-                            <p>Two Gallants, A Painful Case| <a>Streets</a></p>
-                            <p>Baggot St. runs southeast from St. Stephen’s Green to the Grand Canal.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/iztuQnuKXGnmfLtt6" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="building" class="card">
-                        <img src="assets/donnybrooktram.jpg" alt="Dublin Tram No. 26 on route to the Donnybrook tramway">
-                        <div>
-                            <h2>Donnybrook Tram</h2>
-                            <p>Two Gallants | <a>Historic Buildings</a></p>
-                            <p>The Donnybrook tram line was launched in 1873, it connected Merion Square to Donnybrook’s southern terminus. The Donnybrook tramway is no longer in operation, but is now used as the Donnybrook Bus Garage.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/74gJQDgERBcu3NtM9" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="building" class="card"> 
-                        <img src="assets/trinitycollege.jpg" alt="Trinity College Dublin, late 19th century">
-                        <div>
-                            <h2>Trinity College Dublin</h2>
-                            <p>After the Race, Two Gallants, The Dead | <a>Historic Buildings</a></p>
-                            <p>Trinity College was founded in 1592 by Elizabeth I. It was built upon the grounds of All Hallows, a former Augustinian priory that had been dissolved during the Reformation.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/eKxH9ADKXphahcSD9" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="food" class="card"> 
-                        <img src="assets/TempleBar.jpg" alt="The Temple Bar Pub on Temple Lane, Dublin, photographed in 2008">
-                        <div>
-                            <h2>Temple Bar</h2>
-                            <p>Counterparts | <a>Restaurants &amp; Pubs</a></p>
-                            <p>Temple Bar is an area on the south bank of the River Liffey in central Dublin, lined with pubs and restaurants. Farrington moves through this zone on his drinking crawl. Today it’s best known as the city’s main tourist and nightlife district.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/4PrTkDyaBF5Q4enV6" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="street" class="card"> 
-                        <img src="assets/ShelbourneRoad.jpg" alt="Shelbourne House on Shelbourne Road, Dublin, photographed in 2023">
-                        <div>
-                            <h2>Shelbourne Road</h2>
-                            <p>Counterparts | <a>Street</a></p>
-                            <p>Shelbourne Road is a “lower-middle-class” residential street in Ballsbridge, connecting Merrion Road toward the Bath Avenue/Haddington Road area. It's where Farrington exits the tram at the end of his exhausting night. </p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/YssN8pKivxZuEr9K8" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="building" class="card"> 
-                        <img src="assets/Nelson_s_Pillar.jpg" alt="Nelson's Pillar on Sackville-Street, Dublin, 1829">
-                        <div>
-                            <h2>Nelson's Pillar</h2>
-                            <p>Clay | <a>Statue</a></p>
-                            <p>Nelson’s Pillar stood on O’Connell Street and was a major city-centre landmark and meeting point, shaping how people navigated central Dublin. It was destroyed in 1966. </p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/U7yptH7RbLzMgnP26" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="street" class="card"> 
-                        <img src="assets/LucanBridge.jpg" alt="Lucan Bridge and surrounds, 1814">
-                        <div>
-                            <h2>Lucan Road</h2>
-                            <p>A Painful Case | <a>Street</a></p>
-                            <p>The Lucan Road runs westward along the south side of the Liffey, connecting Chapelizod to Lucan, the town to the city. Its westward direction connotes a departure, an escape from the city. </p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/bk4SKWinZJho6wLi9" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="street" class="card"> 
-                        <img src="assets/CroweStreet.jpg" alt="Crowe Street in Dublin, photographed in 2026">
-                        <div>
-                            <h2>Crowe Street</h2>
-                            <p>Counterparts, Grace | <a>Street</a></p>
-                            <p>Crowe Street is located in the Temple Bar area south of the River Liffey. In Grace, it is the location of Tom Kernan’s workplace in the city. </p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/xeVAenYKyEd8WPrs7" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="street" class="card"> 
-                        <img src="assets/SuffolkStreet.jpg" alt="Suffolk Street entrance to the head office of National Bank Ltd., 1926">
-                        <div>
-                            <h2>Suffolk Street</h2>
-                            <p>Ivy Day in the Committee Room | <a>Street</a></p>
-                            <p>Suffolk Street is a short street connecting the Grafton Street area with St Andrew’s Street. In Ivy Day in the Committee Room, it serves as a meeting point within Dublin’s political city centre. </p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/k3oEHJTmghJsFNf28" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="waterway" class="card"> 
-                        <img src="assets/OConnellBridge.jpg" alt="O'Connell Bridge, Dublin, photographed in 2005">
-                        <div>
-                            <h2>O’Connell Bridge</h2>
-                            <p>Counterparts, The Dead, Two Gallants | <a>Bridge</a></p>
-                            <p>O’Connell Bridge is one of Dublin’s central bridges connecting the north and south sides of the city. It appears in both Counterparts and The Dead, marking an important crossing point in Joyce’s Dublin. </p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/i6RqpANZ7QvAUoj78" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="park" class="card"> 
-                        <img src="assets/PhoenixPark.jpg" alt="Phoenix Park, Dublin, photographed in 2011">
-                        <div>
-                            <h2>Phoenix Park</h2>
-                            <p>The Dead | <a>Parks</a></p>
-                            <p>A 17th-century, 707-hectare park, created for royal hunting, mentioned as “the Park”, the Parkgate in the Dubliners. </p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/VcZa8zjNFVvhZBxD7" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="food" class="card"> 
-                        <img src="assets/JohnnyRushs.jpg" alt="The exterior of the pub Johnny Rush's, Dublin">
-                        <div>
-                            <h2>Johnny Rush’s</h2>
-                            <p>The Sisters | <a>Pub</a></p>
-                            <p>Johnny Rush’s is a pub, located on South William St., Historically, it was a real business located near Findlater’s place.  </p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/sKKSqnhexQJwHi9k8" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="food" class="card"> 
-                        <img src="assets/Bewleys.jpg" alt="The exterior of Bewley's cafe on Grafton's Street, Dublin">
-                        <div>
-                            <h2>Bewley’s</h2>
-                            <p> A Little Cloud | <a>Cafe &amp; Restaurant</a></p>
-                            <p>A cafe, located in Grafton Street, which was frequented by Irish literary and artistic figures, including James Joyce.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/hBRDgzzapSicGpW39" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="building" class="card"> 
-                        <img src="assets/TheatreRoyal.jpg" alt="Theatre Royal, Hawkins Street, Dublin, photographed between 1910-1930">
-                        <div>
-                            <h2>Theatre Royal</h2>
-                            <p>The Dead | <a>Theatre</a></p>
-                            <p>One of three major early 20th-century Dublin theatres, it was primarily used for dramatic presentations. It was demolished in 1962.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/rxdo7cdNqb5UzcwDA" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="building" class="card"> 
-                        <img src="assets/portanddock.jpg" alt="This photo of the North Wall shows some of the docks and ports along the eastern end of the Liffey. Photographed by Robert French between 1865 and 1914.">
-                        <div>
-                            <h2>Port and Docks</h2>
-                            <p>The Dead | <a>Port</a></p>
-                            <p>Also known as Dublin Port, established in 1707 and was headquartered at different places along the Liffey river.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/R3jm5drynADhb9UbA" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="building" class="card"> 
-                        <img src="assets/Queenstheater.jpg" alt="The Queen's Theatre, Dublin was built on the site of several previous buildings of entertainment.">
-                        <div>
-                            <h2>Queen’s Theatre</h2>
-                            <p>A Mother | <a>Theater</a></p>
-                            <p>The theatre, often called simply the Queen’s Theatre or the Queen’s, was characteristically known as a venue for comic and musical acts. In 1969, the theatre was demolished.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/zsMyLGABFSabmHu96" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="food" class="card"> 
-                        <img src="assets/Chapelizodbridge.png" alt="Screenshot of the Google Maps version showing the Chapelizod Bridge.">
-                        <div>
-                            <h2>Chapelizod Bridge</h2>
-                            <p>A Painful Case | <a>Pub</a></p>
-                            <p>It is the unnamed pub only distinguished in the story by its location at the Chapelizod bridge, with its connotations of romance and history, that offers Duffy the ability to feel tenderly.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/wmoZizpuKQ2Kyy1J9" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="building" class="card"> 
-                        <img src="assets/Adamandeves.jpg" alt="Adam and Eve’s (Church of the Immaculate Conception) as seen from the south bank of the Liffey in Merchant’s Quay. Photograph by Jasmine Mulliken, May 31, 2015.">
-                        <div>
-                            <h2>Adam and Eve’s</h2>
-                            <p>The Dead | <a>Church</a></p>
-                            <p>Adam and Eve’s, the Fransiscan church was, from 1889 on, officially the Church of the Immaculate Conception.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/WcBJPCJXdCNkDHrS8" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="building" class="card"> 
-                        <img src="assets/antientconcertroomsbefore.jpg" alt="Antient Concert Rooms building. From archiseek.">
-                        <div>
-                            <h2>Ancient Concert Rooms</h2>
-                            <p>A Mother &amp; The Dead | <a>Historic Buildings</a></p>
-                            <p>The Antient Concert Rooms at 52 Pearse Street was demolished in the mid-20th century. Today, the site has been replaced by office buildings and facilities used by Trinity College Dublin.</p>
-                        </div>
-                    </article>
-
-                    <article data-name="street" class="card"> 
-                        <img src="assets/ormondquay.jpg" alt="View of the River Liffey and Ormond Quay, Lower, taken from south quays].” Photograph by J.J. Clarke. From the Clarke Photographic Collection at the National Library of Ireland.">
-                        <div>
-                            <h2>Ormond Quay</h2>
-                            <p>A Mother | <a>Streets</a></p>
-                            <p>Ormond Quay is one of many waterfront spans of street lining the Liffey in central Dublin. Situated on the north bank, its upper (western) and lower (eastern) sections are bisected by Capel Street as it becomes Grattan Bridge.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/ib8YjNd2URZ7ueBo6" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="street" class="card"> 
-                        <img src="assets/merrionstreet.png" alt="A section of an 1883 Letts Sns & Co. “Plan of the City of Dubln” map showing Merrion Street and Merrion Square. From the online David Rumsey Historical Map Collection.">
-                        <div>
-                            <h2>Merrion Street</h2>
-                            <p>Two gallants | <a>Streets</a></p>
-                            <p>In Joyce's era, Merrion Street featured rows of elegant Georgian townhouses constructed following the 1748 completion of Leinster House. The domestic servant Corley manipulates almost certainly worked in one of these affluent households.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/7vpDfuc1ZKLYUcaS6" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article  data-name="waterway" class="card">
-                        <img src="assets/Grattan-Bridge.jpg" alt="Grattan Bridge, Dublin City, Co. Dublin, photographed by Robert French between 1865 and 1914. From the Lawrence Photograph Collection at the National Library of Ireland.">
-                        <div>
-                            <h2>Grattan Bridge</h2>
-                            <p>Two gallants | <a>Bridge</a></p>
-                            <p>Grattan Bridge crosses the Liffey and joins Capel Street to Parliament Street; originally known as Essex Bridge before later rebuilds/renaming.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/PrTPcTFCYqLZhkou7" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="building" class="card"> 
-                        <img src="assets/dublincastle.jpg" alt="Dublin Castle, Dublin City, Co. Dublin, photographed by Robert French between 1865 and 1914. From the Lawrence Photograph Collection at the National Library of Ireland.">
-                        <div>
-                            <h2>Dublin Castle</h2>
-                            <p>Grace | <a>Castle</a></p>
-                            <p>Situated in the heart of Dublin in Dame Street. A 13th-century structure built on Viking ruins and served as the headquarters of British administration in Ireland for over 700 years.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/7Wuv9ZJLQhrHzBZ99" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="waterway" class="card"> 
-                        <img src="assets/Shannonwaves.jpg" alt="Shannon River, Foynes, Co. Limerick, photographed between 1865 and 1914 by Robert French. From the Lawrence Photograph Collection at the National Library of Ireland.">
-                        <div>
-                            <h2>Shannon Waves</h2>
-                            <p>The Dead | <a>River</a></p>
-                            <p>Refers to River Shannon, located in the west of Ireland , flows southward from the Cuilcagh Mountains in County Cavan to the Atlantic Ocean, passing through 11 counties.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/rnSMDirZdiyf6nE56" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-                    
-                     <article data-name="building" class="card"> 
-                        <img src="assets/tivolitheatre.jpg" alt="The Tivoli Theatre on Burgh Quay, on the south bank of the Liffey. The theatre would have been a block north of Mulligan’s and a block east of the Scotch House. Photographed between 1901 and 1914 by Robert French, from the National Library of Ireland’s Lawrence Photograph Collection.">
-                        <div>
-                            <h2>Tivoli Theatre</h2>
-                            <p>Counterparts | <a>Theatre</a></p>
-                            <p>Formerly The Grand Lyric Hall / Lyric Theatre of Varieties, the Tivoli Theatre was located in Burgh Quay on the south bank of the Liffey, was later acquired by the Irish Press newspaper group in 1930.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/az9ZcZHU3eof7mf4A" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="building" class="card"> 
-                        <img src="assets/kavanagh.jpg" alt="This would have been just a couple doors down from Kavanagh’s. Photo taken between 1860 and 1883 by James Simonton or Frederick Holland Mares, held by the National Library of Ireland as part of the Stereo Pairs Photograph Collection.">
-                        <div>
-                            <h2>Kavanagh’s</h2>
-                            <p>IVY DAY IN THE COMMITTEE ROOM | <a>Pup</a></p>
-                            <p>A spot for political, under-the-table deals, located in Parliament Street, between Essex and Dame Streets, south of Liffey.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/dCTr3DbnuepAsLkJ9" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="building" class="card"> 
-                        <img src="assets/catherines.jpg" alt="View of Hardwicke Street from North Frederick Street End, Drumcondra, Co. Dublin” from the National Library of Ireland’s Eason Photograph Collection. Photograph ca. 1900-1939.">
-                        <div>
-                            <h2>St Catherine’s Church</h2>
-                            <p>The Sisters | <a>Church</a></p>
-                            <p>St. Catherine’s is a Roman Catholic church on Meath Street, situated around the corner from St. Catherine’s in Thomas Street. </p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/QvbYYMYavrafhaRp7" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="building" class="card"> 
-                        <img src="assets/rutlandsquare.jpg" alt="A section of the 1883 Letts, Son & Co. map, “Plan of the city of Dublin,” showing Rutland Square. Made available by the David Rumsey Map Collection online.">
-                        <div>
-                            <h2>Rutland Square</h2>
-                            <p>Two Gallants | <a>Square</a></p>
-                            <p>Rutland Square is part of the Northside setting. It was renamed Parnell Square in 1933, bordered on northwest and southeast by Palace Row and Parnell Street (formerly known as Great Britain Street)</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/S6mkGb6hDbECdQAn7" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
-                    <article data-name="street" class="card"> 
-                        <img src="assets/earlstreet.jpg" alt="Earl Street. photograph by Robert French from National Library of Ireland’s digitized Lawrence Collection at http://catalogue.nli.ie/Record/vtls000040954">
-                        <div>
-                            <h2>Earl Street</h2>
-                            <p>Two gallants | <a>Streets</a></p>
-                            <p> Earl Street is located near the Liffey, running between Sackville (O’Connell) Street and Marlborough Street.</p>
-                            <a class="location-btn" href="https://maps.app.goo.gl/b5XRvz1RQkM8VJJh7" target="_blank"><span>Map It Out</span></a>
-                        </div>
-                    </article>
-
+          <article data-name="waterway" class="card">
+            <img src="assets/CanalBridge.png" alt="Canal Bridge" />
+            <div>
+              <p><a>#Rivers &amp; Canals</a></p>
+              <h2>Canal Bridge</h2>
+              <p>An Encounter</p>
+              <p>
+                It’s a bridge crossing the Royal Canal and is generally
+                identified as Newcomen Bridge, in the North Strand area
+                (Nuimgeography, 2019).
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/1VkVjncdrfNuaX1w6"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
             </div>
-            <button class="btn loadmore">Load More</button>
-        </section>
+          </article>
 
-        <!-- SECTION 2 - NAVIGATING DUBLIN (FAQ) -->
-        <section aria-label="Navigating Dublin FAQ">
-            <h2>Navigating Dublin</h2>
-            <p class="section-lead">Frequently asked questions about Dublin's public transport system.</p>
+          <article data-name="building" class="card">
+            <img src="assets/PigeonHouse.png" alt="Pigeon House" />
+            <div>
+              <p><a>#Historic Building</a></p>
+              <h2>Pigeon House</h2>
+              <p>An Encounter</p>
+              <p>
+                The Pigeon House was the electricity and power station which
+                served the city of Dublin. It is now a deserted port (O’Connor,
+                1990).
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/2M1dDt8zis3TRbtp9"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
 
-            <!-- FAQ ITEM 1 -->
-            <details>
-                <summary>Lorem ipsum?</summary>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </details>
-            <hr>
-            <!-- FAQ ITEM 2 -->
-            <details>
-                <summary>Lorem ipsum?</summary>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </details>
-            <hr>
-            <!-- FAQ ITEM 3 -->
-            <details>
-                <summary>Lorem ipsum?</summary>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </details>
-            <hr>
-            <!-- FAQ ITEM 4 -->
-            <details>
-                <summary>Lorem ipsum?</summary>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </details>
-            <hr>
-            <!-- FAQ ITEM 5 -->
-            <details>
-                <summary>Lorem ipsum?</summary>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </details>
-            <hr>
-        </section>
+          <article data-name="street" class="card">
+            <img src="assets/NorthStrand.png" alt="North Strand Road" />
+            <div>
+              <p><a>#Street</a></p>
+              <h2>North Strand Road</h2>
+              <p>An Encounter</p>
+              <p>North Strand Road is a street in the Northside of Dublin.</p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/UaiCTewAjNrN45FF8"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
 
+          <article data-name="street" class="card">
+            <img src="assets/WharfRoad.png" alt="Wharf Road" />
+            <div>
+              <p><a>Street</a></p>
+              <h2>Wharf Road</h2>
+              <p>An Encounter</p>
+              <p>
+                The Wharf Road, now East Wall Road, is a road that runs along
+                the top of the wall built to keep the River Tolka on course on
+                its way to the sea so that it doesn’t flood the city’s
+                northern-eastern neighborhoods and industrial complexes.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/xeFEZh6ypFLhLqCa6"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="street" class="card">
+            <img src="assets/RiverLiffey.png" alt="River Liffey" />
+            <div>
+              <p><a>#Street</a></p>
+              <h2>North Richmond Street</h2>
+              <p>Araby</p>
+              <p>
+                North Richmond Street is a quiet cul-de-sac on Dublin’s north
+                side and forms the opening setting of Araby. Joyce uses the
+                street to establish the confined domestic world of the narrator
+                before his journey toward the bazaar begins.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/WMqrf22SxW1bbe7j7"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="building" class="card">
+            <img
+              src="assets/virtiolworks.png"
+              alt="section of the 'Plan of the City of Dublin' map showing were the Virtiol Works building used to be."
+            />
+            <div>
+              <p><a>#Historic Buildings</a></p>
+              <h2>Virtiol Works</h2>
+              <p>An Encounter</p>
+              <p>
+                Vitriol (sulphuric acid) was used for bleaching linen cloth from
+                the mid-18th century onward.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/UaiCTewAjNrN45FF8"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="waterway" class="card">
+            <img src="assets/RiverLiffey.png" alt="River Liffey" />
+            <div>
+              <p><a>#Rivers &amp; Canals</a></p>
+              <h2>River Liffey</h2>
+              <p>An Encounter, A Little Cloud, A Painful Case</p>
+              <p>
+                The Liffey is Dublin's main river, cutting through the heart of
+                the city and splitting it into a northern and southern half.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/v3opxChXTQK1Joyw9"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="building" class="card">
+            <img src="assets/christianbrothersschool.jpg" alt="River Liffey" />
+            <div>
+              <p><a>Historic Buildings</a></p>
+              <h2>Christian Brothers School</h2>
+              <p>Araby</p>
+              <p>
+                The Christian Brothers’ School on North Richmond Street is
+                mentioned in Araby and also appears in Ivy Day in the Committee
+                Room. It reflects the strong presence of Catholic education in
+                everyday Dublin life during Joyce’s time.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/9sJfv4pR14egPqmY8"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="street" class="card">
+            <img
+              src="assets/buckinghamstreet.png"
+              alt="Section of Letts, Son & Co. 1883 Plan of the city of Dublin map showing the entire length of Buckingham Street and the Railway Terminus. Made available at the David Rumsey Map Collection online"
+            />
+            <div>
+              <p><a>#Streets</a></p>
+              <h2>Buckingham Street</h2>
+              <p>An Encounter, Araby</p>
+              <p>
+                Buckingham Street lies on the north side of Dublin and forms
+                part of the boy’s route toward the bazaar in Araby. The street
+                helps trace his movement from a quiet residential neighborhood
+                into the wider city.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/nZrJ7tstfd4RpQj29"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="buidling" class="card">
+            <img
+              src="assets/westlandrowstation.jpg"
+              alt="A modern-day photo of the former Westland Row train station"
+            />
+            <div>
+              <p><a>#Historic Buildings</a></p>
+              <h2>Westland Row Station</h2>
+              <p>After the Race</p>
+              <p>
+                Westland Row Station appears in both Araby and After the Race as
+                a point of travel and departure. It represents Dublin’s growing
+                modern transport network at the turn of the twentieth century.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/moShyem36XMLYs5g6"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="street" class="card">
+            <img
+              src="assets/naasroad.jpg"
+              alt="A modern-day photo of Naas road"
+            />
+            <div>
+              <p><a>#Streets</a></p>
+              <h2>Naas Road</h2>
+              <p>After the Race</p>
+              <p>
+                Naas Road forms the western approach into Dublin and is
+                mentioned in After the Race. The racing cars travel along this
+                road as they speed toward the city, symbolizing modernity and
+                excitement.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/AFq6dy5kSrfu6t3N7"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="street" class="card">
+            <img
+              src="assets/damestreet.jpg"
+              alt="A modern-day photo of Dame street."
+            />
+            <div>
+              <p><a>#Streets</a></p>
+              <h2>Dame Street</h2>
+              <p>Two Gallants, A Little Cloud, Counterpart</p>
+              <p>
+                Dame Street is one of Dublin’s major city-centre streets and a
+                hub of commercial activity. In Two Gallants and A Little Cloud,
+                it forms part of the busy urban landscape through which the
+                characters move.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/GPGYjr6VuWb1AWgo7"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="park" class="card">
+            <img
+              src="assets/stephensgreen.png"
+              alt="Detroit Publishing Co. St Stephen’s Green Park, Dublin, County Dublin, Ireland (LC-DIG-ppmsc-009877), c. 1890-1900. Library of Congress, Washington, D.C."
+            />
+            <div>
+              <p><a>#Parks</a></p>
+              <h2>St Stephen’s Green</h2>
+              <p>Two Gallants, After the Raceste</p>
+              <p>
+                St Stephen’s Green is Dublin’s best-known public park and a
+                landmark in the city centre. In Two Gallants, Lenehan passes
+                through the park during his wanderings across Dublin.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/m1fxGSbXZyt5tp2F8"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="park" class="card">
+            <img
+              src="assets/rutlandsquare.jpg"
+              alt="Rutland Square and Rutland Square Church in black and white."
+            />
+            <div>
+              <p><a>#Park</a></p>
+              <h2>Rutland Square</h2>
+              <p>Two Gallants</p>
+              <p>
+                Rutland Square, now known as Parnell Square, is the first
+                location mentioned in Two Gallants. Its Georgian setting
+                reflects the faded elegance of nineteenth-century Dublin. It was
+                renamed to Parnell Square in 1933 and features the Garden of
+                Rememberance park.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/zagjrejDbUT7pxSE9"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="street" class="card">
+            <img
+              src="assets/dorsetstreet.jpg"
+              alt="Eason & Son. View of a Dublin Street (Dorset Street), Drumcondra, Co. Dublin. 1900."
+            />
+            <div>
+              <p><a>#Streets</a></p>
+              <h2>Dorset Street</h2>
+              <p>Two Gallants, Clay</p>
+              <p>
+                Dorset Street is a busy northside street in Dublin and appears
+                early in Two Gallants. It forms part of the route taken by the
+                characters as they walk through the city.
+              </p>
+              <a class="location-btn"><span>Map It Out</span></a>
+            </div>
+          </article>
+
+          <article data-name="street" class="card">
+            <img
+              src="assets/baggotstreet.jpg"
+              alt="A row of houses in Lower Baggot Street, Dublin"
+            />
+            <div>
+              <p><a>#Streets</a></p>
+              <h2>Baggot Street</h2>
+              <p>Two Gallants, A Painful Case</p>
+              <p>
+                Baggot St. runs southeast from St. Stephen’s Green to the Grand
+                Canal.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/iztuQnuKXGnmfLtt6"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="building" class="card">
+            <img
+              src="assets/donnybrooktram.jpg"
+              alt="Dublin Tram No. 26 on route to the Donnybrook tramway"
+            />
+            <div>
+              <p><a>#Historic Buildings</a></p>
+              <h2>Donnybrook Tram</h2>
+              <p>Two Gallants</p>
+              <p>
+                The Donnybrook tram line was launched in 1873, it connected
+                Merion Square to Donnybrook’s southern terminus. The Donnybrook
+                tramway is no longer in operation, but is now used as the
+                Donnybrook Bus Garage.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/74gJQDgERBcu3NtM9"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="building" class="card">
+            <img
+              src="assets/trinitycollege.jpg"
+              alt="Trinity College Dublin, late 19th century"
+            />
+            <div>
+              <h2>Trinity College Dublin</h2>
+              <p>
+                After the Race, Two Gallants, The Dead |
+                <a>Historic Buildings</a>
+              </p>
+              <p>
+                Trinity College was founded in 1592 by Elizabeth I. It was built
+                upon the grounds of All Hallows, a former Augustinian priory
+                that had been dissolved during the Reformation.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/eKxH9ADKXphahcSD9"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="food" class="card">
+            <img
+              src="assets/TempleBar.jpg"
+              alt="The Temple Bar Pub on Temple Lane, Dublin, photographed in 2008"
+            />
+            <div>
+              <p><a>Restaurants &amp; Pubs</a></p>
+              <h2>Temple Bar</h2>
+              <p>Counterparts</p>
+              <p>
+                Temple Bar is an area on the south bank of the River Liffey in
+                central Dublin, lined with pubs and restaurants. Farrington
+                moves through this zone on his drinking crawl. Today it’s best
+                known as the city’s main tourist and nightlife district.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/4PrTkDyaBF5Q4enV6"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="street" class="card">
+            <img
+              src="assets/ShelbourneRoad.jpg"
+              alt="Shelbourne House on Shelbourne Road, Dublin, photographed in 2023"
+            />
+            <div>
+              <p><a>#Streets</a></p>
+              <h2>Shelbourne Road</h2>
+              <p>Counterparts</p>
+              <p>
+                Shelbourne Road is a “lower-middle-class” residential street in
+                Ballsbridge, connecting Merrion Road toward the Bath
+                Avenue/Haddington Road area. It's where Farrington exits the
+                tram at the end of his exhausting night.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/YssN8pKivxZuEr9K8"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="building" class="card">
+            <img
+              src="assets/Nelson_s_Pillar.jpg"
+              alt="Nelson's Pillar on Sackville-Street, Dublin, 1829"
+            />
+            <div>
+              <p><a>#Historic Buildings</a></p>
+              <h2>Nelson's Pillar</h2>
+              <p>Clay | <a>Statue</a></p>
+              <p>
+                Nelson’s Pillar stood on O’Connell Street and was a major
+                city-centre landmark and meeting point, shaping how people
+                navigated central Dublin. It was destroyed in 1966.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/U7yptH7RbLzMgnP26"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="street" class="card">
+            <img
+              src="assets/LucanBridge.jpg"
+              alt="Lucan Bridge and surrounds, 1814"
+            />
+            <div>
+              <p><a>#Streets</a></p>
+              <h2>Lucan Road</h2>
+              <p>A Painful Case</p>
+              <p>
+                The Lucan Road runs westward along the south side of the Liffey,
+                connecting Chapelizod to Lucan, the town to the city. Its
+                westward direction connotes a departure, an escape from the
+                city.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/bk4SKWinZJho6wLi9"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="street" class="card">
+            <img
+              src="assets/CroweStreet.jpg"
+              alt="Crowe Street in Dublin, photographed in 2026"
+            />
+            <div>
+              <p><a>#Streets</a></p>
+              <h2>Crowe Street</h2>
+              <p>Counterparts, Grace</p>
+              <p>
+                Crowe Street is located in the Temple Bar area south of the
+                River Liffey. In Grace, it is the location of Tom Kernan’s
+                workplace in the city.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/xeVAenYKyEd8WPrs7"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="street" class="card">
+            <img
+              src="assets/SuffolkStreet.jpg"
+              alt="Suffolk Street entrance to the head office of National Bank Ltd., 1926"
+            />
+            <div>
+              <p><a>#Streets</a></p>
+              <h2>Suffolk Street</h2>
+              <p>Ivy Day in the Committee Room</p>
+              <p>
+                Suffolk Street is a short street connecting the Grafton Street
+                area with St Andrew’s Street. In Ivy Day in the Committee Room,
+                it serves as a meeting point within Dublin’s political city
+                centre.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/k3oEHJTmghJsFNf28"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="waterway" class="card">
+            <img
+              src="assets/OConnellBridge.jpg"
+              alt="O'Connell Bridge, Dublin, photographed in 2005"
+            />
+            <div>
+              <p><a>#Waterway</a></p>
+              <h2>O’Connell Bridge</h2>
+              <p>Counterparts, The Dead, Two Gallants</p>
+              <p>
+                O’Connell Bridge is one of Dublin’s central bridges connecting
+                the north and south sides of the city. It appears in both
+                Counterparts and The Dead, marking an important crossing point
+                in Joyce’s Dublin.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/i6RqpANZ7QvAUoj78"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="park" class="card">
+            <img
+              src="assets/PhoenixPark.jpg"
+              alt="Phoenix Park, Dublin, photographed in 2011"
+            />
+            <div>
+              <p><a>Parks</a></p>
+              <h2>Phoenix Park</h2>
+              <p>The Dead</p>
+              <p>
+                A 17th-century, 707-hectare park, created for royal hunting,
+                mentioned as “the Park”, the Parkgate in the Dubliners.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/VcZa8zjNFVvhZBxD7"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="food" class="card">
+            <img
+              src="assets/JohnnyRushs.jpg"
+              alt="The exterior of the pub Johnny Rush's, Dublin"
+            />
+            <div>
+              <p><a>#Restaurants &amp; Pubs</a></p>
+              <h2>Johnny Rush’s</h2>
+              <p>The Sisters</p>
+              <p>
+                Johnny Rush’s is a pub, located on South William St.,
+                Historically, it was a real business located near Findlater’s
+                place.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/sKKSqnhexQJwHi9k8"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="food" class="card">
+            <img
+              src="assets/Bewleys.jpg"
+              alt="The exterior of Bewley's cafe on Grafton's Street, Dublin"
+            />
+            <div>
+              <p><a>#Restaurants &amp; Pubs</a></p>
+              <h2>Bewley’s</h2>
+              <p>A Little Cloud</p>
+              <p>
+                A cafe, located in Grafton Street, which was frequented by Irish
+                literary and artistic figures, including James Joyce.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/hBRDgzzapSicGpW39"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="building" class="card">
+            <img
+              src="assets/TheatreRoyal.jpg"
+              alt="Theatre Royal, Hawkins Street, Dublin, photographed between 1910-1930"
+            />
+            <div>
+              <p><a>#Historic Buildings</a></p>
+              <h2>Theatre Royal</h2>
+              <p>The Dead</p>
+              <p>
+                One of three major early 20th-century Dublin theatres, it was
+                primarily used for dramatic presentations. It was demolished in
+                1962.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/rxdo7cdNqb5UzcwDA"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="waterway" class="card">
+            <img
+              src="assets/portanddock.jpg"
+              alt="This photo of the North Wall shows some of the docks and ports along the eastern end of the Liffey. Photographed by Robert French between 1865 and 1914."
+            />
+            <div>
+              <h2>Port and Docks</h2>
+              <p>The Dead | <a>Port</a></p>
+              <p>
+                Also known as Dublin Port, established in 1707 and was
+                headquartered at different places along the Liffey river.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/R3jm5drynADhb9UbA"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="building" class="card">
+            <img
+              src="assets/Queenstheater.jpg"
+              alt="The Queen's Theatre, Dublin was built on the site of several previous buildings of entertainment."
+            />
+            <div>
+              <p><a>#Historic Buildings</a></p>
+              <h2>Queen’s Theatre</h2>
+              <p>A Mother</p>
+              <p>
+                The theatre, often called simply the Queen’s Theatre or the
+                Queen’s, was characteristically known as a venue for comic and
+                musical acts. In 1969, the theatre was demolished.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/zsMyLGABFSabmHu96"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="food" class="card">
+            <img
+              src="assets/Chapelizodbridge.png"
+              alt="Screenshot of the Google Maps version showing the Chapelizod Bridge."
+            />
+            <div>
+              <p><a>Pubs</a></p>
+              <h2>Chapelizod Bridge</h2>
+              <p>A Painful Case</p>
+              <p>
+                It is the unnamed pub only distinguished in the story by its
+                location at the Chapelizod bridge, with its connotations of
+                romance and history, that offers Duffy the ability to feel
+                tenderly.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/wmoZizpuKQ2Kyy1J9"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="building" class="card">
+            <img
+              src="assets/Adamandeves.jpg"
+              alt="Adam and Eve’s (Church of the Immaculate Conception) as seen from the south bank of the Liffey in Merchant’s Quay. Photograph by Jasmine Mulliken, May 31, 2015."
+            />
+            <div>
+              <p><a>Church</a></p>
+              <h2>Adam and Eve’s</h2>
+              <p>The Dead</p>
+              <p>
+                Adam and Eve’s, the Fransiscan church was, from 1889 on,
+                officially the Church of the Immaculate Conception.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/WcBJPCJXdCNkDHrS8"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="building" class="card">
+            <img
+              src="assets/antientconcertroomsbefore.jpg"
+              alt="Antient Concert Rooms building. From archiseek."
+            />
+            <div>
+              <p><a>#Historic Buildings</a></p>
+              <h2>Ancient Concert Rooms</h2>
+              <p>A Mother &amp; The Dead</p>
+              <p>
+                The Antient Concert Rooms at 52 Pearse Street was demolished in
+                the mid-20th century. Today, the site has been replaced by
+                office buildings and facilities used by Trinity College Dublin.
+              </p>
+            </div>
+          </article>
+
+          <article data-name="street" class="card">
+            <img
+              src="assets/ormondquay.jpg"
+              alt="View of the River Liffey and Ormond Quay, Lower, taken from south quays].” Photograph by J.J. Clarke. From the Clarke Photographic Collection at the National Library of Ireland."
+            />
+            <div>
+              <p><a>#Streets</a></p>
+              <h2>Ormond Quay</h2>
+              <p>A Mother</p>
+              <p>
+                Ormond Quay is one of many waterfront spans of street lining the
+                Liffey in central Dublin. Situated on the north bank, its upper
+                (western) and lower (eastern) sections are bisected by Capel
+                Street as it becomes Grattan Bridge.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/ib8YjNd2URZ7ueBo6"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="street" class="card">
+            <img
+              src="assets/merrionstreet.png"
+              alt="A section of an 1883 Letts Sns & Co. “Plan of the City of Dubln” map showing Merrion Street and Merrion Square. From the online David Rumsey Historical Map Collection."
+            />
+            <div>
+              <p><a>#Streets</a></p>
+              <h2>Merrion Street</h2>
+              <p>Two gallants</p>
+              <p>
+                In Joyce's era, Merrion Street featured rows of elegant Georgian
+                townhouses constructed following the 1748 completion of Leinster
+                House. The domestic servant Corley manipulates almost certainly
+                worked in one of these affluent households.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/7vpDfuc1ZKLYUcaS6"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="waterway" class="card">
+            <img
+              src="assets/Grattan-Bridge.jpg"
+              alt="Grattan Bridge, Dublin City, Co. Dublin, photographed by Robert French between 1865 and 1914. From the Lawrence Photograph Collection at the National Library of Ireland."
+            />
+            <div>
+              <p><a>Bridge</a></p>
+              <h2>Grattan Bridge</h2>
+              <p>Two gallants</p>
+              <p>
+                Grattan Bridge crosses the Liffey and joins Capel Street to
+                Parliament Street; originally known as Essex Bridge before later
+                rebuilds/renaming.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/PrTPcTFCYqLZhkou7"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="building" class="card">
+            <img
+              src="assets/dublincastle.jpg"
+              alt="Dublin Castle, Dublin City, Co. Dublin, photographed by Robert French between 1865 and 1914. From the Lawrence Photograph Collection at the National Library of Ireland."
+            />
+            <div>
+              <p><a>Castle</a></p>
+              <h2>Dublin Castle</h2>
+              <p>Grace</p>
+              <p>
+                Situated in the heart of Dublin in Dame Street. A 13th-century
+                structure built on Viking ruins and served as the headquarters
+                of British administration in Ireland for over 700 years.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/7Wuv9ZJLQhrHzBZ99"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="waterway" class="card">
+            <img
+              src="assets/Shannonwaves.jpg"
+              alt="Shannon River, Foynes, Co. Limerick, photographed between 1865 and 1914 by Robert French. From the Lawrence Photograph Collection at the National Library of Ireland."
+            />
+            <div>
+              <h2>Shannon Waves</h2>
+              <p>The Dead | <a>River</a></p>
+              <p>
+                Refers to River Shannon, located in the west of Ireland , flows
+                southward from the Cuilcagh Mountains in County Cavan to the
+                Atlantic Ocean, passing through 11 counties.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/rnSMDirZdiyf6nE56"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="building" class="card">
+            <img
+              src="assets/tivolitheatre.jpg"
+              alt="The Tivoli Theatre on Burgh Quay, on the south bank of the Liffey. The theatre would have been a block north of Mulligan’s and a block east of the Scotch House. Photographed between 1901 and 1914 by Robert French, from the National Library of Ireland’s Lawrence Photograph Collection."
+            />
+            <div>
+              <h2>Tivoli Theatre</h2>
+              <p>Counterparts | <a>Theatre</a></p>
+              <p>
+                Formerly The Grand Lyric Hall / Lyric Theatre of Varieties, the
+                Tivoli Theatre was located in Burgh Quay on the south bank of
+                the Liffey, was later acquired by the Irish Press newspaper
+                group in 1930.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/az9ZcZHU3eof7mf4A"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="building" class="card">
+            <img
+              src="assets/kavanagh.jpg"
+              alt="This would have been just a couple doors down from Kavanagh’s. Photo taken between 1860 and 1883 by James Simonton or Frederick Holland Mares, held by the National Library of Ireland as part of the Stereo Pairs Photograph Collection."
+            />
+            <div>
+              <h2>Kavanagh’s</h2>
+              <p>IVY DAY IN THE COMMITTEE ROOM | <a>Pup</a></p>
+              <p>
+                A spot for political, under-the-table deals, located in
+                Parliament Street, between Essex and Dame Streets, south of
+                Liffey.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/dCTr3DbnuepAsLkJ9"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="building" class="card">
+            <img
+              src="assets/catherines.jpg"
+              alt="View of Hardwicke Street from North Frederick Street End, Drumcondra, Co. Dublin” from the National Library of Ireland’s Eason Photograph Collection. Photograph ca. 1900-1939."
+            />
+            <div>
+              <h2>St Catherine’s Church</h2>
+              <p>The Sisters | <a>Church</a></p>
+              <p>
+                St. Catherine’s is a Roman Catholic church on Meath Street,
+                situated around the corner from St. Catherine’s in Thomas
+                Street.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/QvbYYMYavrafhaRp7"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="building" class="card">
+            <img
+              src="assets/rutlandsquare.jpg"
+              alt="A section of the 1883 Letts, Son & Co. map, “Plan of the city of Dublin,” showing Rutland Square. Made available by the David Rumsey Map Collection online."
+            />
+            <div>
+              <h2>Rutland Square</h2>
+              <p>Two Gallants | <a>Square</a></p>
+              <p>
+                Rutland Square is part of the Northside setting. It was renamed
+                Parnell Square in 1933, bordered on northwest and southeast by
+                Palace Row and Parnell Street (formerly known as Great Britain
+                Street)
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/S6mkGb6hDbECdQAn7"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+
+          <article data-name="street" class="card">
+            <img
+              src="assets/earlstreet.jpg"
+              alt="Earl Street. photograph by Robert French from National Library of Ireland’s digitized Lawrence Collection at http://catalogue.nli.ie/Record/vtls000040954"
+            />
+            <div>
+              <p><a>#Streets</a></p>
+              <h2>Earl Street</h2>
+              <p>Two gallants</p>
+              <p>
+                Earl Street is located near the Liffey, running between
+                Sackville (O’Connell) Street and Marlborough Street.
+              </p>
+              <a
+                class="location-btn"
+                href="https://maps.app.goo.gl/b5XRvz1RQkM8VJJh7"
+                target="_blank"
+                ><span>Map It Out</span></a
+              >
+            </div>
+          </article>
+        </div>
+        <button class="btn loadmore">Load More</button>
+      </section>
+
+      <!-- SECTION 2 - NAVIGATING DUBLIN (FAQ) -->
+      <section aria-label="Navigating Dublin FAQ">
+        <h2>Navigating Dublin</h2>
+        <p class="section-lead">
+          Frequently asked questions about Dublin's public transport system.
+        </p>
+
+        <!-- FAQ ITEM 1 -->
+        <details>
+          <summary>Lorem ipsum?</summary>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </details>
+        <hr />
+        <!-- FAQ ITEM 2 -->
+        <details>
+          <summary>Lorem ipsum?</summary>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </details>
+        <hr />
+        <!-- FAQ ITEM 3 -->
+        <details>
+          <summary>Lorem ipsum?</summary>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </details>
+        <hr />
+        <!-- FAQ ITEM 4 -->
+        <details>
+          <summary>Lorem ipsum?</summary>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </details>
+        <hr />
+        <!-- FAQ ITEM 5 -->
+        <details>
+          <summary>Lorem ipsum?</summary>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </details>
+        <hr />
+      </section>
     </main>
 
     <!-- FOOTER -->
     <footer>
-        <div>
-            <a href="index.html" aria-label="Retellings – Home">
-                <img src="assets/logo_navy.png" alt="Retellings Logo" class="logo">
-                <img src="assets/logo_offwhite.png" alt="Retellings Logo" class="logo">
-            </a>
-            <p>Lorem ipsum dolor sit amet consectetur. Integer at at non et eu est sit gravida suspendisse, vitae arcu. Quis et, placerat at. Vitae sit amet varius. Turpis purus gravida.</p>
-            <p><small>&copy; 2026 Lorem Ipsum</small></p>
-        </div>
+      <div>
+        <a href="index.html" aria-label="Retellings – Home">
+          <img src="assets/logo_navy.png" alt="Retellings Logo" class="logo" />
+          <img
+            src="assets/logo_offwhite.png"
+            alt="Retellings Logo"
+            class="logo"
+          />
+        </a>
+        <p>
+          Lorem ipsum dolor sit amet consectetur. Integer at at non et eu est
+          sit gravida suspendisse, vitae arcu. Quis et, placerat at. Vitae sit
+          amet varius. Turpis purus gravida.
+        </p>
+        <p><small>&copy; 2026 Lorem Ipsum</small></p>
+      </div>
 
+      <div>
         <div>
-            <div>
-                <h2>Credits</h2>
-                <p>Lorem ipsum dolor sit amet consectetur. Turpis purus gravida.</p>
-            </div>
+          <h2>Credits</h2>
+          <p>Lorem ipsum dolor sit amet consectetur. Turpis purus gravida.</p>
         </div>
+      </div>
 
-        <div>
-            <ul aria-label="Social media links">
-                <li><a href="#" aria-label="Facebook"><img src="assets/facebook.png" alt="Facebook"></a></li>
-                <li><a href="#" aria-label="X (Twitter)"><img src="assets/twitter.png" alt="X (Twitter)"></a></li>
-                <li><a href="#" aria-label="Instagram"><img src="assets/instagram.png" alt="Instagram"></a></li>
-                <li><a href="#" aria-label="LinkedIn"><img src="assets/linkedin.png" alt="LinkedIn"></a></li>
-            </ul>
-        </div>
+      <div>
+        <ul aria-label="Social media links">
+          <li>
+            <a href="#" aria-label="Facebook"
+              ><img src="assets/facebook.png" alt="Facebook"
+            /></a>
+          </li>
+          <li>
+            <a href="#" aria-label="X (Twitter)"
+              ><img src="assets/twitter.png" alt="X (Twitter)"
+            /></a>
+          </li>
+          <li>
+            <a href="#" aria-label="Instagram"
+              ><img src="assets/instagram.png" alt="Instagram"
+            /></a>
+          </li>
+          <li>
+            <a href="#" aria-label="LinkedIn"
+              ><img src="assets/linkedin.png" alt="LinkedIn"
+            /></a>
+          </li>
+        </ul>
+      </div>
 
-        <nav aria-label="Footer navigation">
-            <ul>
-                <li><a href="#">Privacy policy</a></li>
-                <li><a href="#">Terms of service</a></li>
-                <li><a href="#">Language</a></li>
-            </ul>
-        </nav>
+      <nav aria-label="Footer navigation">
+        <ul>
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Terms of service</a></li>
+          <li><a href="#">Language</a></li>
+        </ul>
+      </nav>
     </footer>
   </body>
 </html>

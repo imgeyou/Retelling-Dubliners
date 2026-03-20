@@ -14,34 +14,34 @@ section[aria-label="Following the Dubliners locations"] h1 {
 }
 
 /* main - section 1 - filter */
-div[aria-label="Location category filter"] .filterable-cards {
-  list-style: none;
+.filter-buttons {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: var(--sp-xl);
-  border-bottom: solid var(--light-text-color) 2px;
+  gap: var(--sp-xs);
+  /* border-bottom: solid var(--light-text-color) 1px; */
   margin-bottom: var(--sp-xl);
   overflow-x: auto;
   scrollbar-width: none;
   white-space: nowrap;
-  background: linear-gradient(to left, #00000007 0%, transparent 15%);
+  /* background: linear-gradient(to left, #00000007 0%, transparent 15%); */
 }
 
-div[aria-label="Location category filter"] article {
-  padding: 0.5rem;
-}
-
-.filter-buttons {
+.filter-buttons button {
+  text-transform: uppercase;
   font-size: var(--fs-nav);
   background: none;
   border: none;
-  padding-right: 1.5rem;
-  margin-bottom: 1.75rem;
+  padding: 0.3rem 1.2rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.8rem;
+  transition:
+    background 0.2s,
+    color 0.2s;
 }
 
-div[aria-label="Location category filter"] article:first-of-type button {
-  margin-left: 0.9rem;
+.filter-buttons:first-of-type button {
+  margin-left: 0.2rem;
 }
 
 /* main - section 1 - location cards */
@@ -53,14 +53,35 @@ div[aria-label="Location category filter"] article:first-of-type button {
   gap: var(--sp-lg);
   overflow: visible;
 }
-
+@media (max-width: 1280px) {
+  .filterable-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .filterable-cards article div {
+    height: 18rem;
+  }
+}
+@media (max-width: 768px) {
+  .filterable-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .filterable-cards article div {
+    height: 13rem;
+  }
+}
+@media (max-width: 480px) {
+  .filterable-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .filterable-cards article div {
+    height: 18rem;
+  }
+}
 /* individual card */
 .filterable-cards article {
   width: 100%;
   height: fit-content;
-  /* border: solid var(--faded-navy) 1.5px; */
-  border-radius: 1rem;
-  box-shadow: 0.5px 0.5px 5px #5a687f5f;
+  /* border-radius: 0.5rem; */
   position: relative;
   isolation: isolate;
   transition:
@@ -69,26 +90,19 @@ div[aria-label="Location category filter"] article:first-of-type button {
 }
 
 .filterable-cards article::after {
-  content: '';
+  content: "";
   position: absolute;
-  border-radius: 1rem;
+  /* border-radius: 0.5rem; */
   inset: 0;
-  background-image: url(../../pages/assets/paperTexture.jpg);
   background-size: cover;
-  mix-blend-mode: multiply;
   pointer-events: none;
   z-index: 1;
   opacity: 1;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.5s ease;
 }
 
 .filterable-cards article:hover {
   transform: translateY(-6px);
-  box-shadow: 0px 8px 16px #5a687f3f;
-}
-
-.filterable-cards article:hover::after {
-  opacity: 0;
 }
 
 .filterable-cards img {
@@ -96,30 +110,38 @@ div[aria-label="Location category filter"] article:first-of-type button {
   aspect-ratio: 16/9;
   object-fit: cover;
   display: block;
-  border-radius: 1rem 1rem 0 0;
+  /* border-radius: 0.5rem 0.5rem 0 0; */
 }
 
 .filterable-cards article div {
   width: 100%;
-  height: 23rem;
+  height: 26rem;
   padding: var(--sp-md) var(--sp-lg);
   display: flex;
   flex-direction: column;
-  gap: var(--sp-md);
   position: relative;
 }
 
 .filterable-cards article div h2 {
   font-size: var(--fs-h5);
   font-weight: var(--fw-bold);
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
 }
 
-.filterable-cards article div p{
+.filterable-cards article div p {
   font-size: var(--fs-body);
 }
 
-.filterable-cards article div p:first-of-type{
-  font-size: var(--fs-h6);
+.filterable-cards article div p:first-of-type {
+  font-size: var(--fs-small);
+  color: #868682;
+}
+.filterable-cards article div p:nth-of-type(2) {
+  font-size: var(--fs-small);
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
 }
 
 .location-btn {
@@ -135,7 +157,7 @@ div[aria-label="Location category filter"] article:first-of-type button {
   border: none;
   margin-top: auto;
   align-self: flex-start;
-  width:100%;
+  width: 100%;
 }
 
 .load-more {
