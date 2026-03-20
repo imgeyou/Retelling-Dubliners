@@ -1,234 +1,279 @@
-@import './variable.css';
+@import "./variable.css";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--font-primary);
-    line-height: var(--lh-body);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+  line-height: var(--lh-body);
 }
 
-/* light mode color styles */
+/* styling for color */
 
+/* 1. light mode color styles */
 body {
-    background-color: var(--light-base-color);
+  background-color: var(--light-base-color);
+  color: var(--light-text-color);
+
+  /* navigation bar styling */
+  header nav ul a {
     color: var(--light-text-color);
+  }
 
-    header nav ul a {
-        color: var(--light-text-color);
-    }
+  header nav ul a:hover {
+    color: var(--accent-red);
+  }
 
-    header nav ul a:hover {
-        color: var(--accent-red);
-    }
+  /* button styling */
+  .btn-s1 {
+    background-color: var(--pure-black);
+    color: var(--pure-white);
+  }
 
-    .btn-s1 {
-        background-color: var(--pure-black);
-        color: var(--pure-white);
-    }
+  .btn-s1:hover {
+    background-color: var(--accent-red);
+  }
 
-    .btn-s1:hover {
-        background-color: var(--accent-red);
-    }
+  .btn-s2 {
+    background-color: var(--pure-black);
+    color: var(--pure-white);
+  }
 
-    .btn-s2 {
-        background-color: var(--pure-black);
-        color: var(--pure-white);
-    }
+  .btn-s2:hover {
+    background-color: var(--accent-red);
+  }
 
-    .btn-s2:hover {
-        background-color: var(--accent-red);
-    }
+  .btn-s3 {
+    background-color: var(--accent-navy);
+    color: var(--light-base-color);
+  }
 
-    .btn-s3 {
-        background-color: var(--accent-navy);
-        color: var(--light-base-color);
-    }
+  .btn-s3:hover {
+    background-color: var(--accent-red);
+  }
 
-    .btn-s3:hover {
-        background-color: var(--accent-red);
-    }
+  /* used in: location location btn */
+  .location-btn {
+    background-color: var(--accent-navy);
+    color: var(--light-base-color);
+    position: relative;
+    overflow: hidden;
+  }
 
-    div[aria-label="Location category filter"] button {
-        color: var(--light-text-color);
-    }
+  .location-btn span {
+    position: relative;
+    z-index: 1;
+  }
 
-    div[aria-label="Location category filter"] button:hover {
-        color: var(--accent-red);
-    }
+  .location-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--accent-red);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
 
-    a {
-        color: var(--accent-green);
-    }
+  .location-btn:hover::before {
+    transform: translateX(0);
+  }
+  
+  /* used in: location loadmore btn */
+  .loadmore{
+    background-color: var(--accent-navy);
+    color: var(--light-base-color);
+  }
+  .loadmore:hover {
+    background-color: var(--accent-red);
+  }
+  /* div[aria-label="Location category filter"] button {
+    color: var(--light-text-color);
+  }
 
-    a:hover {
-        color: var(--accent-red);
-    }
+  div[aria-label="Location category filter"] button:hover {
+    color: var(--accent-red);
+  } */
 
-    .slider-line {
-        background-color: var(--light-text-color);
-    }
+  /* a {
+    color: var(--accent-green);
+  }
+  a:hover {
+    color: var(--accent-red);
+  } */
 
-    .ph-arrows-out-line-horizontal {
-        color: var(--light-base-color);
-    }
 
-    .slider-btn {
-        background-color: var(--light-text-color);
-        box-shadow: 1px 1px 1px var(--light-text-color);
-    }
+/* used in walking-tour.html: past-present image slider */
+  .slider-line {
+    background-color: var(--light-text-color);
+  }
 
-    div[aria-label="Location category filter"] button:hover {
-        text-decoration: solid 2px var(--accent-navy);
-    }
+  .ph-arrows-out-line-horizontal {
+    color: var(--light-base-color);
+  }
 
-    div[aria-label="Location category filter"] button .active {
-        text-decoration: solid 2px var(--accent-navy);
-    }
+  .slider-btn {
+    background-color: var(--light-text-color);
+    box-shadow: 1px 1px 1px var(--light-text-color);
+  }
 
-    div[aria-label="Location category filter"] article:first-of-type button {
-        border-right: solid var(--light-text-color) 2px;
-    }
+/* used in locations.html: filter buttons */
+  .filter-buttons button {
+    text-decoration: solid 2px var(--accent-navy);
+  }
+  .filter-buttons button:hover {
+    text-decoration: solid 2px var(--accent-navy);
+  }
 
-    footer {
-        border-top: solid var(--light-text-color) 2px;
-    }
+  .filter-buttons.active {
+    text-decoration: solid 2px var(--accent-navy);
+  }
 
-    .footer-credits {
-        color: var(--footer-faded-dark);
-    }
+  div[aria-label="Location category filter"] article:first-of-type button {
+    border-right: solid var(--light-text-color) 2px;
+  }
 
+  footer {
+    border-top: solid var(--light-text-color) 2px;
+  }
+
+  .footer-credits {
+    color: var(--footer-faded-dark);
+  }
 }
 
 /* dark mode color styles */
 body.dark {
-    background-color: var(--dark-base-color);
+  background-color: var(--dark-base-color);
+  color: var(--dark-text-color);
+
+  header nav ul a {
     color: var(--dark-text-color);
+  }
 
+  header nav ul a:hover {
+    color: var(--accent-gold);
+  }
+  .btn-s1 {
+    background-color: var(--pure-white);
+    color: var(--pure-black);
+  }
 
-    header nav ul a {
-        color: var(--dark-text-color);
-    }
+  .btn-s1:hover {
+    background-color: var(--accent-gold);
+  }
 
-    header nav ul a:hover {
-        color: var(--accent-gold);
-    }
+  .btn-s2 {
+    background-color: var(--pure-white);
+    color: var(--pure-black);
+  }
 
-    .btn-s1 {
-        background-color: var(--pure-white);
-        color: var(--pure-black);
-    }
+  .btn-s2:hover {
+    background-color: var(--accent-gold);
+  }
 
-    .btn-s1:hover {
-        background-color: var(--accent-gold);
-    }
+  .btn-s3 {
+    background-color: var(--accent-gold);
+    color: var(--dark-base-color);
+  }
 
-    .btn-s2 {
-        background-color: var(--pure-white);
-        color: var(--pure-black);
-    }
+  .btn-s3:hover {
+    background-color: var(--accent-gold);
+  }
 
-    .btn-s2:hover {
-        background-color: var(--accent-gold);
-    }
+  a {
+    color: var(--accent-gold);
+  }
+  a:hover {
+    color: var(--dark-text-color);
+  }
 
-    .btn-s3 {
-        background-color: var(--accent-gold);
-        color: var(--dark-base-color);
-    }
+  .slider-line {
+    background-color: var(--dark-text-color);
+  }
 
-    .btn-s3:hover {
-        background-color: var(--accent-gold);
-    }
+  .ph-arrows-out-line-horizontal {
+    color: var(--dark-base-color);
+  }
 
-    a {
-        color: var(--accent-gold);
-    }
+  .slider-btn {
+    background-color: var(--dark-text-color);
+    box-shadow: 1px 1px 1px var(--dark-text-color);
+  }
 
-    a:hover {
-        color: var(--dark-text-color);
-    }
+  footer {
+    border-top: solid var(--dark-text-color) 2px;
+  }
 
-    .slider-line {
-        background-color: var(--dark-text-color);
-    }
-
-    .ph-arrows-out-line-horizontal {
-        color: var(--dark-base-color);
-    }
-
-    .slider-btn {
-        background-color: var(--dark-text-color);
-        box-shadow: 1px 1px 1px var(--dark-text-color);
-    }
-
-    footer {
-        border-top: solid var(--dark-text-color) 2px;
-    }
-
-    .footer-credits {
-        color: var(--dark-text-color);
-    }
+  .footer-credits {
+    color: var(--dark-text-color);
+  }
 }
 
 
+/* styling for layout */
 body {
-    margin: 0;
-    padding: 2.5rem 4.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: var(--sp-xl);
+  margin: 0;
+  padding: 2.5rem 4.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-xl);
 }
 
 /* header */
 header {
-    padding: 1.4rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  padding: 1.4rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* header - navigation bar */
 header nav {
-    align-items: center;
+  align-items: center;
 }
 
 /* header - navigation bar - links */
 header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-    font-size: var(--fs-nav);
-    font-weight: var(--fw-semibold);
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  font-size: var(--fs-nav);
+  font-weight: var(--fw-semibold);
 }
 
 header nav ul a {
-    text-decoration: none;
-    text-align: right;
+  text-decoration: none;
+  text-align: right;
 }
 
 /* logo styles */
-#logo {
-    width: 10%;
-    height: auto;
+.logo-container{
+  display: block;
+  position: relative;
 }
 
-#logo img:last-child {
+.logo {
+  height: 3rem;
+  width: auto;
+  display: block;
+}
+
+.logo:last-child {
+  display: none;
+  overflow: hidden;
+}
+
+body.dark .logo:first-child {
     display: none;
     overflow: hidden;
 }
 
-body.dark #logo img:first-child {
-    display: none;
-    overflow: hidden;
-}
-
-body.dark #logo img:last-child {
+body.dark .logo:last-child {
     display: block;
 }
 
-#logo a {
+.logo a {
     text-decoration: none;
 }
 
@@ -262,94 +307,94 @@ body.dark #logo img:last-child {
     left: calc(100% - 22px);
 }
 
-
 /* btn styles */
 .btn {
-    display: inline-block;
-    margin: 1.5rem 0;
-    padding: 0.75rem 3.5rem;
-    text-align: center;
-    text-decoration: none;
-    font-size: var(--fs-button);
-    font-weight: var(--fw-regular);
-    cursor: pointer;
-    border: none;
+  display: inline-block;
+  margin: 1.5rem 0;
+  padding: 0.75rem 3.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: var(--fs-button);
+  font-weight: var(--fw-regular);
+  cursor: pointer;
+  border: none;
 }
 
 /* Footer */
 footer {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 9rem;
-    align-items: stretch;
-    padding: 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 9rem;
+  align-items: stretch;
+  padding: 2rem 0;
 }
 
 /* Footer - left column */
 .footer-col-left {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 footer small {
-    font-size: var(--fs-small);
+  font-size: var(--fs-small);
 }
 
 /* Footer - navigation bar - links */
 nav[aria-label="Footer navigation"] ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
 
-    font-size: var(--fs-body);
-    font-weight: var(--fw-regular);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
 }
 
 nav[aria-label="Footer navigation"] ul a {
-    text-decoration: none;
-    /* color: var(--light-text-color); */
-    text-align: right;
+  text-decoration: none;
+  /* color: var(--light-text-color); */
+  text-align: right;
 }
 
 /* Footer - right column */
 .footer-col-right {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-right: 2rem;
 }
 
 .footer-tagline {
-    font-size: var(--fs-h6);
-    font-weight: var(--fw-bold);
+  font-size: var(--fs-h6);
+  font-weight: var(--fw-bold);
 }
 
 .footer-credits {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
 }
 
 .footer-credits h2 {
-    font-size: var(--fs-tag);
-    font-weight: var(--fw-regular);
-    margin-bottom: 1rem;
+  font-size: var(--fs-tag);
+  font-weight: var(--fw-regular);
+  margin-bottom: 1rem;
 }
 
 .footer-credits p {
-    font-size: var(--fs-body);
+  font-size: var(--fs-body);
 }
 
 ul[aria-label="Social media links"] {
-    list-style: none;
-    display: flex;
-    gap: 0.5rem;
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
 }
 
 ul[aria-label="Social media links"] img {
-    width: 1.5rem;
-    height: auto;
+  width: 1.5rem;
+  height: auto;
 }
 
 /* back to top btn */
