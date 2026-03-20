@@ -8,9 +8,9 @@
   line-height: var(--lh-body);
 }
 
-/* styling for color */
+/* =============== styling for color ================ */
 
-/* 1. light mode color styles */
+/* -------- 1. light mode color styles --------- */
 body {
   background-color: var(--light-base-color);
   color: var(--light-text-color);
@@ -19,7 +19,6 @@ body {
   header nav ul a {
     color: var(--light-text-color);
   }
-
   header nav ul a:hover {
     color: var(--accent-red);
   }
@@ -51,6 +50,7 @@ body {
   .btn-s3:hover {
     background-color: var(--accent-red);
   }
+
   /* used in location.html: filter buttons */
   .filter-buttons button {
     border: 1px solid var(--light-text-color);
@@ -63,16 +63,19 @@ body {
     color: var(--light-base-color);
     border-color: transparent;
   }
+
   .filter-buttons button:first-of-type.active,
   .filter-buttons button:first-of-type:hover {
     background: var(--accent-red);
   }
+
   /* used in: location.html: location card */
   .filterable-cards article {
     background-color: var(--light-base-color);
     /* border: solid var(--light-text-color) 1.5px; */
     /* box-shadow: 0.5px 0.5px 5px #5a687fcc; */
   }
+
   .filterable-cards article::after {
     background-image: url(../../pages/assets/paperTexture.jpg);
     mix-blend-mode: multiply;
@@ -92,7 +95,8 @@ body {
   .filterable-cards article div:hover p:nth-of-type(2) {
     color: var(--accent-red);
   }
-  /* used in: location location btn */
+
+  /* used in: location.html: location btn */
   .location-btn {
     background-color: var(--light-text-color);
     color: var(--light-base-color);
@@ -119,7 +123,7 @@ body {
     transform: translateX(0);
   }
 
-  /* used in: location loadmore btn */
+  /* used in: location.html: loadmore btn */
   .loadmore {
     background-color: var(--accent-navy);
     color: var(--light-base-color);
@@ -171,7 +175,7 @@ body {
   }
 }
 
-/* ================== dark mode color styles ================== */
+/* -------- 2. Dark mode color styles -------- */
 body.dark {
   background-color: var(--dark-base-color);
   color: var(--dark-text-color);
@@ -305,10 +309,10 @@ body.dark {
   }
 }
 
-/* styling for layout */
+/* ================== styling for layout ================= */
 body {
   margin: 0;
-  padding: 2.5rem 4.5rem;
+  padding: 2.5rem 5.5rem;
   display: flex;
   flex-direction: column;
   gap: var(--sp-xl);
