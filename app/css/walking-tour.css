@@ -1,201 +1,226 @@
-@import './variable.css';
+@import "./variable.css";
 
 /* main - section 1: hero */
 section[aria-label="Walking tour hero"] {
-    position:relative;
+  position: relative;
 }
 
-section[aria-label="Walking tour hero"] img{
-    display: block;
-    width: 100%;
-    height: auto;
-    margin-bottom: var(--sp-xl);
+section[aria-label="Walking tour hero"] img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: var(--sp-xl);
 }
-section[aria-label="Walking tour hero"] div{
-    position: absolute;
-    top: 18%;
-    left: 8%;
+section[aria-label="Walking tour hero"] div {
+  position: absolute;
+  top: 18%;
+  left: 8%;
 }
-section[aria-label="Walking tour hero"] h1{
-    font-size: var(--fs-h2);
-}
-
-section[aria-label="Walking tour hero"] .tagline{
-    font-size: var(--fs-tag);
-    font-weight: var(--fw-regular);
-    margin: var(--sp-sm) 0;
-}
-section[aria-label="Walking tour hero"] .tagline span{
-    display: inline-block;
-    padding: 0.75rem 3.5rem;
-    margin-left: var(--sp-xl);
-    background-color: var(--light-text-color);
-    color: var(--light-base-color);
-    font-size: var(--fs-tag);
+section[aria-label="Walking tour hero"] h1 {
+  font-size: var(--fs-h2);
 }
 
-section[aria-label="Walking tour hero"] p{
-    font-size: var(--fs-body);
-    margin-top: var(--sp-md);
-    width:60%;
-    margin-top: var(--sp-xl);
+section[aria-label="Walking tour hero"] .tagline {
+  font-size: var(--fs-tag);
+  font-weight: var(--fw-regular);
+  margin: var(--sp-sm) 0;
 }
+section[aria-label="Walking tour hero"] .tagline span {
+  display: inline-block;
+  padding: 0.75rem 3.5rem;
+  margin-left: var(--sp-xl);
+  background-color: var(--light-text-color);
+  color: var(--light-base-color);
+  font-size: var(--fs-tag);
+}
+
+section[aria-label="Walking tour hero"] p {
+  font-size: var(--fs-body);
+  margin-top: var(--sp-md);
+  width: 60%;
+  margin-top: var(--sp-xl);
+}
+
+
 
 /* main - section 2: Interactive map */
 section[aria-label="Interactive map"]{
-    margin: var(--sp-xl) 0;
+    position: relative;
+    margin-top: var(--sp-xl);
+    margin-bottom: var(--sp-xl);
 }
-section[aria-label="Interactive map"] img{
-    display:block;
-    width: 100%;
+iframe{
+    display: block;
+    width:100%;
+    height: 40rem;
+}
+.map-overlay {
+    display: block;
+    position:absolute;
+    bottom:0;
+    right:0;
+    padding: 3rem 4rem 5rem 4rem;
+    width: 50%;
 }
 
+.map-overlay h2 {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--sp-lg);
+}
+.map-overlay p{
+  text-align: left;
+  margin-right: 1rem;
+}
+
+
 /* main - section 3: Navigating Dublin FAQ */
-section[aria-label="Navigating Dublin FAQ"]{
-    padding: var(--sp-lg) 10rem;
+section[aria-label="Navigating Dublin FAQ"] {
+  padding: var(--sp-lg) 10rem;
 }
-section[aria-label="Navigating Dublin FAQ"] h2{
-    font-size: var(--fs-h2);
-    font-weight: var(--fw-bold);
-    text-align: center;
-    margin-bottom: var(--sp-lg);
+section[aria-label="Navigating Dublin FAQ"] h2 {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  text-align: center;
+  margin-bottom: var(--sp-lg);
 }
-.section-lead{
+.section-lead {
     font-size: var(--fs-h6);
     text-align: center;
     margin-bottom: var(--sp-xl);
-}  
-section[aria-label="Navigating Dublin FAQ"] summary{
-    font-size: var(--fs-h6);
-    font-weight: var(--fw-bold);
-    margin-top: var(--sp-sm);
+    padding: 0 5rem;
 }
-section[aria-label="Navigating Dublin FAQ"] p{
-    font-size: var(--fs-body);
-    margin-top: var(--sp-sm);
+section[aria-label="Navigating Dublin FAQ"] summary {
+  font-size: var(--fs-h6);
+  font-weight: var(--fw-bold);
+  margin-top: var(--sp-sm);
 }
-section[aria-label="Navigating Dublin FAQ"] hr{
-    border-top: solid var(--light-text-color) 1.5px;
-    margin-top: var(--sp-sm);
+section[aria-label="Navigating Dublin FAQ"] p {
+  font-size: var(--fs-body);
+  margin-top: var(--sp-sm);
+}
+section[aria-label="Navigating Dublin FAQ"] hr {
+  border-top: solid var(--light-text-color) 1.5px;
+  margin-top: var(--sp-sm);
 }
 
 /* main - section 4: TOUR STOPS */
-section[aria-label="Tour stops"] h2{
-    font-size: var(--fs-h3);
-    margin-top: var(--sp-xl);
-    margin-bottom: var(--sp-xl);
+section[aria-label="Tour stops"] h2 {
+  font-size: var(--fs-h3);
+  margin-top: var(--sp-xl);
+  margin-bottom: var(--sp-xl);
 }
 
 /* main - section 4: TOUR STOPS - card */
-section[aria-label="Tour stops"] ol{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: var(--sp-2xl);
+section[aria-label="Tour stops"] ol {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2xl);
 }
 
-section[aria-label="Tour stops"] article{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--sp-xl);
+section[aria-label="Tour stops"] article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-xl);
 }
 /* text column */
-.text-column h3{
-    font-size: var(--fs-h4);
-    font-weight: var(--fw-bold);
-    margin-bottom: var(--sp-xl);
+.text-column h3 {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--sp-xl);
 }
-.text-column h4{
-    font-size: var(--fs-h6);
-    font-weight: var(--fw-bold);
+.text-column h4 {
+  font-size: var(--fs-h6);
+  font-weight: var(--fw-bold);
 }
-.text-column h5{
-    font-size: var(--fs-h5);
-    font-weight: var(--fw-bold);
-    margin-bottom: var(--sp-md);
+.text-column h5 {
+  font-size: var(--fs-h5);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--sp-md);
 }
-.text-column p{
-    padding-right: var(--sp-xl);
-    font-size: var(--fs-body);
-    margin-bottom: var(--sp-xl);
-}
-
-section[aria-label="Tour stops"] hr{
-    border-top: solid var(--light-text-color) 1.5px;
-    margin-top: var(--sp-xl);
+.text-column p {
+  padding-right: var(--sp-xl);
+  font-size: var(--fs-body);
+  margin-bottom: var(--sp-xl);
 }
 
-.side-quest summary{
-    font-size: var(--fs-h6);
-    font-weight: var(--fw-bold);
-    margin-top: var(--sp-sm);
+section[aria-label="Tour stops"] hr {
+  border-top: solid var(--light-text-color) 1.5px;
+  margin-top: var(--sp-xl);
 }
-.side-quest p{
-    font-size: var(--fs-body);
-    margin-top: var(--sp-sm);
+
+.side-quest summary {
+  font-size: var(--fs-h6);
+  font-weight: var(--fw-bold);
+  margin-top: var(--sp-sm);
+}
+.side-quest p {
+  font-size: var(--fs-body);
+  margin-top: var(--sp-sm);
 }
 
 /* past & present image column */
-.img-column{
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    aspect-ratio: 1/1;
+.img-column {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 1/1;
 }
-.spot-image{
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    display: block;
+.spot-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
-.image-past{
-    z-index: 8;
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    clip-path: inset(0 calc(100% - var(--position, 50%)) 0 0);
+.image-past {
+  z-index: 8;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: inset(0 calc(100% - var(--position, 50%)) 0 0);
 }
 
 /* slider */
-.slider{
-    z-index: 9;
-    position:absolute;
-    inset: 0;
-    cursor: pointer;
-    opacity: 0;
-    /* for Firefox */
-    width: 100%;
-    height: 100%;
+.slider {
+  z-index: 9;
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  opacity: 0;
+  /* for Firefox */
+  width: 100%;
+  height: 100%;
 }
-.slider-line{
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    width: 0.3rem;
-    z-index: 10;
-    left: var(--position, 50%);
-    transform: translateX(-50%);
-    pointer-events: none;
+.slider-line {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 0.3rem;
+  z-index: 10;
+  left: var(--position, 50%);
+  transform: translateX(-50%);
+  pointer-events: none;
 }
 /* slider icon */
-.ph-arrows-out-line-horizontal{
-    font-size: var(--slider-size); 
-    display: block;
+.ph-arrows-out-line-horizontal {
+  font-size: var(--slider-size);
+  display: block;
 }
-.slider-btn { 
-    position: absolute;
-    top: 50%;
-    left: var(--position, 50%);
-    z-index: 11; 
-    padding: 0.5rem;
-    border-radius: 2rem;  
-    transform: translate(-50%, -50%);
-    pointer-events: none; 
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  left: var(--position, 50%);
+  z-index: 11;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 /* make slider keyboard-select visible */
-.slider:focus-visible ~ .slider-btn{
-    outline: 0.3rem solid black;
-    outline-offset: 0.2rem;
+.slider:focus-visible ~ .slider-btn {
+  outline: 0.3rem solid black;
+  outline-offset: 0.2rem;
 }
