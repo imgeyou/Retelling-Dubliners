@@ -216,16 +216,21 @@ header nav ul a {
 
 #logo img:last-child {
     display: none;
+    overflow: hidden;
 }
 
 body.dark #logo img:first-child {
     display: none;
+    overflow: hidden;
 }
 
 body.dark #logo img:last-child {
     display: block;
 }
 
+#logo a {
+    text-decoration: none;
+}
 
 /* light mode + dark mode toggle */
 .toggle {
