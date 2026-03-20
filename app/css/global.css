@@ -13,14 +13,15 @@
 body {
     background-color: var(--light-base-color);
     color: var(--light-text-color);
-    
-    header nav ul a{
+
+    header nav ul a {
         color: var(--light-text-color);
     }
 
     header nav ul a:hover {
         color: var(--accent-red);
     }
+
     .btn-s1 {
         background-color: var(--pure-black);
         color: var(--pure-white);
@@ -48,29 +49,31 @@ body {
         background-color: var(--accent-red);
     }
 
-    div[aria-label="Location category filter"] button{
+    div[aria-label="Location category filter"] button {
         color: var(--light-text-color);
     }
-    div[aria-label="Location category filter"] button:hover{
+
+    div[aria-label="Location category filter"] button:hover {
         color: var(--accent-red);
     }
 
-    a{
+    a {
         color: var(--accent-green);
     }
-    a:hover{
+
+    a:hover {
         color: var(--accent-red);
     }
 
-    .slider-line{
+    .slider-line {
         background-color: var(--light-text-color);
     }
 
-    .ph-arrows-out-line-horizontal{
+    .ph-arrows-out-line-horizontal {
         color: var(--light-base-color);
     }
 
-    .slider-btn{
+    .slider-btn {
         background-color: var(--light-text-color);
         box-shadow: 1px 1px 1px var(--light-text-color);
     }
@@ -84,14 +87,14 @@ body {
     }
 
     div[aria-label="Location category filter"] article:first-of-type button {
-     border-right: solid var(--light-text-color) 2px;
+        border-right: solid var(--light-text-color) 2px;
     }
 
-    footer{
+    footer {
         border-top: solid var(--light-text-color) 2px;
     }
 
-    .footer-credits{
+    .footer-credits {
         color: var(--footer-faded-dark);
     }
 
@@ -103,13 +106,14 @@ body.dark {
     color: var(--dark-text-color);
 
 
-    header nav ul a{
+    header nav ul a {
         color: var(--dark-text-color);
     }
 
     header nav ul a:hover {
         color: var(--accent-gold);
     }
+
     .btn-s1 {
         background-color: var(--pure-white);
         color: var(--pure-black);
@@ -137,54 +141,51 @@ body.dark {
         background-color: var(--accent-gold);
     }
 
-    a{
+    a {
         color: var(--accent-gold);
     }
-    a:hover{
+
+    a:hover {
         color: var(--dark-text-color);
     }
 
-    .slider-line{
+    .slider-line {
         background-color: var(--dark-text-color);
     }
 
-    .ph-arrows-out-line-horizontal{
+    .ph-arrows-out-line-horizontal {
         color: var(--dark-base-color);
     }
 
-    .slider-btn{
+    .slider-btn {
         background-color: var(--dark-text-color);
         box-shadow: 1px 1px 1px var(--dark-text-color);
     }
 
-    footer{
+    footer {
         border-top: solid var(--dark-text-color) 2px;
     }
 
-    .footer-credits{
+    .footer-credits {
         color: var(--dark-text-color);
     }
 }
 
 
-body{
+body {
     margin: 0;
     padding: 2.5rem 4.5rem;
     display: flex;
     flex-direction: column;
     gap: var(--sp-xl);
 }
+
 /* header */
 header {
     padding: 1.4rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.logo {
-    width: auto;
-    height: 1.5rem;
 }
 
 /* header - navigation bar */
@@ -207,11 +208,34 @@ header nav ul a {
     text-align: right;
 }
 
+/* logo styles */
+#logo {
+    width: 10%;
+    height: auto;
+}
+
+#logo img:last-child {
+    display: none;
+    overflow: hidden;
+}
+
+body.dark #logo img:first-child {
+    display: none;
+    overflow: hidden;
+}
+
+body.dark #logo img:last-child {
+    display: block;
+}
+
+#logo a {
+    text-decoration: none;
+}
 
 /* light mode + dark mode toggle */
 .toggle {
-    height: 50px;
-    width: 150px;
+    height: 25px;
+    width: 50px;
     background-color: var(--light-base-color);
     border: 2px solid var(--accent-navy);
     position: relative;
@@ -222,12 +246,12 @@ header nav ul a {
 .toggle::before {
     content: "";
     position: absolute;
-    height: 40px;
-    width: 40px;
+    height: 20px;
+    width: 20px;
     background-color: var(--accent-navy);
     border-radius: 50%;
     top: 50%;
-    left: 5px;
+    left: 2px;
     transform: translateY(-50%);
     transition: all 0.3s ease-in-out;
 }
@@ -235,7 +259,7 @@ header nav ul a {
 .toggle.active::before {
     background-color: var(--dark-base-color);
     color: var(--accent-cream);
-    left: calc(100% - 45px);
+    left: calc(100% - 22px);
 }
 
 
@@ -329,7 +353,7 @@ ul[aria-label="Social media links"] img {
 }
 
 /* back to top btn */
-.back-to-top{
+.back-to-top {
     width: 2.5rem;
     height: 2.5rem;
     position: fixed;
@@ -341,15 +365,18 @@ ul[aria-label="Social media links"] img {
     visibility: hidden;
     z-index: 1000;
 }
+
 .back-to-top:hover {
-  cursor: pointer;
-  opacity: 1;
+    cursor: pointer;
+    opacity: 1;
 }
+
 .back-to-top:active {
-  box-shadow: inset 0.2rem 0.2rem 1rem 0 rgba(0, 0, 0, 0.346);
+    box-shadow: inset 0.2rem 0.2rem 1rem 0 rgba(0, 0, 0, 0.346);
 }
+
 .back-to-top.show {
-  opacity: 0.5;
-  visibility: visible;
-  pointer-events: auto;
+    opacity: 0.5;
+    visibility: visible;
+    pointer-events: auto;
 }
