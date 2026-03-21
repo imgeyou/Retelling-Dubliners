@@ -10,27 +10,71 @@ main {
 }
 
 /* main - hero section */
-section[aria-label="Hero"] figure{
+
+section[aria-label="Hero"] figure {
     position: relative;
+    overflow: hidden; 
 }
-section[aria-label="Hero"] img{
-    display:block;
+
+section[aria-label="Hero"] img {
+    display: block;
     width: 100%;
     height: auto;
+    transition: filter 0.5s ease; 
 }
-section[aria-label="Hero"] figcaption{
+
+section[aria-label="Hero"] figcaption {
     position: absolute;
     top: 18%;
     left: 8%;
+    z-index: 2; 
 }
-section[aria-label="Hero"] figcaption p{
+
+section[aria-label="Hero"] figcaption p {
     font-size: var(--fs-h6);
     font-weight: var(--fw-bold);
 }
-section[aria-label="Hero"] figcaption h1{
+
+section[aria-label="Hero"] figcaption h1 {
     font-size: var(--fs-h1);
     margin-top: var(--sp-xl);
 }
+
+.content-wrapper {
+    transition: transform 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.hero-description {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s;
+    max-width: 500px;
+    margin-top: var(--sp-lg); 
+}
+
+.hero-description p {
+    font-size: var(--fs-h6); 
+    font-weight: var(--fw-normal);
+    line-height: 1.6;
+}
+
+/* main - hover action */
+
+section[aria-label="Hero"] figure:hover img {
+    filter: brightness(0.3); 
+}
+
+section[aria-label="Hero"] figure:hover .content-wrapper {
+    transform: translateY(-40px);
+}
+
+section[aria-label="Hero"] figure:hover .hero-description {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
 
 /* main - section: who was james joyce */
 section[aria-label="Who was James Joyce?"] figure{
@@ -77,6 +121,27 @@ section[aria-label="About James Joyce"] p {
     line-height: var(--lh-body);
 }
 
+.joyce-link { 
+    color: inherit; 
+    text-decoration: none; /* Remove default underline */
+    display: block; /* Make the whole area clickable */
+}
+
+.joyce-link:hover figure img {
+    filter: brightness(0.3);
+}
+
+ .joyce-link:visited, 
+.joyce-link:visited h2, 
+.joyce-link:visited p { 
+    color: inherit !important; 
+}
+
+.joyce-link:hover figure img {
+    filter: brightness(0.7);
+    transition: filter 0.4s ease; /* Smooth transition */
+}
+
 /* main - section: Joyce's Dublin photo gallery */
 section[aria-label="Joyce's Dublin photo gallery"] h2 {
     font-size: var(--fs-h3);
@@ -120,4 +185,53 @@ section[aria-label="Joyce's Dublin photo gallery"] figure:nth-child(9) {
   
   section[aria-label="Joyce's Dublin photo gallery"] figure:nth-child(10) {
     grid-column: span 2;
+}
+
+.gallery-description {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s;
+    max-width: 500px;
+    margin-top: var(--sp-lg); 
+}
+
+
+/* main - gallery hover action */
+
+section[aria-label="Joyce's Dublin photo gallery"] figure::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+section[aria-label="Joyce's Dublin photo gallery"] figure:hover::after {
+    opacity: 1;
+}
+
+section[aria-label="Joyce's Dublin photo gallery"] figure:hover p {
+    transform: translateY(-40px);
+    color: var(--light-base-color);
+}
+
+section[aria-label="Joyce's Dublin photo gallery"] figure:hover .gallery-description {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+figure {
+    position: relative;
+}
+
+section[aria-label="Joyce's Dublin photo gallery"] figcaption {
+    position: absolute;
+    bottom: 5%;   
+    left: 2%;
+    right: 2%;
+    z-index: 2; 
 }

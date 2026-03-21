@@ -35,33 +35,43 @@
     <main>
         <!-- SECTION 1 - HERO -->
         <section aria-label="Hero">
-            <figure>
+            <figure class="hero-container">
                 <img src="assets/Hero_home.png" alt="Painting of the Four Courts and the river Liffey, Dublin in 1837">
+                
+                <div class="hero-overlay"></div>
+
                 <figcaption>
-                    <p>Where History and Literature Meet</p>
-                    <h1>Retellings</h1>
+                    <div class="text-wrapper">
+                        <p>Where History and Literature Meet</p>
+                        <h1>Retellings</h1>
+                        <div class="hero-description">
+                            <p>Welcome to Retellings, where the historical heart of James Joyce's works comes alive. We trace the steps of 'Dubliners', map the locations, and retell the stories behind the literature.</p>
+                        </div>
+                    </div>
                 </figcaption>
             </figure>
         </section>
-
+        
         <!-- SECTION 2 - WHO WAS JAMES JOYCE? -->
         <section aria-label="Who was James Joyce?">
-            <figure>
-                <img src="assets/Home_Section_jj.png" alt="Portrait Painting of James Joyce by Jacques-Émile Blanche in 1935">
-                <figcaption>
-                    <h2>Who was<br>James Joyce?</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur. Arcu nam eu nam id donec.</p>
-                </figcaption>
-            </figure>
+            <a href="life-of-joyce.html" class="joyce-link">
+                <figure>
+                    <img src="assets/Home_Section_jj.png" alt="Portrait Painting of James Joyce by Jacques-Émile Blanche in 1935">
+                    <figcaption>
+                        <h2>Who was<br>James Joyce?</h2>
+                        <p>James Augustine Aloysius Joyce (1882-1941) is considered one of Ireland’s most famous writers. Celebrated for his works “Dubliners”, “Ulysses” and more. </p>
+                    </figcaption>
+                </figure>
+            </a>
         </section>
 
         <!-- SECTION 3 - TWO-COLUMN TEXT + LEARN MORE BUTTON -->
         <section aria-label="About James Joyce">
             <div>
-                <p>Lorem ipsum dolor sit amet consectetur. Eget mattis fermentum at ultrices tincidunt viverra ullamcorper sed. Nibh placerat donec dignissim diam nibh. Lobortis sagittis ut dolor nunc dolor nec feugiat ut at. Orci egestas libero ac nunc nullam quis elementum faucibus. Risus convallis venenatis lobortis feugiat lacinia ullamcorper amet. Tempus cras malesuada enim pulvinar amet aenean tellus sit in. Fermentum tellus in accumsan dignissim eget in id. Fermentum tempor donec velit enim massa purus massa nibh. Pellentesque ut lacus risus purus. Velit malesuada turpis sed proin faucibus tempor vel sed platea.</p>
+                <p>Born on February 2nd 1882, James Joyce is considered one of Ireland’s most celebrated writers for his books, Dubliners and Ulysses. The eldest of 10 children, Joyce lived in Brighton Square, Rathgar with his parents, John Stanislaus Joyce and Mary Jane “May” (née Murray). Joyce attended Clongowes Wood College, Belvedere College and University College, formally located on St. Stephen’s Green, before moving to Paris to study medicine. Joyce returned to Ireland in April 1903 to attend to his family after the death of his mother and stayed until 1904. During this time, he met his future wife Nora Barnacle, from county Galway. </p>
             </div>
             <div>
-                <p>Lorem ipsum dolor sit amet consectetur. Eget mattis fermentum at ultrices tincidunt viverra ullamcorper sed. Nibh placerat donec dignissim diam nibh. Lobortis sagittis ut dolor nunc dolor nec feugiat ut at. Orci egestas libero ac nunc nullam quis elementum faucibus. Risus convallis venenatis lobortis feugiat lacinia ullamcorper amet.</p>
+                <p> During this time Joyce also wrote his first short story for the magazine Irish Homestead. In October 1904, Joyce and Nora left Ireland to live in Pola, now known as Pula Croatia, where Joyce became an english teacher. After 1904, Joyce only visited Ireland three other times with his last visit being in 1912. </p>
                 <a href="life-of-joyce.html" class="btn btn-s1">Learn More</a>
             </div>
         </section>
@@ -72,80 +82,80 @@
             <div>
                 <figure>
                     <img src="assets/GalleryImage1.png" alt="Sackville Street & O'Connell Bridge, Dublin in 1899">
-                    <figcaption>
-                        Sackville Street &amp; O'Connell Bridge, Dublin, ca. 1899. Photoglob Zürich, via <a href="https://commons.wikimedia.org/wiki/File:Flickr_-_%E2%80%A6trialsanderrors_-_Sackville_Street_%5E_O%27Connell_Bridge,_Dublin,_Ireland,_ca._1899.jpg" target="_blank">Wikimedia Commons</a>. Licensed under <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY 2.0</a>.
-                      </figcaption>
+                    <figcaption class="gallery-description">
+                        <p>Sackville Street &amp; O'Connell Bridge, Dublin, ca. 1899. Photoglob Zürich, via <a href="https://commons.wikimedia.org/wiki/File:Flickr_-_%E2%80%A6trialsanderrors_-_Sackville_Street_%5E_O%27Connell_Bridge,_Dublin,_Ireland,_ca._1899.jpg" target="_blank">Wikimedia Commons</a>. Licensed under <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY 2.0</a>.</p>
+                    </figcaption>
                 </figure>
                 <figure>
                     <img src="assets/GalleryImage2.jpg" alt="Trinity College in 1909">
-                    <figcaption>
-                        From <em>Ireland Yesterday and Today</em> by Hugh Sutherland (Philadelphia: 
+                    <figcaption class="gallery-description">
+                        <p>From <em>Ireland Yesterday and Today</em> by Hugh Sutherland (Philadelphia: 
                         The North American, 1909). Public domain, via 
-                        <a href="https://commons.wikimedia.org/wiki/File:Ireland_yesterday_and_today_(1909)_(14770574771).jpg" target="_blank">Wikimedia Commons</a>.
+                        <a href="https://commons.wikimedia.org/wiki/File:Ireland_yesterday_and_today_(1909)_(14770574771).jpg" target="_blank">Wikimedia Commons</a>.</p>
                     </figcaption>
                 </figure>
                 <figure>
                     <img src="assets/GalleryImage3.png" alt="Bank of Ireland, Dublin between 1890 and 1900">
-                    <figcaption>
-                        Bank of Ireland, Dublin, ca. 1890–1900. Photoglob Zürich, photochrom print. 
+                    <figcaption class="gallery-description">
+                        <p>Bank of Ireland, Dublin, ca. 1890–1900. Photoglob Zürich, photochrom print. 
                         Public domain, via 
-                        <a href="https://commons.wikimedia.org/wiki/File:Bank_of_Ireland,_Dublin._County_Dublin,_Ireland-LCCN2002717395.jpg" target="_blank">Wikimedia Commons</a>.
+                        <a href="https://commons.wikimedia.org/wiki/File:Bank_of_Ireland,_Dublin._County_Dublin,_Ireland-LCCN2002717395.jpg" target="_blank">Wikimedia Commons</a>.</p>
                     </figcaption>
                 </figure>
                 <figure>
                     <img src="assets/GalleryImage4.png" alt="College Green, Dublin 1800">
-                    <figcaption>
-                        College Green, Dublin, 1800. Thomas Sautelle Roberts, via 
-                        <a href="https://commons.wikimedia.org/wiki/File:College_Green,_Dublin_1800.jpg" target="_blank">Wikimedia Commons</a>. Public domain.
+                    <figcaption class="gallery-description">
+                        <p>College Green, Dublin, 1800. Thomas Sautelle Roberts, via 
+                        <a href="https://commons.wikimedia.org/wiki/File:College_Green,_Dublin_1800.jpg" target="_blank">Wikimedia Commons</a>. Public domain.</p>
                       </figcaption>
                 </figure>
                 <figure>
                     <img src="assets/StStephensGreenLake.png" alt="Swans on the lake at St Stephen's Green">
-                    <figcaption>
-                        St Stephen's Green, Dublin (2026). Photograph by Yayi Liu.
+                    <figcaption class="gallery-description">
+                        <p>St Stephen's Green, Dublin (2026). Photograph by Yayi Liu.</p>
                     </figcaption>
                 </figure>
                 <figure>
                     <img src="assets/StStephensGreenStatues.png" alt="Statues in St Stephen's Green park">
-                    <figcaption>
-                         St Stephen's Green, Dublin (2026). Photograph by Yayi Liu.
+                    <figcaption class="gallery-description">
+                        <p>St Stephen's Green, Dublin (2026). Photograph by Yayi Liu.</p>
                     </figcaption>
                 </figure>
                 <figure>
                     <img src="assets/JJDeathMask.png" alt="Death mask of James Joyce">
-                    <figcaption>
-                        The James Joyce Centre, Dublin (2026). Photograph by Yayi Liu.
+                    <figcaption class="gallery-description">
+                        <p>The James Joyce Centre, Dublin (2026). Photograph by Yayi Liu.</p>
                     </figcaption>
                 </figure>
                 <figure>
                     <img src="assets/JJCenterPatio.png" alt="Patio of the James Joyce Centre">
-                    <figcaption>
-                        The James Joyce Centre, Dublin (2026). Photograph by Yayi Liu.
+                    <figcaption class="gallery-description">
+                        <p>The James Joyce Centre, Dublin (2026). Photograph by Yayi Liu.</p>
                     </figcaption>
                 </figure>
                 <figure>
                     <img src="assets/Bloomsday2.JPG" alt="people gathered in front of Davy Byrne's pub in Bloomsday, photographed in 2013">
-                    <figcaption>
-                        People gathered in front of Davy Byrne's pub, Dublin, in Bloomsday (2013). Photograph by Cathal O’Connor.
+                    <figcaption class="gallery-description">
+                        <p>People gathered in front of Davy Byrne's pub, Dublin, in Bloomsday (2013). Photograph by Cathal O’Connor.</p>
                     </figcaption>
                 </figure>
                 <figure>
                     <img src="assets/Bloomsday1.JPG" alt="people gathered in front of the bookstore Sweny's Pharmacy in Bloomsday, photographed in 2013">
-                    <figcaption>
-                        People gathered in front of the bookstore Sweny's Pharmacy, Dublin, in Bloomsday (2013). Photograph by Cathal O’Connor.
+                    <figcaption class="gallery-description">
+                        <p>People gathered in front of the bookstore Sweny's Pharmacy, Dublin, in Bloomsday (2013). Photograph by Cathal O’Connor.</p>
                     </figcaption>
                 </figure>
                 <figure>
                     <img src="assets/Bloomsday3.JPG" alt="people gathered in front of the bookstore Sweny's Pharmacy in Bloomsday, photographed in 2013">
-                    <figcaption>
-                        People gathered in front of the bookstore Sweny's Pharmacy, Dublin, in Bloomsday (2013). Photograph by Cathal O’Connor.
+                    <figcaption class="gallery-description">
+                        <p>People gathered in front of the bookstore Sweny's Pharmacy, Dublin, in Bloomsday (2013). Photograph by Cathal O’Connor.</p>
                     </figcaption>
                 </figure>
                 <figure>
                     <img src="assets/James_Joyce_statue,_Dublin_1998.jpg" alt="James Joyce statue">
-                    <figcaption>
-                        James Joyce statue, Dublin, 1998. Photograph by Rodhullandemu, via <a href="https://commons.wikimedia.org/wiki/File:James_Joyce_statue,_Dublin_1998.jpg" target="_blank">Wikimedia Commons</a>. Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.
-                      </figcaption>
+                    <figcaption class="gallery-description">
+                        <p>James Joyce statue, Dublin, 1998. Photograph by Rodhullandemu, via <a href="https://commons.wikimedia.org/wiki/File:James_Joyce_statue,_Dublin_1998.jpg" target="_blank">Wikimedia Commons</a>. Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.</p>
+                    </figcaption>
                 </figure>
             </div>
         </section>
