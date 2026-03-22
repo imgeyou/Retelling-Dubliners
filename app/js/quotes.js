@@ -22,4 +22,4 @@ function randomQuote() {
 }
 //Quote Time Intervals
 randomQuote();
-window.setInterval(randomQuote, 20000);
+window.setInterval(randomQuote, 8000);
