@@ -195,7 +195,9 @@ section[aria-label="Joyce's Dublin photo gallery"] figure:nth-child(9) {
     max-width: 500px;
     margin-top: var(--sp-lg); 
 }
-
+.gallery-description p{
+    font-size: var(--fs-small);
+}
 
 /* main - gallery hover action */
 
@@ -214,8 +216,18 @@ section[aria-label="Joyce's Dublin photo gallery"] figure:hover::after {
 }
 
 section[aria-label="Joyce's Dublin photo gallery"] figure:hover p {
-    transform: translateY(-40px);
+    transform: translateY(-5px);
     color: var(--light-base-color);
+}
+
+section[aria-label="Joyce's Dublin photo gallery"] a{
+    text-decoration: none;
+    text-decoration: underline;
+    color: var(--light-base-color);
+}
+
+section[aria-label="Joyce's Dublin photo gallery"]a {
+    color: var(--accent-red);
 }
 
 section[aria-label="Joyce's Dublin photo gallery"] figure:hover .gallery-description {
