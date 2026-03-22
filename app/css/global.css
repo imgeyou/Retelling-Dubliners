@@ -43,6 +43,7 @@ body {
     color: #000000;
   }
 
+  /* ------ [learn more btn] < life_of_jj.html ------ */
   .btn-s2 {
     background-color: var(--pure-black);
     color: var(--pure-white);
@@ -230,12 +231,14 @@ body.dark {
     color: var(--pure-white);
   }
 
+  /* ------ [learn more btn] < life_of_jj.html ------ */
   .btn-s2 {
-    background-color: var(--pure-white);
-    color: var(--pure-black);
+    background-color: var(--pure-black);
+    color: var(--pure-white);
   }
 
   .btn-s2:hover {
+    color: var(--pure-black);
     background-color: var(--accent-gold);
   }
 
@@ -461,6 +464,9 @@ body.dark .logo:last-child {
   font-weight: var(--fw-regular);
   cursor: pointer;
   border: none;
+  transition: 
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .btn-s1 {

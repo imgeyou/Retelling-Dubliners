@@ -131,7 +131,7 @@ section[aria-label="About James Joyce"] p {
     filter: brightness(0.3);
 }
 
- .joyce-link:visited, 
+.joyce-link:visited, 
 .joyce-link:visited h2, 
 .joyce-link:visited p { 
     color: inherit !important; 
