@@ -2,7 +2,7 @@ console.log('I load things!');
 
 
 //load more button
-const loadBtn = document.querySelector("#load-more");
+const loadBtn = document.querySelector(".loadmore");
 var items = [...document.querySelectorAll(".card")];
 var currentValue = 6;
 
