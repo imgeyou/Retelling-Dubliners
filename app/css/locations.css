@@ -215,7 +215,7 @@ section[aria-label="Following the Dubliners locations"] h1 {
 
 /* main - section 2: FAQ */
 section[aria-label="Navigating Dublin FAQ"] {
-  padding: var(--sp-lg) 10rem;
+  padding: var(--sp-lg) 8rem;
 }
 
 section[aria-label="Navigating Dublin FAQ"] h2 {
@@ -229,17 +229,28 @@ section[aria-label="Navigating Dublin FAQ"] h2 {
   font-size: var(--fs-h6);
   text-align: center;
   margin-bottom: var(--sp-xl);
+  padding: 0 5rem;
 }
 
 section[aria-label="Navigating Dublin FAQ"] summary {
-  font-size: var(--fs-h6);
+  font-size: var(--fs-h5);
   font-weight: var(--fw-bold);
   margin-top: var(--sp-sm);
 }
-
-section[aria-label="Navigating Dublin FAQ"] p {
+section[aria-label="Navigating Dublin FAQ"] details p {
   font-size: var(--fs-body);
   margin-top: var(--sp-sm);
+  margin-left: var(--sp-xl);
+}
+
+section[aria-label="Navigating Dublin FAQ"] details h3 {
+  font-size: var(--fs-h6);
+  margin-top: var(--sp-sm);
+  margin-left: var(--sp-xl);
+}
+
+section[aria-label="Navigating Dublin FAQ"] details a {
+  color: inherit;
 }
 
 section[aria-label="Navigating Dublin FAQ"] hr {
