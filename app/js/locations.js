@@ -27,22 +27,27 @@ const filterCards = e => {
 filterButtons.forEach(button => button.addEventListener("click", filterCards));
 
 //load more button
-const loadBtn = document.querySelector(".loadmore");
-var cards = [document.querySelectorAll(".card")];
+const loadBtn = document.querySelector("#load-more");
+var items = [...document.querySelectorAll(".card")];
 var currentValue = 6;
 
-//on button click it will load 6 more cards
-loadBtn.addEventListener('click',()=>{
+console.log(loadBtn);
+console.log(items);
+
+
+loadBtn.addEventListener('click', () => {
     setTimeout(() => {
-        for(var i=currentValue;i<currentValue+6; i++){
-            cards[i].style.display = "block";
+        for (var i = currentValue; i < currentValue + 6; i++) {
+            items[i].style.display = "block";
         }
-        //display nothing if no more cards left
         currentValue += 6;
-        if(currentValue >= cards.length){
+
+        if (currentValue >= items.length) {
             loadBtn.style.display = "none";
         }
-            loadBtn.innerText = 'Load More'; 
-    },1000);
-    // loadBtn.innerText = ''; 
+        loadBtn.innerText = 'Load More';
+        console.log("I work yay!")
+    }, 3000)
+    loadBtn.innerText = ' ';
+    loadBtn.innerHTML = '<span class="loader></span>';
 })

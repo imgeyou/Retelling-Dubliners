@@ -159,14 +159,32 @@ section[aria-label="Following the Dubliners locations"] h1 {
   align-self: flex-start;
   width: 100%;
 }
-
-.load-more {
+/* load more button styles */
+.loadmore {
   display: block;
   /* overwrite original btn style */
   margin: var(--sp-xl) auto;
   padding: 0.75rem 5rem;
 }
 
+.loader{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: magenta;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  &::before{
+    position: absolute;
+    content: '';
+    inset: 10%;
+    border-radius: 50%;
+    background-color: greenyellow;
+  }
+}
 /* filter by styles for location cards */
 .card.hide {
   display: none;
