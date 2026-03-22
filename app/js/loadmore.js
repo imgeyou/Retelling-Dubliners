@@ -11,6 +11,7 @@ loadBtn.addEventListener('click', () => {
     setTimeout(() => {
         for (var i = currentValue; i < currentValue + 6; i++) {
             items[i].style.display = "block";
+            console.log("i display items");
         }
         currentValue += 6;
 
@@ -19,7 +20,7 @@ loadBtn.addEventListener('click', () => {
         }
         loadBtn.innerText = 'Load More';
         console.log("I work yay!")
-    }, 3000)
-    loadBtn.innerText = ' ';
+    }, 1000)
+    loadBtn.innerText = '';
     loadBtn.innerHTML = '<span class="loader></span>';
 })
