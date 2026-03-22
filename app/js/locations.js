@@ -25,29 +25,3 @@ const filterCards = e => {
 
 //click event listener for filter buttons
 filterButtons.forEach(button => button.addEventListener("click", filterCards));
-
-//load more button
-const loadBtn = document.querySelector("#load-more");
-var items = [...document.querySelectorAll(".card")];
-var currentValue = 6;
-
-console.log(loadBtn);
-console.log(items);
-
-
-loadBtn.addEventListener('click', () => {
-    setTimeout(() => {
-        for (var i = currentValue; i < currentValue + 6; i++) {
-            items[i].style.display = "block";
-        }
-        currentValue += 6;
-
-        if (currentValue >= items.length) {
-            loadBtn.style.display = "none";
-        }
-        loadBtn.innerText = 'Load More';
-        console.log("I work yay!")
-    }, 3000)
-    loadBtn.innerText = ' ';
-    loadBtn.innerHTML = '<span class="loader></span>';
-})
