@@ -15,7 +15,7 @@ body {
   background-color: var(--light-base-color);
   color: var(--light-text-color);
 
-  /* navigation bar styling */
+  /* ------ navigation bar styling ------ */
   header nav ul a {
     color: var(--light-text-color);
   }
@@ -23,9 +23,7 @@ body {
     color: var(--accent-red);
   }
 
-  /* button styling */
-
-  /* used in index.html: learn more btn */
+  /* ------ [learn more btn] < index.html ------ */
   .btn-s1 {
     background-color: var(--pure-black);
     color: var(--pure-white);
@@ -62,12 +60,24 @@ body {
   .btn-s3:hover {
     background-color: var(--accent-red);
   }
-  /* used in walking-tour.html: map overlay */
+  /* ------ [joyce-link] < index.html */
+  .joyce-link:hover{
+    color:var(--accent-red);
+    transition: filter 0.4s ease;
+  }
+
+  /* ------ [links in gallery-container] < index.html */
+  .gallery-container a:hover {
+    color: var(--accent-red);
+    transition: filter 0.4s ease;
+  }
+
+  /* ------ [map overlay] < walking-tour.html ------ */
   .map-overlay {
     background-color: #fdfff5e8;
     box-shadow: -1.5px -1.5px 8px 0 var(--accent-navy);
   }
-  /* used in location.html: filter buttons */
+  /* ------ [filter buttons] < location.html ------ */
   .filter-buttons button {
     border: 1px solid var(--light-text-color);
     color: var(--light-text-color);
@@ -85,10 +95,9 @@ body {
     background: var(--accent-red);
   }
 
-  /* used in: location.html: location card */
+  /* ------ [location card] < location.html ------ */
   .filterable-cards article {
     background-color: var(--light-base-color);
-    /* border: solid var(--light-text-color) 1.5px; */
     /* box-shadow: 0.5px 0.5px 5px #5a687fcc; */
   }
 
@@ -112,7 +121,7 @@ body {
     color: var(--accent-red);
   }
 
-  /* used in: location.html: location btn */
+  /* ------ [location btn] < location.html ------ */
   .location-btn {
     background-color: var(--light-text-color);
     color: var(--light-base-color);
@@ -139,7 +148,7 @@ body {
     transform: translateX(0);
   }
 
-  /* used in: location.html: loadmore btn */
+  /* ------ [loadmore btn] < location.html ------ */
   .loadmore {
     background-color: var(--accent-navy);
     color: var(--light-base-color);
@@ -148,11 +157,7 @@ body {
     background-color: var(--accent-red);
   }
 
-  a:hover {
-    color: var(--accent-red);
-  }
-
-  /* used in walking-tour.html: past-present image slider */
+  /* ------ [past-present image slider] < walking-tour.html------ */
   .slider-line {
     background-color: var(--light-text-color);
   }
@@ -166,7 +171,7 @@ body {
     box-shadow: 1px 1px 1px var(--light-text-color);
   }
 
-  /* used in locations.html: filter buttons */
+  /* ------ [filter buttons]: locations.html------ */
   .filter-buttons button {
     text-decoration: solid 2px var(--accent-navy);
   }
@@ -196,7 +201,7 @@ body.dark {
   background-color: var(--dark-base-color);
   color: var(--dark-text-color);
 
-  /* navigation bar styling */
+  /* ------ navigation bar styling ------ */
   header nav ul a {
     color: var(--dark-text-color);
   }
@@ -205,9 +210,7 @@ body.dark {
     color: var(--accent-gold);
   }
 
-  /* button styling */
-
-  /* used in index.html: learn more btn */
+  /* ------ [learn more btn] < index.html ------ */
   .btn-s1 {
     background-color: var(--pure-white);
     color: var(--pure-black);
@@ -244,11 +247,23 @@ body.dark {
   .btn-s3:hover {
     background-color: var(--accent-gold);
   }
-  /* used in walking-tour.html: map overlay */
+  /* ------ [joyce-link] < index.html */
+  .joyce-link:hover {
+    color: var(--accent-gold);
+    transition: filter 0.4s ease;
+  }
+
+  /* ------ [links in gallery-container] < index.html */
+  .gallery-container a:hover {
+    color: var(--accent-gold);
+    transition: filter 0.4s ease;
+  }
+
+  /* ------ [map overlay] < walking-tour.html ------ */
   .map-overlay {
     background-color: #1c2f4dcb;
   }
-  /* used in location.html: filter buttons */
+  /* ------ [filter buttons] < location.html ------ */
   .filter-buttons button {
     color: var(--dark-text-color);
     border: 1px solid var(--dark-text-color);
@@ -264,7 +279,7 @@ body.dark {
   .filter-buttons button:first-of-type:hover {
     background: var(--accent-gold);
   }
-  /* used in: location.html: location card */
+  /* ------ [location card] < location.html ------ */
   .filterable-cards article {
     background-color: var(--dark-base-color);
     /* box-shadow: 0.5px 0.5px 5px #fbfeed9d; */
@@ -287,7 +302,7 @@ body.dark {
     color: var(--accent-gold);
   }
 
-  /* used in: location.html: location btn */
+  /* ------ [location btn] < location.html ------ */
   .location-btn {
     background-color: var(--dark-text-color);
     color: var(--dark-base-color);
@@ -305,7 +320,7 @@ body.dark {
     transform: translateX(0);
   }
 
-  /* used in: location loadmore btn */
+  /* ------ [loadmore btn] < location.html ------ */
   .loadmore {
     background-color: var(--dark-text-color);
     color: var(--dark-base-color);
@@ -314,10 +329,7 @@ body.dark {
     background-color: var(--accent-red);
   }
 
-  a:hover {
-    color: var(--accent-gold);
-  }
-
+  /* ------ [past-present image slider] < walking-tour.html ------ */
   .slider-line {
     background-color: var(--dark-text-color);
   }
@@ -584,9 +596,9 @@ ul[aria-label="Social media links"] img {
   right: 1.5rem;
   pointer-events: none;
   transition:
-    opacity 0.5s,
-    visibility 0.5s;
-  opacity: 0.5;
+    opacity 0.5s ease,
+    visibility 0.5s ease;
+  opacity: 0;
   visibility: hidden;
   z-index: 1000;
 }
@@ -601,7 +613,11 @@ ul[aria-label="Social media links"] img {
 }
 
 .back-to-top.show {
-  opacity: 0.5;
+  opacity: 0.3;
   visibility: visible;
   pointer-events: auto;
+}
+
+.back-to-top.show:hover {
+  opacity: 0.7;
 }
