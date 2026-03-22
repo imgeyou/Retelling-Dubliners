@@ -23,24 +23,24 @@ section[aria-label="Hero"] img {
     transition: filter 0.5s ease; 
 }
 
-section[aria-label="Hero"] figcaption {
+.text-wrapper {
     position: absolute;
     top: 18%;
     left: 8%;
     z-index: 2; 
 }
 
-section[aria-label="Hero"] figcaption p {
+.text-wrapper:first-child {
     font-size: var(--fs-h6);
     font-weight: var(--fw-bold);
 }
 
-section[aria-label="Hero"] figcaption h1 {
+.text-wrapper h1 {
     font-size: var(--fs-h1);
     margin-top: var(--sp-xl);
 }
 
-.content-wrapper {
+.text-wrapper {
     transition: transform 0.6s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
@@ -55,7 +55,7 @@ section[aria-label="Hero"] figcaption h1 {
 
 .hero-description p {
     font-size: var(--fs-h6); 
-    font-weight: var(--fw-normal);
+    font-weight: var(--fw-regular);
     line-height: 1.6;
 }
 
@@ -157,10 +157,10 @@ section[aria-label="Joyce's Dublin photo gallery"] figure img {
     object-fit: cover;
     display: block;
 }
-section[aria-label="Joyce's Dublin photo gallery"] div {
+.gallery-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 16rem);
+    grid-template-rows: repeat(6, 18rem);
     gap: var(--sp-md);
 }
 section[aria-label="Joyce's Dublin photo gallery"] figure:nth-child(1) {
