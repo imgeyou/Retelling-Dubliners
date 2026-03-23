@@ -288,3 +288,375 @@ blockquote {
   outline: 0.3rem solid black;
   outline-offset: 0.2rem;
 }
+
+
+/* SECTION 5 - TOUR OUTRO  */
+section[aria-label="Tour conclusion"] {
+  text-align: center;
+  padding: var(--sp-3xl) var(--sp-3xl);
+  border-top: 2px solid var(--accent-navy);
+  margin: var(--sp-2xl) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-xl);
+}
+
+section[aria-label="Tour conclusion"]::before {
+  content: "— ✦ —";
+  display: block;
+  font-size: var(--fs-h5);
+  color: var(--accent-navy);
+  letter-spacing: 0.4em;
+}
+
+section[aria-label="Tour conclusion"] h2 {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  color: var(--accent-navy);
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+section[aria-label="Tour conclusion"] p {
+  font-size: var(--fs-body);
+  max-width: 55ch;
+  line-height: var(--sp-lg);
+  margin: 0;
+  color: var(--accent-navy);
+}
+
+body.dark section[aria-label="Tour conclusion"] {
+  border-top-color: var(--accent-gold);
+}
+
+body.dark section[aria-label="Tour conclusion"]::before {
+  color: var(--accent-gold);
+}
+
+body.dark section[aria-label="Tour conclusion"] h2 {
+  color: var(--accent-gold);
+}
+
+body.dark section[aria-label="Tour conclusion"] p {
+  color: var(--dark-text-color);
+}
+
+@media (max-width: 1440px) {
+  section[aria-label="Tour conclusion"] {
+    padding: var(--sp-2xl) var(--sp-xl);
+  }
+}
+
+@media (max-width: 640px) {
+  section[aria-label="Tour conclusion"] {
+    padding: var(--sp-xl) var(--sp-md);
+  }
+
+  section[aria-label="Tour conclusion"] h2 {
+    font-size: var(--fs-h3);
+  }
+}
+
+
+/*  NATIVE AUDIO PLAYER  */
+
+audio {
+  /* Size and layout */
+  display: block;
+  width: 100%;
+  max-width: 36rem;
+  height: 3rem;
+  margin: var(--sp-md) 0;
+
+  /* Remove the default grey pill and reset appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+
+  /* Our classical border treatment */
+  border: 1.5px solid var(--accent-navy);
+  border-radius: 0;
+  background-color: var(--light-base-color);
+
+  /* Smooth colour transitions for dark mode */
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+/* ── Outer container (the pill shell) ── */
+audio::-webkit-media-controls-enclosure {
+  border-radius: 0;
+  background-color: transparent;
+  border: none;
+  overflow: hidden;
+}
+
+/* ── Inner panel ── */
+audio::-webkit-media-controls-panel {
+  background-color: var(--light-base-color);
+  border-radius: 0;
+  padding: 0 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ── Play / Pause button ── */
+audio::-webkit-media-controls-play-button {
+  background-color: var(--accent-navy);
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  filter: invert(1); 
+  transition: background-color 0.2s ease;
+}
+
+audio::-webkit-media-controls-play-button:hover {
+  background-color: var(--accent-gold);
+  filter: none;
+}
+
+/* ── Timeline / scrubber track ── */
+audio::-webkit-media-controls-timeline {
+  -webkit-appearance: none;
+  appearance: none;
+  flex: 1;
+  height: 3px;
+  background-color: var(--light-audio-bar);
+  border-radius: 0;
+  cursor: pointer;
+  accent-color: var(--accent-navy);
+}
+
+/* ── Current time display ── */
+audio::-webkit-media-controls-current-time-display {
+  color: var(--accent-navy);
+  font-family: var(--font-primary);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.04em;
+}
+
+/* ── Total / remaining time display ── */
+audio::-webkit-media-controls-time-remaining-display {
+  color: var(--accent-navy);
+  opacity: 0.6;
+  font-family: var(--font-primary);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.04em;
+}
+
+/* ── Mute button ── */
+audio::-webkit-media-controls-mute-button {
+  background-color: transparent;
+  filter: invert(20%) sepia(30%) saturate(500%) hue-rotate(185deg);
+}
+
+/* ── Volume slider ── */
+audio::-webkit-media-controls-volume-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  accent-color: var(--accent-navy);
+  height: 3px;
+  background-color: var(--light-audio-bar);
+  cursor: pointer;
+}
+
+/* ── Overflow ── */
+audio::-webkit-media-controls-overflow-button {
+  display: none;
+}
+
+
+/* DARK MODE — native audio */
+body.dark audio {
+  border-color: var(--accent-gold);
+  background-color: var(--dark-base-color);
+}
+
+body.dark audio::-webkit-media-controls-panel {
+  background-color: var(--dark-base-color);
+}
+
+body.dark audio::-webkit-media-controls-play-button {
+  background-color: var(--accent-gold);
+  filter: none; /* gold bg, dark icon */
+}
+
+body.dark audio::-webkit-media-controls-play-button:hover {
+  background-color: var(--accent-cream);
+}
+
+body.dark audio::-webkit-media-controls-timeline {
+  background-color: var(--dark-audio-bar);
+  accent-color: var(--accent-gold);
+}
+
+body.dark audio::-webkit-media-controls-current-time-display {
+  color: var(--dark-text-color);
+}
+
+body.dark audio::-webkit-media-controls-time-remaining-display {
+  color: var(--dark-text-color);
+}
+
+body.dark audio::-webkit-media-controls-mute-button {
+  filter: invert(1) sepia(0.3) saturate(2) hue-rotate(10deg);
+}
+
+body.dark audio::-webkit-media-controls-volume-slider {
+  accent-color: var(--accent-gold);
+  background-color: var(--dark-audio-bar);
+}
+
+
+/* AUDIO TRANSCRIPTS — collapsible */
+
+details.audio-transcript {
+  width: 100%;
+  max-width: 36rem;
+  margin: 0 0 var(--sp-md) 0;
+  border: none;
+}
+
+details.audio-transcript > summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-family: var(--font-primary);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  color: var(--accent-navy);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  list-style: none; /* remove default triangle in Firefox */
+  user-select: none;
+  background-color: transparent;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Remove the default WebKit disclosure arrow */
+details.audio-transcript > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Custom arrow icon using a CSS border triangle */
+details.audio-transcript > summary::before {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 7px solid var(--accent-navy);
+  transition: transform 0.2s ease, border-left-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+details.audio-transcript[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+details.audio-transcript > summary:hover {
+  background-color: var(--accent-navy);
+  color: var(--light-base-color);
+}
+
+details.audio-transcript > summary:hover::before {
+  border-left-color: var(--light-base-color);
+}
+
+details.audio-transcript > summary:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: -2px;
+}
+
+
+details.audio-transcript[open] {
+  border: 1px solid var(--accent-navy);
+}
+
+
+details.audio-transcript[open] > summary {
+  background-color: var(--accent-navy);
+  color: var(--light-base-color);
+}
+
+details.audio-transcript[open] > summary::before {
+  border-left-color: var(--light-base-color);
+}
+
+/* Transcript body — the expanded content */
+.transcript-body {
+  padding: 0.75rem 1rem 1rem;
+  border-top: 1px solid var(--accent-navy);
+  background-color: var(--light-base-color);
+}
+
+.transcript-body p {
+  font-family: var(--font-primary);
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--light-text-color);
+  margin: 0 0 0.75rem 0;
+}
+
+.transcript-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Dark mode ── */
+body.dark details.audio-transcript {
+  border: none;
+}
+
+body.dark details.audio-transcript[open] {
+  border: 1px solid var(--accent-gold);
+}
+
+body.dark details.audio-transcript > summary {
+  color: var(--accent-gold);
+}
+
+body.dark details.audio-transcript > summary::before {
+  border-left-color: var(--accent-gold);
+}
+
+body.dark details.audio-transcript[open] > summary {
+  background-color: var(--accent-gold);
+  color: var(--dark-base-color);
+}
+
+body.dark details.audio-transcript[open] > summary::before {
+  border-left-color: var(--dark-base-color);
+}
+
+body.dark details.audio-transcript > summary:hover {
+  background-color: var(--accent-gold);
+  color: var(--dark-base-color);
+}
+
+body.dark details.audio-transcript > summary:hover::before {
+  border-left-color: var(--dark-base-color);
+}
+
+body.dark details.audio-transcript[open] .transcript-body {
+  border-top-color: var(--accent-gold);
+}
+
+body.dark details.audio-transcript > summary:focus-visible {
+  outline-color: var(--accent-cream);
+}
+
+body.dark .transcript-body {
+  border-top-color: var(--accent-gold);
+  background-color: var(--dark-base-color);
+}
+
+body.dark .transcript-body p {
+  color: var(--dark-text-color);
+}
