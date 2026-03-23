@@ -1,6 +1,6 @@
 @import './variable.css';
 
-/* main */
+/* main — matches the reset present in every other page CSS */
 main {
     margin: 0;
     padding: 0;
@@ -42,7 +42,7 @@ main {
     border-bottom: 1px solid var(--accent-gold);
 }
 
-/* dark mode */
+/* dark mode: switch section headings from red (unreadable on navy) to gold */
 body.dark .credits-section h2 {
     color: var(--accent-gold);
 }
