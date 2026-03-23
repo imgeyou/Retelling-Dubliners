@@ -55,6 +55,7 @@ iframe{
     width:100%;
     height: 36rem;
     position: relative;
+    /* used to hide the google topbar */
     top: -60px;
     border: none;
 }
@@ -64,15 +65,20 @@ iframe{
   position: absolute;
   width: 100%;
   height:100%;
+  /* used to hide the google topbar */
   bottom: 60px;
+  pointer-events: none;
 }
 .map-overlay {
     display: block;
     position:absolute;
     bottom:0;
     right:0;
-    padding: 2rem 3rem 1rem 3rem;
+    height: 65%;
+    padding-top: 3%;
+    padding-left: 5%;
     width: 50%;
+    pointer-events: auto;
 }
 
 .map-overlay h2 {
@@ -136,10 +142,15 @@ section[aria-label="Tour stops"] ol {
   gap: var(--sp-2xl);
 }
 
+/* image on right: text(wide)+image(narrow) */
 section[aria-label="Tour stops"] article {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 2fr;
   gap: var(--sp-xl);
+}
+/* image on left: image(narrow)+text(wide) */
+section[aria-label="Tour stops"] article:has(.img-column:first-child) {
+  grid-template-columns: 2fr 3fr;
 }
 /* text column */
 .text-column h3 {
