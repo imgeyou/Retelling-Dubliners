@@ -64,10 +64,12 @@ section[aria-label="All About Dubliners"] hgroup > p{
     font-size: var(--fs-h6);
     font-weight: var(--fw-bold);
     margin-bottom: var(--sp-xl);
+    line-height: var(--sp-lg);
 }
 section[aria-label="All About Dubliners"] div > p{
     font-size: var(--fs-body);
     margin-bottom: var(--sp-xl);
+    line-height: var(--sp-lg);
 }
 section[aria-label="All About Dubliners"] div:last-of-type{
     justify-self:end;

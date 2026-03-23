@@ -56,7 +56,7 @@ section[aria-label="Hero"] img {
 .hero-description p {
     font-size: var(--fs-h6); 
     font-weight: var(--fw-regular);
-    line-height: 1.6;
+    line-height: var(--sp-lg);
 }
 
 /* main - hover action */
@@ -100,6 +100,7 @@ section[aria-label="Who was James Joyce?"] figcaption p{
     text-align: center;
     font-size: var(--fs-body);
     margin-top: var(--sp-md);
+    line-height: var(--sp-lg);
 }
 
 /* main - section: about james joyce */
@@ -118,7 +119,7 @@ section[aria-label="About James Joyce"] {
 section[aria-label="About James Joyce"] p {
     font-size: var(--fs-body);
     font-weight: var(--fw-medium);
-    line-height: var(--lh-body);
+    line-height: var(--sp-lg);
 }
 
 .joyce-link { 

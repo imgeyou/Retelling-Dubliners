@@ -11,11 +11,13 @@ section[aria-label="Walking tour hero"] img {
   height: auto;
   margin-bottom: var(--sp-xl);
 }
+
 section[aria-label="Walking tour hero"] div {
   position: absolute;
   top: 18%;
   left: 8%;
 }
+
 section[aria-label="Walking tour hero"] h1 {
   font-size: var(--fs-h2);
 }
@@ -25,6 +27,7 @@ section[aria-label="Walking tour hero"] .tagline {
   font-weight: var(--fw-regular);
   margin: var(--sp-sm) 0;
 }
+
 section[aria-label="Walking tour hero"] .tagline span {
   display: inline-block;
   padding: 0.75rem 3.5rem;
@@ -39,46 +42,50 @@ section[aria-label="Walking tour hero"] p {
   margin-top: var(--sp-md);
   width: 60%;
   margin-top: var(--sp-xl);
+  line-height: var(--sp-lg);
 }
 
 
 
 /* main - section 2: Interactive map */
-section[aria-label="Interactive map"]{
-    position: relative;
-    margin-top: var(--sp-xl);
-    margin-bottom: var(--sp-xl);
-    overflow:hidden;
+section[aria-label="Interactive map"] {
+  position: relative;
+  margin-top: var(--sp-xl);
+  margin-bottom: var(--sp-xl);
+  overflow: hidden;
 }
-iframe{
-    display: block;
-    width:100%;
-    height: 36rem;
-    position: relative;
-    /* used to hide the google topbar */
-    top: -60px;
-    border: none;
+
+iframe {
+  display: block;
+  width: 100%;
+  height: 36rem;
+  position: relative;
+  /* used to hide the google topbar */
+  top: -60px;
+  border: none;
 }
-.map-overlay-container{
-  overflow:hidden;
+
+.map-overlay-container {
+  overflow: hidden;
   display: block;
   position: absolute;
   width: 100%;
-  height:100%;
+  height: 100%;
   /* used to hide the google topbar */
   bottom: 60px;
   pointer-events: none;
 }
+
 .map-overlay {
-    display: block;
-    position:absolute;
-    bottom:0;
-    right:0;
-    height: 65%;
-    padding-top: 3%;
-    padding-left: 5%;
-    width: 50%;
-    pointer-events: auto;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 65%;
+  padding-top: 3%;
+  padding-left: 5%;
+  width: 50%;
+  pointer-events: auto;
 }
 
 .map-overlay h2 {
@@ -86,7 +93,8 @@ iframe{
   font-weight: var(--fw-bold);
   margin-bottom: var(--sp-lg);
 }
-.map-overlay p{
+
+.map-overlay p {
   text-align: left;
   margin-right: 1rem;
 }
@@ -96,35 +104,40 @@ iframe{
 section[aria-label="Navigating Dublin FAQ"] {
   padding: var(--sp-lg) 8rem;
 }
+
 section[aria-label="Navigating Dublin FAQ"] h2 {
   font-size: var(--fs-h2);
   font-weight: var(--fw-bold);
   text-align: center;
   margin-bottom: var(--sp-lg);
 }
+
 .section-lead {
-    font-size: var(--fs-h6);
-    text-align: center;
-    margin-bottom: var(--sp-xl);
-    padding: 0 5rem;
+  font-size: var(--fs-h6);
+  text-align: center;
+  margin-bottom: var(--sp-xl);
+  padding: 0 5rem;
 }
+
 section[aria-label="Navigating Dublin FAQ"] summary {
   font-size: var(--fs-h5);
   font-weight: var(--fw-bold);
   margin-top: var(--sp-sm);
 }
+
 section[aria-label="Navigating Dublin FAQ"] details p {
   font-size: var(--fs-body);
   margin-top: var(--sp-sm);
-  margin-left:var(--sp-xl);
+  margin-left: var(--sp-xl);
 }
 
 section[aria-label="Navigating Dublin FAQ"] hr {
   border-top: solid var(--light-text-color) 1.5px;
   margin-top: var(--sp-sm);
 }
-section[aria-label="Navigating Dublin FAQ"] details a{
-  color:inherit;
+
+section[aria-label="Navigating Dublin FAQ"] details a {
+  color: inherit;
 }
 
 /* main - section 4: TOUR STOPS */
@@ -148,29 +161,35 @@ section[aria-label="Tour stops"] article {
   grid-template-columns: 3fr 2fr;
   gap: var(--sp-xl);
 }
+
 /* image on left: image(narrow)+text(wide) */
 section[aria-label="Tour stops"] article:has(.img-column:first-child) {
   grid-template-columns: 2fr 3fr;
 }
+
 /* text column */
 .text-column h3 {
   font-size: var(--fs-h4);
   font-weight: var(--fw-bold);
   margin-bottom: var(--sp-xl);
 }
+
 .text-column h4 {
   font-size: var(--fs-h6);
   font-weight: var(--fw-bold);
 }
+
 .text-column h5 {
   font-size: var(--fs-h5);
   font-weight: var(--fw-bold);
   margin-bottom: var(--sp-md);
 }
+
 .text-column p {
   padding-right: var(--sp-xl);
   font-size: var(--fs-body);
   margin-bottom: var(--sp-xl);
+  line-height: var(--sp-lg);
 }
 
 section[aria-label="Tour stops"] hr {
@@ -178,14 +197,25 @@ section[aria-label="Tour stops"] hr {
   margin-top: var(--sp-xl);
 }
 
+blockquote {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--sp-xl);
+  padding-left: 25px;
+  line-height: var(--sp-lg);
+}
+
 .side-quest summary {
   font-size: var(--fs-h6);
   font-weight: var(--fw-bold);
   margin-top: var(--sp-sm);
+  line-height: var(--sp-lg);
 }
+
 .side-quest p {
   font-size: var(--fs-body);
   margin-top: var(--sp-sm);
+  line-height: var(--sp-lg);
 }
 
 /* past & present image column */
@@ -195,12 +225,14 @@ section[aria-label="Tour stops"] hr {
   width: 100%;
   aspect-ratio: 1/1;
 }
+
 .spot-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
+
 .image-past {
   z-index: 8;
   position: absolute;
@@ -222,6 +254,7 @@ section[aria-label="Tour stops"] hr {
   width: 100%;
   height: 100%;
 }
+
 .slider-line {
   position: absolute;
   inset: 0;
@@ -232,11 +265,13 @@ section[aria-label="Tour stops"] hr {
   transform: translateX(-50%);
   pointer-events: none;
 }
+
 /* slider icon */
 .ph-arrows-out-line-horizontal {
   font-size: var(--slider-size);
   display: block;
 }
+
 .slider-btn {
   position: absolute;
   top: 50%;
@@ -247,8 +282,9 @@ section[aria-label="Tour stops"] hr {
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
+
 /* make slider keyboard-select visible */
-.slider:focus-visible ~ .slider-btn {
+.slider:focus-visible~.slider-btn {
   outline: 0.3rem solid black;
   outline-offset: 0.2rem;
 }

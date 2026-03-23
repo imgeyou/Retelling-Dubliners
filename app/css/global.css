@@ -181,6 +181,10 @@ body {
     box-shadow: 1px 1px 1px var(--light-text-color);
   }
 
+  blockquote{
+    border-left: 8px solid var(--accent-navy);
+  }
+
   /* ------ [filter buttons]: locations.html------ */
   .filter-buttons button {
     text-decoration: solid 2px var(--accent-navy);
@@ -204,6 +208,7 @@ body {
   .footer-credits {
     color: var(--footer-faded-dark);
   }
+
 }
 
 /* -------- 2. Dark mode color styles -------- */
@@ -352,6 +357,10 @@ body.dark {
   }
   .loadmore:hover {
     background-color: var(--accent-red);
+  }
+
+    blockquote{
+    border-left: 8px solid var(--accent-gold);
   }
 
   /* ------ [past-present image slider] < walking-tour.html ------ */
