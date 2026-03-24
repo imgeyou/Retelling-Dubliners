@@ -25,29 +25,50 @@ toTopBtn.addEventListener('click', e => {
 
 //light mode + dark mode toggle
 const body = document.querySelector("body");
-toggle = document.querySelector(".toggle");
+toggle = document.querySelectorAll(".toggle");
 
 //setting what color mode it's in
 let getMode = localStorage.getItem("mode");
 console.log(getMode);
 if (getMode && getMode === "dark"){
     body.classList.toggle("dark");
-    toggle.classList.toggle("active")
-}
+    toggle.forEach(t=>t.classList.toggle("active"));
+};
 
 //toggling light vs dark mode
-toggle.addEventListener("click", () => {
+toggle.forEach(t => {
+    t.addEventListener("click", () => {
     body.classList.toggle("dark");
 
     if (!body.classList.contains("dark")) {
         return localStorage.setItem("mode", "light");
     }
     localStorage.setItem("mode", "dark");
-})
+    });
+});
 
 // activating toggle on click
-toggle.addEventListener("click", () => toggle.classList.toggle("active"));
+toggle.forEach(t => t.addEventListener("click", () => toggle.forEach(t => t.classList.toggle("active"))));
+
+//hamburger-menu trigger
+const hamburger = document.querySelector('.nav-hamburger');
+const menu = document.querySelector('.mobile-menu'); 
+const closeMenu = document.querySelector('.close-menu'); 
 
 
+hamburger.addEventListener('click', () => {
+    if(!menu.classList.contains('shown')){ 
+    menu.classList.add('shown');
+    console.log('mobile menu shown');
+    } 
+});
+
+closeMenu.addEventListener('click', () => {
+    if(menu.classList.contains('shown')){
+         menu.classList.remove('shown');
+         
+        console.log('mobile menu hidden');
+    }
+});
 
 
