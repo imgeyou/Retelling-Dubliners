@@ -605,7 +605,7 @@ nav[aria-label="Footer navigation"] ul a {
 
 .footer-credits h2 {
   font-size: var(--fs-tag);
-  font-weight: var(--fw-regular);
+  font-weight: var(--fw-semibold);
   margin-bottom: 1rem;
 }
 
