@@ -161,7 +161,7 @@ section[aria-label="Works by James Joyce"] article a{
 }
 
 /* Mobile: 1-column grid */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     section[aria-label="Works by James Joyce"] ul{
         grid-template-columns: 1fr;
     }

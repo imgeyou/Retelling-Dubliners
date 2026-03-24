@@ -6,16 +6,15 @@
     --light-text-color: #37465E;
     --light-audio-bar: #D3D3C7;
     
-/* Dark Mode Colors */
+    /* Dark Mode Colors */
     --dark-base-color:#37465E;
     --dark-text-color: #fdfff5;
     --dark-audio-bar: #D3D3C7;
 
-
+    /* translucent colors */
     --footer-faded-dark: #37465Ecc;
     --footer-faded-light:#F2B769cc;
     --faded-navy: #5a687fcc;
-    /* location card border */
 
     /* for highlight & btn variations */
     --accent-cream: #fdfff5;
@@ -30,7 +29,7 @@
     /* Font */
     --font-primary: "Epilogue", sans-serif;
 
-    /* Font sizes */
+    /* Font sizes: dafault */
     --fs-h1: 5.938rem;
     --fs-h2: 4.5rem;
     --fs-h3: 3.375rem;
@@ -74,11 +73,11 @@
     --slider-size: 3rem;
 }
 
-/* Tablet (<= 1440px) */
-@media (max-width: 1440px) {
+/* Small screen (<= 1024px) */
+@media (max-width: 1024px) {
     :root {
         /* font sizes */
-        --fs-h1: 3.5rem;
+        --fs-h1: 4.5rem;
         --fs-h2: 2.5rem;
         --fs-h3: 2.3rem;
         --fs-h4: 1.4rem;
@@ -87,7 +86,7 @@
         --fs-body: 1rem;
         --fs-small: 0.8rem;
         --fs-button: 1rem;
-        --fs-nav: 1rem;
+        --fs-nav: 1.1rem;
         --fs-tag: 1rem;
     
     /* Spacing - subject to change */
@@ -107,9 +106,9 @@
     }
 }
 
-/* Mobile (<= 640px) */
+/* Tablet & Mobile (<= 768px) */
 /* font sizes */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     :root {
         --fs-h1: 3rem;
         --fs-h2: 2.4rem;
