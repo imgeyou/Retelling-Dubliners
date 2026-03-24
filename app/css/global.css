@@ -382,13 +382,14 @@ body.dark {
     color: var(--dark-base-color);
   }
   .loadmore:hover {
-    background-color: var(--accent-red);
+    background-color: var(--accent-gold);
   }
 
     blockquote{
     border-left: 8px solid var(--accent-gold);
   }
 
+  
   /* ------ [past-present image slider] < walking-tour.html ------ */
   .slider-line {
     background-color: var(--dark-text-color);
@@ -509,6 +510,10 @@ body.dark .logo:last-child {
   text-decoration: none;
 }
 
+.logo-footer {
+    height: 2.5rem; /* smaller than the 4rem header logo */
+}
+
 /* light mode + dark mode toggle */
 .toggle {
   height: 25px;
@@ -622,6 +627,12 @@ footer {
 
 footer small {
   font-size: var(--fs-small);
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 }
 
 /* Footer - navigation bar - links */

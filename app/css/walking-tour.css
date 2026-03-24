@@ -3,19 +3,40 @@
 /* main - section 1: hero */
 section[aria-label="Walking tour hero"] {
   position: relative;
+  width: auto;
+  height: 580px;
+  margin: 0 auto;
+}
+
+
+section[aria-label="Walking tour hero"]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4); 
+  z-index: 1;
+  pointer-events: none;
+}
+
+body.dark  section[aria-label="Walking tour hero"]::after{
+  background-color: rgba(0, 0, 0, 0.4); 
 }
 
 section[aria-label="Walking tour hero"] img {
   display: block;
   width: 100%;
-  height: auto;
-  margin-bottom: var(--sp-xl);
+  height: 100%;
+  object-fit: cover; 
 }
 
 section[aria-label="Walking tour hero"] div {
   position: absolute;
   top: 18%;
   left: 8%;
+  z-index: 2; 
 }
 
 section[aria-label="Walking tour hero"] h1 {
@@ -39,10 +60,14 @@ section[aria-label="Walking tour hero"] .tagline span {
 
 section[aria-label="Walking tour hero"] p {
   font-size: var(--fs-body);
-  margin-top: var(--sp-md);
   width: 60%;
   margin-top: var(--sp-xl);
   line-height: var(--sp-lg);
+}
+
+html {
+  /* This makes all internal jumps smooth and "beautiful" */
+  scroll-behavior: smooth; 
 }
 
 

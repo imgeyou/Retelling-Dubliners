@@ -66,13 +66,20 @@
 
         <!-- SECTION 1 - HERO -->
         <section aria-label="Walking tour hero">
-            <img src="assets/map.png" alt="Map showing the walking tour route in Dublin">
+            <img src="assets/Hero_PlaceholderMap.png" alt="Map showing the walking tour route in Dublin">
             <div>
                 <hgroup>
                     <h1>Retelling Dubliners</h1>
-                    <p class="tagline">A Walking Tour through Dublin <span>~ 2 hours</span></p>
+                    <p class="tagline">A Walking Tour through Dublin <a class="btnjump" href="#mapsection">
+    <span class="btn-text">~ 2 hours</span>
+    <div class="btn-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 5V19M12 19L19 12M12 19L5 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </div>
+</a></p>
                 </hgroup>
-                <p>Walk in the footsteps of James Joyce's Dubliners while learning Dublin's iconic history. Starting at the James Joyce Centre and ending at Kennedy's Pub, visit the famous locations mentioned in the book at your own pace.</p>
+                <p>Walk in the footsteps of James Joyce's Dubliners while learning Dublin's iconic history. Starting at the James Joyce Centre and ending at Kennedy's Pub,<br>  visit the famous locations mentioned in the book at your own pace.</p>
                 <br>
                 <!-- Welcome audio: introduction to the tour -->
                 <audio controls>
@@ -91,7 +98,7 @@
         </section>
 
         <!-- SECTION 2 - INTERACTIVE MAP -->
-        <section aria-label="Interactive map">
+        <section aria-label="Interactive map" id="mapsection">
             <div class="map-iframe-wrapper"><iframe src="https://www.google.com/maps/d/u/0/embed?mid=1gUuzkJVAerD3f9yYEMclUwhE23V8mVI&ehbc=2E312F&noprof=1" width="640" height="480" title="Retelling Dubliners walking tour map" loading="lazy"></iframe></div>
             <div class="map-overlay-container">
                 <div class="map-overlay">
@@ -215,7 +222,7 @@
                             <img src="assets/tcd_then.jpg" alt="Trinity College in 1909" class="spot-image image-past">
                             <img src="assets/tcd_now.jpg" alt="Trinity College Dublin now" class="spot-image image-present">
                             <!-- slider -->
-                            <input type="range" min="0" max="100" value="50" class="slider" aria-label="Percentage of present photo shown">
+                            <input type="range" id="slider-1" min="0" max="100" value="50" class="slider" aria-label="Percentage of present photo">
                             <div class="slider-line" aria-hidden="true"></div>
                             <div class="slider-btn" aria-hidden="true">
                                 <em class="ph ph-arrows-out-line-horizontal"></em>
@@ -363,6 +370,7 @@
                             <img src="assets/StStephens_then.png" alt="Fusiliers Arch, St Stephen's Green, taken around 1900" class="spot-image image-past">
                             <img src="assets/StStephens_now.jpg" alt="St. Stephen's Green, photographed by Ralf Houven in 2012" class="spot-image image-present">
                             <!-- slider -->
+                           
                             <input type="range" min="0" max="100" value="50" class="slider" aria-label="Percentage of present photo shown">
                             <div class="slider-line" aria-hidden="true"></div>
                             <div class="slider-btn" aria-hidden="true">
@@ -380,6 +388,7 @@
                             <img src="assets/ShelbourneHotel_then.jpg" alt="Shelbourne Hotel in 1890" class="spot-image image-past">
                             <img src="assets/ShelbourneHotel_now.jpg" alt="Shelbourne Hotel, Dublin, photographed in 2026" class="spot-image image-present">
                             <!-- slider -->
+                            
                             <input type="range" min="0" max="100" value="50" class="slider" aria-label="Percentage of present photo shown">
                             <div class="slider-line" aria-hidden="true"></div>
                             <div class="slider-btn" aria-hidden="true">

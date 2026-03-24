@@ -117,12 +117,12 @@ section[aria-label="Works by James Joyce"] article::after{
     background-color: white;
     position: absolute;
     inset:0;
-    opacity: 0;
+    opacity: 0.1;
     transition: opacity 0.5s;
     z-index: 1;
 }
 section[aria-label="Works by James Joyce"] article:hover::after {
-    opacity: 0.3;
+    opacity: 0.1;
 }
 
 section[aria-label="Works by James Joyce"] article div{
