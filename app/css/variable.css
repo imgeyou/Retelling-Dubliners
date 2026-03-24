@@ -30,17 +30,17 @@
     --font-primary: "Epilogue", sans-serif;
 
     /* Font sizes: dafault */
-    --fs-h1: 5.938rem;
+    --fs-h1: 6rem;
     --fs-h2: 4.5rem;
-    --fs-h3: 3.375rem;
+    --fs-h3: 3.4rem;
     --fs-h4: 2.5rem;
-    --fs-h5: 1.875rem;
-    --fs-h6: 1.438rem;
-    --fs-body: 1.063rem;
-    --fs-small: 0.813rem;
-    --fs-button: 1.438rem;
-    --fs-nav: 1.438rem;
-    --fs-tag: 1.438rem;
+    --fs-h5: 1.9rem;
+    --fs-h6: 1.5rem;
+    --fs-body: 1rem;
+    --fs-small: 0.8rem;
+    --fs-button: 1.4rem;
+    --fs-nav: 1.3rem;
+    --fs-tag: 1.4rem;
 
 
     /* Font weight */
@@ -72,13 +72,29 @@
     /* Element Sizes */
     --slider-size: 3rem;
 }
-
+/* Small screen (<= 1240px) */
+@media (max-width: 1240px) {
+     :root {
+        /* font sizes */
+        --fs-h1: 5rem;
+        --fs-h2: 4rem;
+        --fs-h3: 2.3rem;
+        --fs-h4: 1.4rem;
+        --fs-h5: 1.2rem;
+        --fs-h6: 1.1rem;
+        --fs-body: 1rem;
+        --fs-small: 0.8rem;
+        --fs-button: 1rem;
+        --fs-nav: 1.2rem;
+        --fs-tag: 1rem;
+    }
+}
 /* Small screen (<= 1024px) */
 @media (max-width: 1024px) {
     :root {
         /* font sizes */
         --fs-h1: 4.5rem;
-        --fs-h2: 2.5rem;
+        --fs-h2: 3.5rem;
         --fs-h3: 2.3rem;
         --fs-h4: 1.4rem;
         --fs-h5: 1.2rem;
@@ -116,9 +132,9 @@
         --fs-h4: 1.7rem;
         --fs-h5: 1.4rem;
         --fs-h6: 1.2rem;
-        --fs-body: 1rem;
-        --fs-small: 0.5rem;
-        --fs-button: 0.8rem;
+        --fs-body: 0.9rem;
+        --fs-small: 0.7rem;
+        --fs-button: 1rem;
         --fs-nav: 0.8rem;
         --fs-tag: 0.8rem;
     }

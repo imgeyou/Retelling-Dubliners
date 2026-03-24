@@ -71,7 +71,20 @@ body {
   /* ------ [links in gallery-container] < index.html */
   .gallery-container a:hover {
     color: var(--accent-red);
-    transition: filter 0.4s ease;
+  }
+  .gallery-container p {
+    color: white;
+  }
+  .gallery-container a {
+    color: inherit;
+  }
+  @media (max-width: 768px) {
+    .gallery-container p {
+    color: var(--light-text-color);
+    }
+    section[aria-label="Joyce's Dublin photo gallery"] figure a:hover {
+      color: var(--accent-red)!important;
+    }
   }
 
   /* ------ [map overlay] < walking-tour.html ------ */
@@ -274,7 +287,20 @@ body.dark {
   /* ------ [links in gallery-container] < index.html */
   .gallery-container a:hover {
     color: var(--accent-gold);
-    transition: filter 0.4s ease;
+  }
+  .gallery-container p {
+    color: white;
+  }
+  .gallery-container a {
+    color: inherit;
+  }
+  @media (max-width: 768px) {
+    .gallery-container p {
+    color: var(--dark-text-color);
+    }
+    section[aria-label="Joyce's Dublin photo gallery"] figure a:hover {
+      color: var(--accent-gold)!important;
+    }
   }
 
   /* ------ [map overlay] < walking-tour.html ------ */
@@ -398,10 +424,14 @@ body.dark {
       color: var(--accent-gold);
     }
   
+    .nav-hamburger svg {
+      fill: var(--dark-text-color);
+    }
+
     .close-menu svg {
       fill: var(--dark-text-color);
     }
-  
+
     .close-menu:hover svg {
       fill: var(--accent-gold);
     }
@@ -410,7 +440,7 @@ body.dark {
 /* ================== styling for layout ================= */
 body {
   margin: 0;
-  padding: 2rem 7rem;
+  padding: 2% 8%;
   display: flex;
   flex-direction: column;
   gap: var(--sp-xl);
@@ -718,9 +748,6 @@ details[open] > *:not(summary) {
 
 /* =============responsive: Smaller Screen ====================*/
 @media (max-width: 1024px) {
-  body {
-    padding: 2rem 4rem;
-  }
 
   header {
     gap: 1.25rem;
@@ -753,14 +780,14 @@ details[open] > *:not(summary) {
   }
 }
 /* =============responsive: Tablet & Mobile ====================*/
-/* for nav bar specifically */
-@media (max-width: 990px) {
+
+/* --------- for nav bar specifically ------------- */
 /* hide the original nav links */
+@media (max-width: 1100px) {
   header nav ul {
     display: none;
     pointer-events: none;
-  }
-
+  } 
   /* hamburger icon */
   .nav-hamburger {
     display: inline-block;
@@ -771,13 +798,14 @@ details[open] > *:not(summary) {
   }
 
   .nav-hamburger svg {
-    width: 3rem;
-    height: 3rem;
+    width: 3.2rem;
+    height: 3.2rem;
     border: none;
   }
 
   .logo {
-    height: 3rem;
+    height: 3.2rem;
+    image-resolution: 1/1;
   }
 
   /* mobile menu when shown */
@@ -826,6 +854,7 @@ details[open] > *:not(summary) {
     color: var(--accent-navy);
     transition: color 0.2s ease;
   }
+  .mobile-menu ul a {}
 
   .mobile-menu ul a:hover {
     color: var(--accent-red);
@@ -855,12 +884,18 @@ details[open] > *:not(summary) {
 
 @media (max-width: 768px) {
   body {
-      padding: 1rem 3rem;
       gap: var(--sp-sm);
     }
   
+  .nav-hamburger svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+  }
 
-
+  .logo {
+    height: 2.5rem;
+  }
   .btn {
     width: 100%;
     padding: 0.9rem 1.25rem;
