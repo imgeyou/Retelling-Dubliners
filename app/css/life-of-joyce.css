@@ -107,7 +107,10 @@ section[aria-label="Works by James Joyce"] article img {
     height: 100%;
     object-fit: cover;
     display: block;
-    transition:opacity 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+section[aria-label="Works by James Joyce"] article:hover img {
+    transform: scale(1.1);
 }
 section[aria-label="Works by James Joyce"] article::after{
     content:'';
@@ -129,10 +132,10 @@ section[aria-label="Works by James Joyce"] article div{
     transform: translateX(-50%);
     width: 100%;
     height: 100%;
-    padding: 3rem 1rem;
+    padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
-    gap: var(--sp-xl);
+    gap: var(--sp-lg);
     z-index: 5;
 }
 section[aria-label="Works by James Joyce"] h3{
@@ -154,6 +157,17 @@ section[aria-label="Works by James Joyce"] article a{
     bottom: 10%;
     width: 80%;
     white-space: nowrap;
+    text-align: center;
+}
+
+/* Mobile: 1-column grid */
+@media (max-width: 640px) {
+    section[aria-label="Works by James Joyce"] ul{
+        grid-template-columns: 1fr;
+    }
+    section[aria-label="Works by James Joyce"] article a{
+        white-space: normal;
+    }
 }
 
 #quote{
