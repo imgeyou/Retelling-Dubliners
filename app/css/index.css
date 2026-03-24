@@ -95,12 +95,20 @@ section[aria-label="Who was James Joyce?"] figcaption h2{
     text-align: center;
     line-height: var(--lh-heading);
     font-size: var(--fs-h2);
+    display:block;
+    white-space: nowrap;
 }
+
 section[aria-label="Who was James Joyce?"] figcaption p{
     text-align: center;
     font-size: var(--fs-body);
     margin-top: var(--sp-md);
     line-height: var(--sp-lg);
+}
+@media (max-width: 1240px) {
+    section[aria-label="Who was James Joyce?"] figcaption p{
+        display:none;
+    }
 }
 
 /* main - section: about james joyce */
@@ -164,6 +172,8 @@ section[aria-label="Joyce's Dublin photo gallery"] figure img {
     grid-template-rows: repeat(6, 18rem);
     gap: var(--sp-md);
 }
+
+@media (min-width: 769px)  {
 section[aria-label="Joyce's Dublin photo gallery"] figure:nth-child(1) {
   grid-row: span 2;
 }
@@ -187,7 +197,7 @@ section[aria-label="Joyce's Dublin photo gallery"] figure:nth-child(9) {
   section[aria-label="Joyce's Dublin photo gallery"] figure:nth-child(10) {
     grid-column: span 2;
 }
-
+}
 .gallery-description {
     opacity: 0;
     visibility: hidden;
@@ -199,7 +209,49 @@ section[aria-label="Joyce's Dublin photo gallery"] figure:nth-child(9) {
 .gallery-description p{
     font-size: var(--fs-small);
 }
-
+@media (max-width: 768px)  {
+    section[aria-label="About James Joyce"] {
+        grid-template-columns: 1fr;
+    }
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+    section[aria-label="Joyce's Dublin photo gallery"] figure {
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+        height: auto;
+    }
+    section[aria-label="Joyce's Dublin photo gallery"] figure img {
+        height: 14rem;
+        flex-shrink: 0;
+    }
+    section[aria-label="Joyce's Dublin photo gallery"] figcaption {
+        position: static !important;
+        margin-top: var(--sp-md);
+    }
+    section[aria-label="Joyce's Dublin photo gallery"] figure::after {
+        display: none;
+    }
+    section[aria-label="Joyce's Dublin photo gallery"] .gallery-description {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+    section[aria-label="Joyce's Dublin photo gallery"] figure:hover p {
+        transform: none !important;
+    }
+    section[aria-label="Joyce's Dublin photo gallery"] figure a {
+        color: inherit !important;
+    }
+}
+@media (max-width: 425px)  {
+    .gallery-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12, 15rem);
+    }
+}
 /* main - gallery hover action */
 
 section[aria-label="Joyce's Dublin photo gallery"] figure::after {
@@ -218,17 +270,10 @@ section[aria-label="Joyce's Dublin photo gallery"] figure:hover::after {
 
 section[aria-label="Joyce's Dublin photo gallery"] figure:hover p {
     transform: translateY(-5px);
-    color: var(--light-base-color);
 }
 
-section[aria-label="Joyce's Dublin photo gallery"] a{
-    text-decoration: none;
+section[aria-label="Joyce's Dublin photo gallery"] a {
     text-decoration: underline;
-    color: var(--light-base-color);
-}
-
-section[aria-label="Joyce's Dublin photo gallery"]a {
-    color: var(--accent-red);
 }
 
 section[aria-label="Joyce's Dublin photo gallery"] figure:hover .gallery-description {
