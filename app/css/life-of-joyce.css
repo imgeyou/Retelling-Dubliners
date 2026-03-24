@@ -160,10 +160,10 @@ section[aria-label="Works by James Joyce"] article a{
     text-align: center;
 }
 
-/* Mobile: 1-column grid */
+/* Mobile: 2-column grid */
 @media (max-width: 768px) {
     section[aria-label="Works by James Joyce"] ul{
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
     section[aria-label="Works by James Joyce"] article a{
         white-space: normal;

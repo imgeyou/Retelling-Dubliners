@@ -715,17 +715,52 @@ details[open] > *:not(summary) {
   padding: 0;
   cursor: pointer;
 }
-/* =============responsive: Tablet & Mobile ====================*/
-@media (max-width: 768px) {
+
+/* =============responsive: Smaller Screen ====================*/
+@media (max-width: 1024px) {
   body {
-    padding: 1rem;
-    gap: var(--sp-md);
+    padding: 2rem 4rem;
   }
-  /* hide the original nav links */
+
+  header {
+    gap: 1.25rem;
+  }
+
+  header nav ul {
+    gap: 1.25rem;
+  }
+
+  .btn {
+    padding: 0.75rem 2.25rem;
+  }
+
+  footer {
+    gap: 3rem;
+  }
+
+  .footer-col-right {
+    margin-right: 0;
+  }
+
+  .footer-credits {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  nav[aria-label="Footer navigation"] ul {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+/* =============responsive: Tablet & Mobile ====================*/
+/* for nav bar specifically */
+@media (max-width: 990px) {
+/* hide the original nav links */
   header nav ul {
     display: none;
     pointer-events: none;
   }
+
   /* hamburger icon */
   .nav-hamburger {
     display: inline-block;
@@ -734,6 +769,7 @@ details[open] > *:not(summary) {
     padding: 0;
     cursor: pointer;
   }
+
   .nav-hamburger svg {
     width: 3rem;
     height: 3rem;
@@ -804,15 +840,25 @@ details[open] > *:not(summary) {
     cursor: pointer;
     padding: 0.25rem;
   }
+
   .close-menu svg {
     width: 3rem;
     height: 3rem;
     fill: var(--accent-navy);
     transition: fill 0.2s ease;
   }
+
   .close-menu:hover svg {
     fill: var(--accent-red);
   }
+}
+
+@media (max-width: 768px) {
+  body {
+      padding: 1rem 3rem;
+      gap: var(--sp-sm);
+    }
+  
 
 
   .btn {
