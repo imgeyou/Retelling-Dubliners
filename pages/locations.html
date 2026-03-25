@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="../app/css/global.css" />
     <link rel="stylesheet" href="../app/css/locations.css" />
     <script src="../app/js/locations.js" defer></script>
-    <script src="../app/js/loadmore.js" defer></script>
     <script src="../app/js/script.js" defer></script>
   </head>
   <body>
@@ -98,9 +97,9 @@
         </div>
 
         <!-- LOCATION CARDS -->
-        <div class="filterable-cards" >
+        <div id="locationCardContainer" class="filterable-cards" >
           <!-- copy the article HTML and keep the data-name structure + class names for everything -->
-          <article data-name="street" class="card">
+          <article data-name="street" class="card location-card">
             <img src="assets/GreatBritainSt.png" alt="Great Britain Street" />
             <div>
               <p><a>#Street</a></p>
@@ -120,7 +119,7 @@
             </div>
           </article>
 
-          <article data-name="waterway" class="card">
+          <article data-name="waterway" class="card location-card">
             <img src="assets/CanalBridge.png" alt="Canal Bridge" />
             <div>
               <p><a>#Rivers &amp; Canals</a></p>
@@ -140,7 +139,7 @@
             </div>
           </article>
 
-          <article data-name="building" class="card">
+          <article data-name="building" class="card location-card">
             <img src="assets/PigeonHouse.png" alt="Pigeon House" />
             <div>
               <p><a>#Historic Building</a></p>
@@ -160,7 +159,7 @@
             </div>
           </article>
 
-          <article data-name="street" class="card">
+          <article data-name="street" class="card location-card">
             <img src="assets/NorthStrand.png" alt="North Strand Road" />
             <div>
               <p><a>#Street</a></p>
@@ -176,7 +175,7 @@
             </div>
           </article>
 
-          <article data-name="street" class="card">
+          <article data-name="street" class="card location-card">
             <img src="assets/WharfRoad.png" alt="Wharf Road" />
             <div>
               <p><a>#Street</a></p>
@@ -197,7 +196,7 @@
             </div>
           </article>
 
-          <article data-name="street" class="card">
+          <article data-name="street" class="card location-card">
             <img src="assets/RiverLiffey.png" alt="River Liffey" />
             <div>
               <p><a>#Street</a></p>
@@ -218,7 +217,7 @@
             </div>
           </article>
 
-          <article data-name="building" class="card">
+          <article data-name="building" class="card location-card">
             <img
               src="assets/virtiolworks.png"
               alt="section of the 'Plan of the City of Dublin' map showing were the Virtiol Works building used to be."
@@ -1106,7 +1105,8 @@
               >
             </div>
           </article>
-           <article data-name="street" class="card">
+          
+          <article data-name="street" class="card">
             <img
               src="assets/NassauSt.png"
               alt="Trams and pedestrians on Nassau Street, viewed from Grafton Street.  Photograph in 1900, Public Domain"
@@ -1127,7 +1127,7 @@
               >
             </div>
           </article>
-          </article>
+
            <article data-name="street" class="card">
             <img
               src="assets/KildareSt.jpg"
@@ -1147,8 +1147,9 @@
                 ><span>Map It Out</span></a
               >
             </div>
+
           </article>
-          </article>
+
            <article data-name="building" class="card">
             <img
               src="assets/KildareStClub.jpg"
@@ -1169,6 +1170,7 @@
               >
             </div>
           </article>
+
           <article data-name="street" class="card">
             <img
               src="assets/HumeSt.jpg"
@@ -1187,6 +1189,7 @@
                 ><span>Map It Out</span></a>
             </div>
           </article>
+
           <article data-name="street" class="card">
             <img
               src="assets/MerrionSq.jpg"
@@ -1205,6 +1208,7 @@
                 ><span>Map It Out</span></a>
             </div>
           </article>
+
           <article data-name="building" class="card">
             <img
               src="assets/LeinsterHouse.jpg"
@@ -1223,6 +1227,7 @@
                 ><span>Map It Out</span></a>
             </div>
           </article>
+
           <article data-name="street" class="card">
             <img
               src="assets/CapelSt.jpg"
@@ -1241,6 +1246,7 @@
                 ><span>Map It Out</span></a>
             </div>
           </article>
+
           <article data-name="building" class="card">
             <img
               src="assets/CityHall.jpg"
@@ -1259,6 +1265,7 @@
                 ><span>Map It Out</span></a>
             </div>
           </article>
+
           <article data-name="street" class="card">
             <img
               src="assets/georgesSt.jpg"
@@ -1279,6 +1286,7 @@
                 ><span>Map It Out</span></a>
             </div>
           </article>
+
           <article data-name="street" class="card">
             <img
               src="assets/WestmorlandSt.jpg"
@@ -1300,6 +1308,7 @@
                 ><span>Map It Out</span></a>
             </div>
           </article>
+
           <article data-name="building" class="card">
             <img
               src="assets/collegeofsurgeons.jpg"
@@ -1318,6 +1327,7 @@
                 ><span>Map It Out</span></a>
             </div>
           </article>
+
           <article data-name="street" class="card">
             <img
               src="assets/SpringGardensLane.jpg"
@@ -1337,6 +1347,7 @@
                 ><span>Map It Out</span></a>
             </div>
           </article>
+
           <article data-name="building" class="card">
             <img
               src="assets/stgeorgechurch.jpg"
@@ -1355,6 +1366,7 @@
                 ><span>Map It Out</span></a>
             </div>
           </article>
+
           <article data-name="street" class="card">
             <img
               src="assets/marlboroughSt.jpg"
@@ -1373,6 +1385,7 @@
                 ><span>Map It Out</span></a>
             </div>
           </article>
+
           <article data-name="waterway" class="card">
             <img
               src="assets/northWall.jpg"
@@ -1391,6 +1404,7 @@
                 ><span>Map It Out</span></a>
             </div>
           </article>
+
           <article data-name="food" class="card">
             <img
               src="assets/ONeills.jpg"
@@ -1411,6 +1425,7 @@
                 ><span>Map It Out</span></a>
             </div>
           </article>
+
           <article data-name="street" class="card">
             <img
               src="assets/fleetst.jpg"
@@ -1429,8 +1444,10 @@
                 ><span>Map It Out</span></a>
             </div>
           </article>
+
         </div>
-        <button class="btn loadmore">Load More</button>
+        
+        <button id="load-more"class="btn loadmore">Load More</button>
         
       </section>
    

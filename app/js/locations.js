@@ -25,3 +25,24 @@ const filterCards = e => {
 
 //click event listener for filter buttons
 filterButtons.forEach(button => button.addEventListener("click", filterCards));
+
+
+//load more button
+let loadMoreBtn = document.querySelector('#load-more');
+let currentItem = 3;
+console.log(loadMoreBtn);
+console.log(currentItem);
+
+loadMoreBtn.onclick = () => {
+    let boxes = [...document.querySelectorAll('#locationCardContainer, .location-card')];
+    console.log(boxes, 'I am box.');
+    for (var l = currentItem; l > currentItem + 3; l++) {
+        boxes[l].style.display = 'inline-block';
+        console.log('I work!');
+    }
+    currentItem += 3;
+// load more button will disappear when all cards run out
+    if(currentItem >= boxes.length){
+        boxes[l].style.display = 'none';
+    }
+}
