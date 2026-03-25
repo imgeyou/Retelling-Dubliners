@@ -4,9 +4,11 @@ console.log('I load more cards!')
 let loadMoreBtn = document.querySelector('#load-more');
 //number of cards that should appear on load
 let currentItem = 4;
+
 //tester code 1
-console.log(loadMoreBtn);
-console.log(currentItem);
+// console.log(loadMoreBtn);
+// console.log(currentItem);
+
 
 //on buttom click more card will load in intances of 4
 loadMoreBtn.onclick = () => {
