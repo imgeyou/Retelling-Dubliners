@@ -169,9 +169,14 @@ section[aria-label="Joyce's Dublin photo gallery"] figure img {
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(6, 18rem);
+    grid-template-rows: auto;
     gap: var(--sp-md);
 }
+
+.card-reveal {
+    animation: slideUp 0.4s ease forwards;
+}
+
 
 @media (min-width: 769px)  {
 section[aria-label="Joyce's Dublin photo gallery"] figure:nth-child(1) {

@@ -43,6 +43,10 @@ body {
     color: #000000;
   }
 
+  .card-reveal {
+    animation: slideUp 0.4s ease forwards;
+}
+
   /* ------ [learn more btn] < life_of_jj.html ------ */
   .btn-s2 {
     background-color: var(--pure-black);
