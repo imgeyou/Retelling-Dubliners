@@ -27,22 +27,21 @@ const filterCards = e => {
 filterButtons.forEach(button => button.addEventListener("click", filterCards));
 
 
-//load more button
-let loadMoreBtn = document.querySelector('#load-more');
-let currentItem = 3;
-console.log(loadMoreBtn);
-console.log(currentItem);
+//load more
+      let loadMoreBtn = document.querySelector('#load-more');
+      let currentItem = 6;
+        console.log(loadMoreBtn);
+        console.log(currentItem);
 
-loadMoreBtn.onclick = () => {
-    let boxes = [...document.querySelectorAll('#locationCardContainer, .location-card')];
-    console.log(boxes, 'I am box.');
-    for (var l = currentItem; l > currentItem + 3; l++) {
-        boxes[l].style.display = 'inline-block';
-        console.log('I work!');
-    }
-    currentItem += 3;
-// load more button will disappear when all cards run out
-    if(currentItem >= boxes.length){
-        boxes[l].style.display = 'none';
+      loadMoreBtn.onclick = () => {
+      let boxes = [...document.querySelectorAll('#locationCardContainer, .card')];
+        for (var i = currentItem; i < currentItem + 3; i++) {
+          boxes[i].style.display = 'inline-block';
+          console.log('I work!');
+      }
+      currentItem += 6;
+      // load more button will disappear when all cards run out
+      if(currentItem >= boxes.length){
+        boxes[i].style.display = 'none';
     }
 }
