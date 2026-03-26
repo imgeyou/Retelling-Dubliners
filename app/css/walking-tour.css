@@ -73,17 +73,29 @@ html {
 }
 @media (max-width: 768px) {
   section[aria-label="Walking tour hero"] div {
-      position: absolute;
       top: 14%;
-      left: 4%;
+      left: 6%;
     }
   section[aria-label="Walking tour hero"] {
-    height: 500px;
+    height: 505px;
   }
 }
-@media (max-width: 520px) {
+
+@media (max-width: 580px) {
   section[aria-label="Walking tour hero"] div {
-    position: absolute;
+      top: 6%;
+      left: 6%;
+    }
+  section[aria-label="Walking tour hero"] {
+      height: 520px;
+    }
+        section[aria-label="Walking tour hero"] .tagline span {
+          padding: 0.45rem 2.5rem;
+          margin-left: var(--sp-sm);
+        }
+}
+@media (max-width: 496px) {
+  section[aria-label="Walking tour hero"] div {
     top: 8%;
     left: 6%;
   }
@@ -100,8 +112,13 @@ html {
     margin-top: var(--sp-md);
   }
   section[aria-label="Walking tour hero"] {
-    height: 540px;
+    height: 480px;
   }
+}
+@media (max-width: 375px) {
+  section[aria-label="Walking tour hero"] {
+      height: 420px;
+    }
 }
 
 /* main - section 2: Interactive map */
