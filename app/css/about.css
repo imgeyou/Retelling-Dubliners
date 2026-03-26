@@ -250,3 +250,126 @@ body.dark .about-link-card:focus-visible {
     max-width: 100%;
   }
 }
+/* ===== Responsive: about page ===== */
+
+@media (max-width: 1024px) {
+  section[aria-label="About Us hero"] h1 {
+    top: 12%;
+    left: 6%;
+    font-size: var(--fs-h3);
+  }
+
+  .section-lead {
+    margin: var(--sp-lg) 4rem;
+  }
+
+  section[aria-label="Meet the team"] li {
+    width: calc(50% - var(--sp-md));
+  }
+
+  section[aria-label="Meet the team"] li img,
+  section[aria-label="Meet the team"] li p {
+    width: 80%;
+  }
+
+  .about-bg-text p {
+    max-width: 100%;
+  }
+
+  .about-link-card {
+    flex: 1 1 calc(50% - var(--sp-lg));
+  }
+}
+
+@media (max-width: 768px) {
+  section[aria-label="About Us hero"] h1 {
+    position: static;
+    margin-bottom: var(--sp-md);
+    font-size: var(--fs-h4);
+    line-height: var(--lh-heading);
+  }
+
+  section[aria-label="About Us hero"] img {
+    margin-bottom: var(--sp-md);
+  }
+
+  section[aria-label="Meet the team"] h2 {
+    font-size: var(--fs-h4);
+  }
+
+  .section-lead {
+    margin: var(--sp-md) 0;
+    font-size: var(--fs-body);
+  }
+
+  section[aria-label="Meet the team"] ul {
+    margin: var(--sp-xl) 0;
+    row-gap: var(--sp-xl);
+  }
+
+  section[aria-label="Meet the team"] li {
+    width: 100%;
+  }
+
+  section[aria-label="Meet the team"] li img {
+    width: 65%;
+    max-width: 220px;
+  }
+
+  section[aria-label="Meet the team"] li h3 {
+    margin: var(--sp-sm) 0;
+  }
+
+  section[aria-label="Meet the team"] li p {
+    width: 85%;
+  }
+
+  .about-bg-section {
+    gap: var(--sp-xl);
+    padding: var(--sp-xl) 0;
+  }
+
+  .about-bg-text {
+    padding-left: var(--sp-md);
+    border-left-width: 4px;
+  }
+
+  .about-bg-text h2 {
+    font-size: var(--fs-h3);
+  }
+
+  .about-bg-text p {
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    max-width: 100%;
+  }
+
+  .about-link-cards {
+    flex-direction: column;
+    gap: var(--sp-md);
+  }
+
+  .about-link-card {
+    flex: 1 1 100%;
+    min-width: 0;
+    padding: var(--sp-lg) var(--sp-lg) var(--sp-md);
+  }
+
+  .about-link-card__title {
+    font-size: var(--fs-h6);
+  }
+}
+
+@media (max-width: 640px) {
+  .about-link-cards {
+    flex-direction: column;
+  }
+
+  .about-link-card {
+    flex: 1 1 100%;
+  }
+
+  .about-bg-text p {
+    max-width: 100%;
+  }
+}
