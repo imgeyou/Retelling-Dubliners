@@ -124,7 +124,7 @@
 
 /* Tablet & Mobile (<= 768px) */
 /* font sizes */
-@media (max-width: 375px) {
+@media (max-width: 768px) {
     :root {
         --fs-h1: 3rem;
         --fs-h2: 2.2rem;
@@ -140,7 +140,7 @@
     }
 }
 
-/* Small Mobile (<= 375px) */
+/* Mobile (<= 375px) */
 /* font sizes */
 @media (max-width: 375px) {
     :root {
@@ -152,6 +152,36 @@
         --fs-h6: 0.9rem;
         --fs-body: 0.9rem;
         --fs-small: 0.7rem;
+        --fs-button: 1rem;
+        --fs-nav: 0.8rem;
+        --fs-tag: 0.8rem;
+
+        /* Spacing - subject to change */
+            --sp-xs: 0.2rem;
+            --sp-sm: 0.3rem;
+            --sp-md: 0.6rem;
+            --sp-lg: 1rem;
+            --sp-xl: 1.3rem;
+            /* for spacing between navLinks, sections, text-columns */
+            --sp-2xl: 2.5rem;
+            /* for spacing between header and text below */
+            --sp-3xl: 5.5rem;
+            /* for paragraph padding */
+    }
+}
+
+/* Small Mobile (<= 320px) */
+/* font sizes */
+@media (max-width: 375px) {
+    :root {
+        --fs-h1: 2.3rem;
+        --fs-h2: 1.5rem;
+        --fs-h3: 1.5rem;
+        --fs-h4: 1.2rem;
+        --fs-h5: 1rem;
+        --fs-h6: 0.8rem;
+        --fs-body: 0.8rem;
+        --fs-small: 0.6rem;
         --fs-button: 1rem;
         --fs-nav: 0.8rem;
         --fs-tag: 0.8rem;
