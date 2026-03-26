@@ -96,6 +96,11 @@ body {
     background-color: #fdfff5e8;
     box-shadow: -1.5px -1.5px 8px 0 var(--accent-navy);
   }
+    @media (max-width: 768px) {
+      .map-overlay {
+        background: none;
+      }
+    }
   /* ------ [a element in Q&A] < walking-tour.html ------ */
   section[aria-label="Navigating Dublin FAQ"] details a:hover{
     color: var(--accent-red);
@@ -314,7 +319,11 @@ body.dark {
     background-color: #1c2f4de3;
     box-shadow: -1.5px -1.5px 8px 0 var(--accent-navy);
   }
-
+@media (max-width: 768px) {
+  .map-overlay {
+    background: none;
+  }
+}
   /* ------ [a element in Q&A] < walking-tour.html ------ */
   section[aria-label="Navigating Dublin FAQ"] details a:hover {
     color: var(--accent-gold);

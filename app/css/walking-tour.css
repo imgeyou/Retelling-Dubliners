@@ -36,6 +36,7 @@ section[aria-label="Walking tour hero"] div {
   position: absolute;
   top: 18%;
   left: 8%;
+  max-width:80%;
   z-index: 2; 
 }
 
@@ -47,6 +48,7 @@ section[aria-label="Walking tour hero"] .tagline {
   font-size: var(--fs-tag);
   font-weight: var(--fw-regular);
   margin: var(--sp-sm) 0;
+  white-space: nowrap;
 }
 
 section[aria-label="Walking tour hero"] .tagline span {
@@ -62,15 +64,45 @@ section[aria-label="Walking tour hero"] p {
   font-size: var(--fs-body);
   width: 60%;
   margin-top: var(--sp-xl);
-  line-height: var(--sp-lg);
+  line-height: 1.5;
 }
 
 html {
   /* This makes all internal jumps smooth and "beautiful" */
   scroll-behavior: smooth; 
 }
-
-
+@media (max-width: 768px) {
+  section[aria-label="Walking tour hero"] div {
+      position: absolute;
+      top: 14%;
+      left: 4%;
+    }
+  section[aria-label="Walking tour hero"] {
+    height: 500px;
+  }
+}
+@media (max-width: 520px) {
+  section[aria-label="Walking tour hero"] div {
+    position: absolute;
+    top: 8%;
+    left: 6%;
+  }
+  section[aria-label="Walking tour hero"] .tagline {
+    white-space: wrap;
+    line-height: 2;
+  }
+  section[aria-label="Walking tour hero"] .tagline span {
+    padding: 0.45rem 2.5rem;
+    margin-left: var(--sp-sm);
+  }
+  section[aria-label="Walking tour hero"] p {
+    width: 100%;
+    margin-top: var(--sp-md);
+  }
+  section[aria-label="Walking tour hero"] {
+    height: 540px;
+  }
+}
 
 /* main - section 2: Interactive map */
 section[aria-label="Interactive map"] {
@@ -88,7 +120,7 @@ section[aria-label="Interactive map"] {
 iframe {
   display: block;
   width: 100%;
-  height: calc(100% + 60px);
+  height: calc(100% + 59px);
   position: relative;
   /* used to hide the google topbar */
   top: -60px;
@@ -102,6 +134,7 @@ iframe {
   width: 100%;
   height: 100%;
   bottom: 0;
+  right:-1px;
   pointer-events: none;
 }
 
@@ -642,6 +675,30 @@ details.audio-transcript > summary::before {
   border-left: 7px solid var(--accent-navy);
   transition: transform 0.2s ease, border-left-color 0.2s ease;
   flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  audio {
+    /* Size and layout */
+    display: block;
+    width: 100%;
+    max-width: 26rem;
+  }
+  details.audio-transcript {
+    max-width: 26rem;
+  }
+}
+
+@media (max-width: 520px) {
+  audio {
+    /* Size and layout */
+    display: block;
+    width: 100%;
+    max-width: 20rem;
+  }
+  details.audio-transcript {
+    max-width: 20rem;
+  }
 }
 
 details.audio-transcript[open] > summary::before {
