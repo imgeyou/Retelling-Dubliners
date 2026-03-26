@@ -12,7 +12,16 @@ section[aria-label="Following the Dubliners locations"] h1 {
   margin-bottom: var(--sp-xl);
   width: 60%;
 }
-
+@media (max-width: 1240px) {
+  .page-lead {
+    width: 70%;
+  }
+}
+@media (max-width: 768px) {
+  .page-lead {
+      width: 100%;
+    }
+}
 /* main - section 1 - filter */
 .filter-buttons {
   display: flex;
@@ -24,6 +33,7 @@ section[aria-label="Following the Dubliners locations"] h1 {
   overflow-x: auto;
   scrollbar-width: none;
   white-space: nowrap;
+  flex-wrap: wrap;
   /* background: linear-gradient(to left, #00000007 0%, transparent 15%); */
 }
 
@@ -53,30 +63,7 @@ section[aria-label="Following the Dubliners locations"] h1 {
   gap: var(--sp-lg);
   overflow: visible;
 }
-@media (max-width: 1280px) {
-  .filterable-cards {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .filterable-cards article div {
-    height: 18rem;
-  }
-}
-@media (max-width: 768px) {
-  .filterable-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .filterable-cards article div {
-    height: 13rem;
-  }
-}
-@media (max-width: 480px) {
-  .filterable-cards {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .filterable-cards article div {
-    height: 18rem;
-  }
-}
+
 /* individual card */
 .filterable-cards article {
   width: 100%;
@@ -137,6 +124,35 @@ section[aria-label="Following the Dubliners locations"] h1 {
   position: relative;
 }
 
+@media (max-width: 1440px) {
+  .filterable-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .filterable-cards article div {
+    height: 18rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .filterable-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .filterable-cards article div {
+    height: 15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .filterable-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .filterable-cards article div {
+    height: 13rem;
+  }
+}
 .filterable-cards article div h2 {
   font-size: var(--fs-h5);
   font-weight: var(--fw-bold);

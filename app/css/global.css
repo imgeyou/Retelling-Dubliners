@@ -154,12 +154,14 @@ body {
     color: var(--light-base-color);
     position: relative;
     overflow: hidden;
+    white-space: nowrap;
   }
 
   .location-btn span {
     position: relative;
     z-index: 1;
     color: var(--light-base-color);
+
   }
 
   .location-btn::before {
