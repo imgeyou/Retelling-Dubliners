@@ -191,7 +191,7 @@ section[aria-label="Navigating Dublin FAQ"] h2 {
 }
 
 section[aria-label="Navigating Dublin FAQ"] summary {
-  font-size: var(--fs-h5);
+  font-size: var(--fs-h6);
   font-weight: var(--fw-bold);
   margin-top: var(--sp-sm);
 }
