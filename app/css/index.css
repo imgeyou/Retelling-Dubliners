@@ -255,6 +255,7 @@ section[aria-label="Joyce's Dublin photo gallery"] figure:nth-child(9) {
     .gallery-container {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(12, 15rem);
+        gap: var(--sp-2xl);
     }
 }
 /* main - gallery hover action */
