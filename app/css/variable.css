@@ -127,11 +127,11 @@
 @media (max-width: 768px) {
     :root {
         --fs-h1: 3rem;
-        --fs-h2: 2.4rem;
+        --fs-h2: 2.2rem;
         --fs-h3: 2rem;
-        --fs-h4: 1.7rem;
-        --fs-h5: 1.4rem;
-        --fs-h6: 1.2rem;
+        --fs-h4: 1.3rem;
+        --fs-h5: 1.1rem;
+        --fs-h6: 1rem;
         --fs-body: 0.9rem;
         --fs-small: 0.7rem;
         --fs-button: 1rem;
