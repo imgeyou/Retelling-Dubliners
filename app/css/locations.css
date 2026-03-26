@@ -117,20 +117,20 @@ section[aria-label="Following the Dubliners locations"] h1 {
 
 .filterable-cards article div {
   width: 100%;
-  height: 26rem;
+  height: 28rem;
   padding: var(--sp-md) var(--sp-lg);
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1240px) {
   .filterable-cards {
     grid-template-columns: repeat(3, 1fr);
   }
 
   .filterable-cards article div {
-    height: 18rem;
+    height: 26rem;
   }
 }
 
@@ -140,7 +140,7 @@ section[aria-label="Following the Dubliners locations"] h1 {
   }
 
   .filterable-cards article div {
-    height: 15rem;
+    height: 22rem;
   }
 }
 
@@ -245,8 +245,9 @@ section[aria-label="Following the Dubliners locations"] h1 {
 }
 
 /* main - section 2: FAQ */
+/* main - section 3: Navigating Dublin FAQ */
 section[aria-label="Navigating Dublin FAQ"] {
-  padding: var(--sp-lg) 8rem;
+  padding: var(--sp-lg) 8%;
 }
 
 section[aria-label="Navigating Dublin FAQ"] h2 {
@@ -260,7 +261,7 @@ section[aria-label="Navigating Dublin FAQ"] h2 {
   font-size: var(--fs-h6);
   text-align: center;
   margin-bottom: var(--sp-xl);
-  padding: 0 5rem;
+  padding: 0 10%;
 }
 
 section[aria-label="Navigating Dublin FAQ"] summary {
@@ -268,24 +269,19 @@ section[aria-label="Navigating Dublin FAQ"] summary {
   font-weight: var(--fw-bold);
   margin-top: var(--sp-sm);
 }
+
 section[aria-label="Navigating Dublin FAQ"] details p {
   font-size: var(--fs-body);
   margin-top: var(--sp-sm);
   margin-left: var(--sp-xl);
 }
 
-section[aria-label="Navigating Dublin FAQ"] details h3 {
-  font-size: var(--fs-h6);
+section[aria-label="Navigating Dublin FAQ"] hr {
+  border-top: solid var(--light-text-color) 1.5px;
   margin-top: var(--sp-sm);
-  margin-left: var(--sp-xl);
 }
 
 section[aria-label="Navigating Dublin FAQ"] details a {
   color: inherit;
-}
-
-section[aria-label="Navigating Dublin FAQ"] hr {
-  border-top: solid var(--light-text-color) 1.5px;
-  margin-top: var(--sp-sm);
 }
 
