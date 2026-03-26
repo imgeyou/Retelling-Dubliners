@@ -353,3 +353,81 @@ section[aria-label="Life of James Joyce hero"] img {
     font-size: var(--fs-body);
   }
 }
+/* ===== Tablet override for book recommendation cards ===== */
+
+@media (max-width: 1024px) {
+  /* Keep four cards in one row, but tighten spacing */
+  section[aria-label="Works by James Joyce"] ul {
+    gap: var(--sp-md);
+  }
+
+  /* Keep the overlay layout and reserve space for the button */
+  section[aria-label="Works by James Joyce"] article div {
+    padding: 1.25rem 0.85rem 6rem;
+    gap: var(--sp-sm);
+    justify-content: flex-start;
+  }
+
+  /* Make the title slightly smaller */
+  section[aria-label="Works by James Joyce"] h3 {
+    font-size: var(--fs-h6);
+    line-height: 1.15;
+  }
+
+  /* Limit the amount of visible description text */
+  section[aria-label="Works by James Joyce"] ul p {
+    font-size: var(--fs-small);
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Keep the button lower and centered */
+  section[aria-label="Works by James Joyce"] article a {
+    width: 76%;
+    bottom: 1rem;
+    white-space: nowrap;
+    font-size: var(--fs-small);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Switch to two columns on smaller screens */
+  section[aria-label="Works by James Joyce"] ul {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-md);
+  }
+
+  section[aria-label="Works by James Joyce"] article div {
+    padding: 1rem 0.75rem 5.5rem;
+    gap: var(--sp-sm);
+  }
+
+  section[aria-label="Works by James Joyce"] h3 {
+    font-size: var(--fs-body);
+  }
+
+  section[aria-label="Works by James Joyce"] ul p {
+    font-size: var(--fs-small);
+    -webkit-line-clamp: 3;
+  }
+
+  section[aria-label="Works by James Joyce"] article a {
+    width: 80%;
+    bottom: 0.9rem;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Switch to one column on very small screens */
+  section[aria-label="Works by James Joyce"] ul {
+    grid-template-columns: 1fr;
+  }
+
+  section[aria-label="Works by James Joyce"] article div {
+    padding: 1rem 0.75rem 5rem;
+  }
+}
