@@ -174,3 +174,182 @@ section[aria-label="Works by James Joyce"] article a{
     font-size: var(--fs-h3);
     text-align: center;
 }
+/* ===== Mobile layout override: life of joyce page ===== */
+
+/* HERO + HEADER RELATION */
+section[aria-label="Life of James Joyce hero"] {
+  position: relative;
+}
+
+section[aria-label="Life of James Joyce hero"] img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* tablet */
+@media (max-width: 1024px) {
+  section[aria-label="Life of James Joyce hero"] h1 {
+    position: absolute;
+    top: 14%;
+    left: 6%;
+    max-width: 72%;
+    font-size: var(--fs-h3);
+    line-height: 1.08;
+    z-index: 2;
+  }
+
+  section[aria-label="Quotes from James Joyce"] {
+    padding: 3rem 2rem;
+  }
+
+  section[aria-label="Quotes from James Joyce"] p:first-of-type,
+  section[aria-label="Quotes from James Joyce"] p:last-of-type {
+    padding: 0 2rem;
+  }
+
+  section[aria-label="All About Dubliners"] {
+    grid-template-columns: 1fr;
+    gap: var(--sp-xl);
+  }
+
+  section[aria-label="All About Dubliners"] div:last-of-type {
+    justify-self: start;
+  }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  /* make page spacing feel connected to hamburger header */
+  main {
+    gap: var(--sp-lg);
+  }
+
+  section[aria-label="Life of James Joyce hero"] {
+    margin-top: 0;
+  }
+
+  section[aria-label="Life of James Joyce hero"] img {
+    margin-bottom: var(--sp-md);
+  }
+
+  section[aria-label="Life of James Joyce hero"] h1 {
+    position: absolute;
+    top: 18%;
+    left: 6%;
+    max-width: 78%;
+    font-size: clamp(2rem, 8vw, 3.2rem);
+    line-height: 1.05;
+    z-index: 2;
+  }
+
+  /* quotes */
+  section[aria-label="Quotes from James Joyce"] {
+    padding: 2rem 1rem;
+  }
+
+  section[aria-label="Quotes from James Joyce"] img:first-of-type,
+  section[aria-label="Quotes from James Joyce"] img:last-of-type {
+    width: 2.5rem;
+  }
+
+  section[aria-label="Quotes from James Joyce"] p:first-of-type {
+    font-size: var(--fs-h5);
+    padding: 0;
+    line-height: 1.25;
+  }
+
+  section[aria-label="Quotes from James Joyce"] p:last-of-type {
+    padding: 0;
+    margin-top: var(--sp-md);
+  }
+
+  /* all about dubliners */
+  section[aria-label="All About Dubliners"] {
+    grid-template-columns: 1fr;
+    gap: var(--sp-lg);
+  }
+
+  section[aria-label="All About Dubliners"] h2 {
+    font-size: var(--fs-h3);
+  }
+
+  section[aria-label="All About Dubliners"] hgroup > p {
+    font-size: var(--fs-body);
+    margin-bottom: var(--sp-md);
+    line-height: 1.6;
+  }
+
+  section[aria-label="All About Dubliners"] div > p {
+    margin-bottom: var(--sp-md);
+    line-height: 1.6;
+  }
+
+  section[aria-label="All About Dubliners"] div:last-of-type {
+    justify-self: start;
+  }
+
+  /* works */
+  section[aria-label="Works by James Joyce"] h2 {
+    margin-top: var(--sp-xl);
+    margin-bottom: var(--sp-md);
+  }
+
+  section[aria-label="Works by James Joyce"] hgroup p {
+    font-size: var(--fs-h4);
+    margin-bottom: var(--sp-lg);
+    line-height: 1.15;
+  }
+
+  section[aria-label="Works by James Joyce"] ul {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-md);
+  }
+
+  section[aria-label="Works by James Joyce"] article div {
+    padding: 1.5rem 0.9rem;
+    gap: var(--sp-sm);
+  }
+
+  section[aria-label="Works by James Joyce"] h3 {
+    font-size: var(--fs-h6);
+    line-height: 1.2;
+  }
+
+  section[aria-label="Works by James Joyce"] ul p {
+    font-size: var(--fs-body);
+  }
+
+  section[aria-label="Works by James Joyce"] article a {
+    width: 86%;
+    bottom: 8%;
+    white-space: normal;
+  }
+
+  #quote {
+    font-size: var(--fs-h4);
+  }
+}
+
+/* small mobile */
+@media (max-width: 480px) {
+  section[aria-label="Life of James Joyce hero"] h1 {
+    top: 20%;
+    left: 6%;
+    max-width: 80%;
+    font-size: clamp(1.8rem, 9vw, 2.7rem);
+    line-height: 1.04;
+  }
+
+  section[aria-label="Works by James Joyce"] ul {
+    grid-template-columns: 1fr;
+  }
+
+  section[aria-label="Works by James Joyce"] article div {
+    padding: 1.4rem 0.8rem;
+  }
+
+  section[aria-label="Works by James Joyce"] h3 {
+    font-size: var(--fs-body);
+  }
+}
