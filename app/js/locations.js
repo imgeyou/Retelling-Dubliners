@@ -12,6 +12,8 @@ const filterCards = e => {
 
     //iterate over each filterable card
     filterableCards.forEach(card => {
+        //clean the "display:none" applied by the loadmore button
+        card.style.display = '';
         //add hide class to hide the card intitially
         card.classList.add("hide");
 
@@ -20,6 +22,15 @@ const filterCards = e => {
             card.classList.remove("hide");
 
         }
+
+        if (e.target.dataset.name === "all") {
+            filterableCards.forEach((card, index) => {
+                if (index >= currentItem) {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
     });
 };
 

@@ -3,14 +3,21 @@ console.log('I load more cards!')
 //load more
 let loadMoreBtn = document.querySelector('.loadmore');
 //number of cards that should appear on load
-let currentItem = 9;
+var currentItem;
+if (window.innerWidth <= 768) {
+    currentItem = 5;
+} else if (window.innerWidth <= 1024) {
+    currentItem = 7;
+} else {
+    currentItem = 9;
+}
 
 //tester code 1
 // console.log(loadMoreBtn);
 // console.log(currentItem);
 
 let boxes = [...document.querySelectorAll('.locationCardContainer, .card')];
-//hide the rest other than first 8
+//hide the rest other than first 8/6/4
 boxes.forEach((box, index) => {
     if (index >= currentItem) {
         box.style.display = 'none';
