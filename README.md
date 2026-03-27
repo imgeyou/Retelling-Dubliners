@@ -1,5 +1,5 @@
 <head>
-  <meta http-equiv="refresh" content="0;url=/folder_that_has_homepage" />
+  <meta http-equiv="refresh" content="0;url=/index.html" />
   # cs7026-group7
   Group project designing an accessible website for CS27026
 </head>
