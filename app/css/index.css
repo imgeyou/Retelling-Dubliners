@@ -300,3 +300,9 @@ section[aria-label="Joyce's Dublin photo gallery"] figcaption {
     right: 2%;
     z-index: 2; 
 }
+
+.loadmore {
+  display: block;
+  margin: var(--sp-xl) auto;
+  padding: 0.75rem 5rem;
+}

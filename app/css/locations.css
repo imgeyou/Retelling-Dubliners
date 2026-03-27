@@ -193,50 +193,8 @@ section[aria-label="Following the Dubliners locations"] h1 {
 /* load more button styles */
 .loadmore {
   display: block;
-  /* overwrite original btn style */
   margin: var(--sp-xl) auto;
   padding: 0.75rem 5rem;
-}
-
-.loader{
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background: magenta;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-
-  &::before{
-    position: absolute;
-    content: '';
-    inset: 10%;
-    border-radius: 50%;
-    background-color: greenyellow;
-  }
-  &::after{
-    position: absolute;
-    content: '';
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    transform-origin: 0 0;
-    height: 50%;
-    width: 20%;
-    background-color: greenyellow;
-    z-index: -1;
-    animation: spinner 1s linear infinite;
-  }
-}
-
-@keyframes spinner{
-  from{
-    rotate: 0deg;
-  }
-  to{
-    rotate: 360deg;
-  }
 }
 
 /* filter by styles for location cards */
