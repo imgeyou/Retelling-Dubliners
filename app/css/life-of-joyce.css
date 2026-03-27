@@ -431,3 +431,40 @@ section[aria-label="Life of James Joyce hero"] img {
     padding: 1rem 0.75rem 5rem;
   }
 }
+/* ===== Fix book cards for 1010px–1380px ===== */
+@media (min-width: 1010px) and (max-width: 1380px) {
+  section[aria-label="Works by James Joyce"] ul {
+    gap: var(--sp-md);
+  }
+
+  /* Keep the overlay layout but reserve more space for the button */
+  section[aria-label="Works by James Joyce"] article div {
+    padding: 1rem 0.75rem 6rem;
+    gap: var(--sp-sm);
+    justify-content: flex-start;
+  }
+
+  /* Reduce title size slightly */
+  section[aria-label="Works by James Joyce"] h3 {
+    font-size: var(--fs-h6);
+    line-height: 1.15;
+  }
+
+  /* Reduce body text and limit the number of visible lines */
+  section[aria-label="Works by James Joyce"] ul p {
+    font-size: var(--fs-small);
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Push the button lower and keep it centered */
+  section[aria-label="Works by James Joyce"] article a {
+    width: 74%;
+    bottom: 0.85rem;
+    font-size: var(--fs-small);
+    white-space: nowrap;
+  }
+}
