@@ -1,4 +1,20 @@
-# System files, for macos users
+# Dependencies
+node_modules/
+
+# Next.js build output & cache
+.next/
+out/
+
+# Environment variables
+.env
+
+# Vercel
+.vercel
+
+# OS files
 .DS_Store
 Thumbs.db
-.DS_Store
+
+# Editor
+.vscode/
+.idea/

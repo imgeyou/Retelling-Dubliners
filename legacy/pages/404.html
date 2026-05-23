@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../app/css/variable.css">
+    <link rel="stylesheet" href="../app/css/global.css">
+    <link rel="stylesheet" href="../app/css/404.css">
+    <script src="../app/js/script.js" defer></script>
+  </head>
+  <body>
+    <!-- hamburger menu: shown when width <= 768px -->
+    <div class="mobile-menu">
+        <div class="close-menu">
+            <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                <path
+                    d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z">
+                </path>
+            </svg>
+        </div>
+        <ul>
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="life-of-joyce.html">Life of James Joyce</a></li>
+            <li><a href="walking-tour.html">Dubliner's Walking Tour</a></li>
+            <li><a href="locations.html">Dubliner's Locations</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li>
+                <div class="toggle"></div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <a href="index.html" aria-label="Retellings - Home" class="logo-container">
+            <img src="assets/logo_navy.png" alt="Retellings Logo" class="logo">
+            <img src="assets/logo_offwhite.png" alt="Retellings Logo" class="logo">
+        </a>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="life-of-joyce.html">Life of James Joyce</a></li>
+                <li><a href="walking-tour.html">Dubliner's Walking Tour</a></li>
+                <li><a href="locations.html">Dubliner's Locations</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><div class="toggle"></div></li>
+            </ul>
+        </nav>
+        <button class="nav-hamburger">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#37465e" viewBox="0 0 256 256">
+                <path
+                    d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z">
+                </path>
+            </svg>
+        </button>
+    </header>
+
+    <main>
+
+        <!-- SECTION 1 - 404 ERROR MESSAGE -->
+        <section aria-label="Page not found">
+            <h1>404</h1>
+            <p>The page you're looking for either doesn't exist or another error occurred.</p>
+
+            <!-- JAMES JOYCE QUOTE -->
+            <blockquote>
+                <img loading="lazy" src="assets/QuotesIcon.png" alt="Open Quote">
+                <p>Mistakes are the portals of discovery.</p>
+                <cite>- James Joyce</cite>
+                <img loading="lazy" src="assets/QuotesIcon.png" alt="End Quote">
+            </blockquote>
+
+            <!-- RETURN HOME LINK -->
+            <a href="index.html" class="btn btn-s3">Go Back</a>
+        </section>
+
+    </main>
+    <!-- FOOTER -->
+   <footer>
+        <div class="footer-col-left">
+            <div class="footer-brand">
+                <a href="index.html" aria-label="Retellings – Home">
+                    <img loading="lazy" src="assets/logo_navy.png" alt="Retellings Logo" class="logo logo-footer">
+                    <img loading="lazy" src="assets/logo_offwhite.png" alt="Retellings Logo" class="logo logo-footer">
+                </a>
+                <h3><strong>Retellings Digital Experience</strong></h3>
+            </div>
+            <p>Bridging the literary genius of The Dubliners by James Joyce with the historical and physical landscape of Dublin.</p>
+            <strong><small>&copy;2026 Retellings. <br>Created for academic purposes as part of the MSc Interactive Digital Media</small></strong>
+        </div>
+
+        <div class="footer-col-right">
+                <h2>Credits</h2>
+                <h3>Thanks to:</h3>
+                <ul>   
+                    <li>Cathal O'Connor</li>
+                    <li>Ren Paul</li>
+                    <li>Maiyse Abuleil</li>
+                </ul>
+                <p>Without whom, this website wouldn’t have been possible to plan this tour.</p>
+        </div>
+    </footer>
+
+  </body>
+</html>

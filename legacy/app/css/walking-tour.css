@@ -1,0 +1,823 @@
+@import "./variable.css";
+
+/* main - section 1: hero */
+section[aria-label="Walking tour hero"] {
+  position: relative;
+  width: auto;
+  height: 580px;
+  margin: 0 auto;
+}
+
+
+section[aria-label="Walking tour hero"]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4); 
+  z-index: 1;
+  pointer-events: none;
+}
+
+body.dark  section[aria-label="Walking tour hero"]::after{
+  background-color: rgba(0, 0, 0, 0.4); 
+}
+
+section[aria-label="Walking tour hero"] img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+section[aria-label="Walking tour hero"] div {
+  position: absolute;
+  top: 18%;
+  left: 8%;
+  max-width:80%;
+  z-index: 2; 
+}
+
+section[aria-label="Walking tour hero"] h1 {
+  font-size: var(--fs-h2);
+}
+
+section[aria-label="Walking tour hero"] .tagline {
+  font-size: var(--fs-tag);
+  font-weight: var(--fw-regular);
+  margin: var(--sp-sm) 0;
+  white-space: nowrap;
+}
+
+section[aria-label="Walking tour hero"] .tagline span {
+  display: inline-block;
+  padding: 0.75rem 3.5rem;
+  margin-left: var(--sp-xl);
+  background-color: var(--light-text-color);
+  color: var(--light-base-color);
+  font-size: var(--fs-tag);
+}
+
+section[aria-label="Walking tour hero"] p {
+  font-size: var(--fs-body);
+  width: 60%;
+  margin-top: var(--sp-xl);
+  line-height: 1.5;
+}
+
+html {
+  /* This makes all internal jumps smooth and "beautiful" */
+  scroll-behavior: smooth; 
+}
+@media (max-width: 768px) {
+  section[aria-label="Walking tour hero"] div {
+      top: 14%;
+      left: 6%;
+    }
+  section[aria-label="Walking tour hero"] {
+    height: 505px;
+  }
+}
+
+@media (max-width: 580px) {
+  section[aria-label="Walking tour hero"] div {
+      top: 6%;
+      left: 6%;
+    }
+  section[aria-label="Walking tour hero"] {
+      height: 520px;
+    }
+        section[aria-label="Walking tour hero"] .tagline span {
+          padding: 0.45rem 2.5rem;
+          margin-left: var(--sp-sm);
+        }
+}
+@media (max-width: 496px) {
+  section[aria-label="Walking tour hero"] div {
+    top: 8%;
+    left: 6%;
+  }
+  section[aria-label="Walking tour hero"] .tagline {
+    white-space: wrap;
+    line-height: 2;
+  }
+  section[aria-label="Walking tour hero"] .tagline span {
+    padding: 0.45rem 2.5rem;
+    margin-left: var(--sp-sm);
+  }
+  section[aria-label="Walking tour hero"] p {
+    width: 100%;
+    margin-top: var(--sp-md);
+  }
+  section[aria-label="Walking tour hero"] {
+    height: 480px;
+  }
+}
+@media (max-width: 375px) {
+  section[aria-label="Walking tour hero"] {
+      height: 420px;
+    }
+}
+
+/* main - section 2: Interactive map */
+section[aria-label="Interactive map"] {
+  position: relative;
+  margin-top: var(--sp-xl);
+  margin-bottom: var(--sp-xl);
+}
+
+.map-iframe-wrapper {
+  overflow: hidden;
+  /* extra 60px is clipped to hide google topbar */
+  aspect-ratio: 16 / 9;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+  height: calc(100% + 59px);
+  position: relative;
+  /* used to hide the google topbar */
+  top: -60px;
+  border: none;
+}
+
+.map-overlay-container {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  right:-1px;
+  pointer-events: none;
+}
+
+.map-overlay {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  overflow: hidden;
+  padding-top: 3%;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  width: 50%;
+  pointer-events: auto;
+}
+
+.map-overlay h2 {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--sp-lg);
+}
+
+.map-overlay p {
+  text-align: left;
+  margin-right: 1rem;
+}
+@media (max-width: 768px) {
+  section[aria-label="Interactive map"] {
+    margin-top:2rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .map-iframe-wrapper {
+    order: 2;
+  }
+
+  iframe {
+    width: 100%;
+    top: -60px;
+  }
+
+  .map-overlay-container {
+    position: static;
+    width: 100%;
+    height: auto;
+    bottom: auto;
+    order: 1;
+  }
+
+  .map-overlay {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: var(--sp-md) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .map-overlay h2 {
+    text-align: center;
+  }
+  .map-overlay p {
+    text-align: center;
+  }
+}
+
+/* main - section 3: Navigating Dublin FAQ */
+section[aria-label="Navigating Dublin FAQ"] {
+  padding: var(--sp-lg) 8%;
+}
+
+section[aria-label="Navigating Dublin FAQ"] h2 {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  text-align: center;
+  margin-bottom: var(--sp-lg);
+}
+
+.section-lead {
+  font-size: var(--fs-h6);
+  text-align: center;
+  margin-bottom: var(--sp-xl);
+  padding: 0 10%;
+}
+
+section[aria-label="Navigating Dublin FAQ"] summary {
+  font-size: var(--fs-h6);
+  font-weight: var(--fw-bold);
+  margin-top: var(--sp-sm);
+}
+
+section[aria-label="Navigating Dublin FAQ"] details p {
+  font-size: var(--fs-body);
+  margin-top: var(--sp-sm);
+  margin-left: var(--sp-xl);
+}
+
+section[aria-label="Navigating Dublin FAQ"] hr {
+  border-top: solid var(--light-text-color) 1.5px;
+  margin-top: var(--sp-sm);
+}
+
+section[aria-label="Navigating Dublin FAQ"] details a {
+  color: inherit;
+}
+
+/* main - section 4: TOUR STOPS */
+section[aria-label="Tour stops"] h2 {
+  font-size: var(--fs-h3);
+  margin-top: var(--sp-xl);
+  margin-bottom: var(--sp-xl);
+}
+
+/* main - section 4: TOUR STOPS - card */
+section[aria-label="Tour stops"] ol {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2xl);
+}
+
+/* image on right: text(wide)+image(narrow) */
+section[aria-label="Tour stops"] article {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: var(--sp-xl);
+}
+
+/* image on left: image(narrow)+text(wide) */
+section[aria-label="Tour stops"] article:has(.img-column:first-child) {
+  grid-template-columns: 2fr 3fr;
+}
+
+@media (max-width: 768px) {
+  section[aria-label="Tour stops"] article {
+    grid-template-columns: 1fr;
+    gap: var(--sp-xl)
+  }
+  section[aria-label="Tour stops"] article:has(.img-column:first-child) {
+    grid-template-columns: 1fr;
+  }
+  section[aria-label="Tour stops"] article .img-column {
+    order: 2;
+  }
+  section[aria-label="Tour stops"] article .text-column {
+    order: 1;
+  }
+}
+
+/* text column */
+.text-column h3 {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--sp-xl);
+}
+
+.text-column h4 {
+  font-size: var(--fs-h6);
+  font-weight: var(--fw-bold);
+}
+
+.text-column h5 {
+  font-size: var(--fs-h5);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--sp-md);
+}
+
+.text-column p {
+  padding-right: var(--sp-xl);
+  font-size: var(--fs-body);
+  margin-bottom: var(--sp-xl);
+  line-height: var(--sp-lg);
+}
+
+section[aria-label="Tour stops"] hr {
+  border-top: solid var(--light-text-color) 1.5px;
+  margin-top: var(--sp-xl);
+}
+
+blockquote {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--sp-xl);
+  padding-left: 25px;
+  line-height: var(--sp-lg);
+}
+
+.side-quest summary {
+  font-size: var(--fs-h6);
+  font-weight: var(--fw-bold);
+  margin-top: var(--sp-sm);
+  line-height: var(--sp-lg);
+}
+
+.side-quest p {
+  font-size: var(--fs-body);
+  margin-top: var(--sp-sm);
+  line-height: var(--sp-lg);
+}
+
+/* past & present image column */
+.img-column {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.spot-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-past {
+  z-index: 8;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: inset(0 calc(100% - var(--position, 50%)) 0 0);
+}
+
+/* slider */
+.slider {
+  z-index: 9;
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  opacity: 0;
+  /* for Firefox */
+  width: 100%;
+  height: 100%;
+}
+
+.slider-line {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 0.3rem;
+  z-index: 10;
+  left: var(--position, 50%);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+/* slider icon */
+.ph-arrows-out-line-horizontal {
+  font-size: var(--slider-size);
+  display: block;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  left: var(--position, 50%);
+  z-index: 11;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* make slider keyboard-select visible */
+.slider:focus-visible~.slider-btn {
+  outline: 0.3rem solid black;
+  outline-offset: 0.2rem;
+}
+
+
+/* SECTION 5 - TOUR OUTRO  */
+section[aria-label="Tour conclusion"] {
+  text-align: center;
+  padding: var(--sp-3xl) var(--sp-3xl);
+  border-top: 2px solid var(--accent-navy);
+  margin: var(--sp-2xl) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-xl);
+}
+
+section[aria-label="Tour conclusion"]::before {
+  content: "— ✦ —";
+  display: block;
+  font-size: var(--fs-h5);
+  color: var(--accent-navy);
+  letter-spacing: 0.4em;
+}
+
+section[aria-label="Tour conclusion"] h2 {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  color: var(--accent-navy);
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+section[aria-label="Tour conclusion"] p {
+  font-size: var(--fs-body);
+  max-width: 55ch;
+  line-height: var(--sp-lg);
+  margin: 0;
+  color: var(--accent-navy);
+}
+
+body.dark section[aria-label="Tour conclusion"] {
+  border-top-color: var(--accent-gold);
+}
+
+body.dark section[aria-label="Tour conclusion"]::before {
+  color: var(--accent-gold);
+}
+
+body.dark section[aria-label="Tour conclusion"] h2 {
+  color: var(--accent-gold);
+}
+
+body.dark section[aria-label="Tour conclusion"] p {
+  color: var(--dark-text-color);
+}
+
+@media (max-width: 1440px) {
+  section[aria-label="Tour conclusion"] {
+    padding: var(--sp-2xl) var(--sp-xl);
+  }
+}
+
+@media (max-width: 640px) {
+  section[aria-label="Tour conclusion"] {
+    padding: var(--sp-xl) var(--sp-md);
+  }
+
+  section[aria-label="Tour conclusion"] h2 {
+    font-size: var(--fs-h3);
+  }
+}
+
+
+/*  NATIVE AUDIO PLAYER  */
+
+audio {
+  /* Size and layout */
+  display: block;
+  width: 100%;
+  max-width: 36rem;
+  height: 3rem;
+  margin: var(--sp-md) 0;
+
+  /* Remove the default grey pill and reset appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+
+  /* Our classical border treatment */
+  border: 1.5px solid var(--accent-navy);
+  border-radius: 0;
+  background-color: var(--light-base-color);
+
+  /* Smooth colour transitions for dark mode */
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+/* ── Outer container (the pill shell) ── */
+audio::-webkit-media-controls-enclosure {
+  border-radius: 0;
+  background-color: transparent;
+  border: none;
+  overflow: hidden;
+}
+
+/* ── Inner panel ── */
+audio::-webkit-media-controls-panel {
+  background-color: var(--light-base-color);
+  border-radius: 0;
+  padding: 0 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ── Play / Pause button ── */
+audio::-webkit-media-controls-play-button {
+  background-color: var(--accent-navy);
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  filter: invert(1); 
+  transition: background-color 0.2s ease;
+}
+
+audio::-webkit-media-controls-play-button:hover {
+  background-color: var(--accent-gold);
+  filter: none;
+}
+
+/* ── Timeline / scrubber track ── */
+audio::-webkit-media-controls-timeline {
+  -webkit-appearance: none;
+  appearance: none;
+  flex: 1;
+  height: 3px;
+  background-color: var(--light-audio-bar);
+  border-radius: 0;
+  cursor: pointer;
+  accent-color: var(--accent-navy);
+}
+
+/* ── Current time display ── */
+audio::-webkit-media-controls-current-time-display {
+  color: var(--accent-navy);
+  font-family: var(--font-primary);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.04em;
+}
+
+/* ── Total / remaining time display ── */
+audio::-webkit-media-controls-time-remaining-display {
+  color: var(--accent-navy);
+  opacity: 0.6;
+  font-family: var(--font-primary);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.04em;
+}
+
+/* ── Mute button ── */
+audio::-webkit-media-controls-mute-button {
+  background-color: transparent;
+  filter: invert(20%) sepia(30%) saturate(500%) hue-rotate(185deg);
+}
+
+/* ── Volume slider ── */
+audio::-webkit-media-controls-volume-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  accent-color: var(--accent-navy);
+  height: 3px;
+  background-color: var(--light-audio-bar);
+  cursor: pointer;
+}
+
+/* ── Overflow ── */
+audio::-webkit-media-controls-overflow-button {
+  display: none;
+}
+
+
+/* DARK MODE — native audio */
+body.dark audio {
+  border-color: var(--accent-gold);
+  background-color: var(--dark-base-color);
+}
+
+body.dark audio::-webkit-media-controls-panel {
+  background-color: var(--dark-base-color);
+}
+
+body.dark audio::-webkit-media-controls-play-button {
+  background-color: var(--accent-gold);
+  filter: none; /* gold bg, dark icon */
+}
+
+body.dark audio::-webkit-media-controls-play-button:hover {
+  background-color: var(--accent-cream);
+}
+
+body.dark audio::-webkit-media-controls-timeline {
+  background-color: var(--dark-audio-bar);
+  accent-color: var(--accent-gold);
+}
+
+body.dark audio::-webkit-media-controls-current-time-display {
+  color: var(--dark-text-color);
+}
+
+body.dark audio::-webkit-media-controls-time-remaining-display {
+  color: var(--dark-text-color);
+}
+
+body.dark audio::-webkit-media-controls-mute-button {
+  filter: invert(1) sepia(0.3) saturate(2) hue-rotate(10deg);
+}
+
+body.dark audio::-webkit-media-controls-volume-slider {
+  accent-color: var(--accent-gold);
+  background-color: var(--dark-audio-bar);
+}
+
+
+/* AUDIO TRANSCRIPTS — collapsible */
+
+details.audio-transcript {
+  width: 100%;
+  max-width: 36rem;
+  margin: 0 0 var(--sp-md) 0;
+  border: none;
+}
+
+details.audio-transcript > summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-family: var(--font-primary);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  color: var(--accent-navy);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  list-style: none; /* remove default triangle in Firefox */
+  user-select: none;
+  background-color: transparent;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Remove the default WebKit disclosure arrow */
+details.audio-transcript > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Custom arrow icon using a CSS border triangle */
+details.audio-transcript > summary::before {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 7px solid var(--accent-navy);
+  transition: transform 0.2s ease, border-left-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  audio {
+    /* Size and layout */
+    display: block;
+    width: 100%;
+    max-width: 26rem;
+  }
+  details.audio-transcript {
+    max-width: 26rem;
+  }
+}
+
+@media (max-width: 520px) {
+  audio {
+    /* Size and layout */
+    display: block;
+    width: 100%;
+    max-width: 20rem;
+  }
+  details.audio-transcript {
+    max-width: 20rem;
+  }
+}
+
+details.audio-transcript[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+details.audio-transcript > summary:hover {
+  background-color: var(--accent-navy);
+  color: var(--light-base-color);
+}
+
+details.audio-transcript > summary:hover::before {
+  border-left-color: var(--light-base-color);
+}
+
+details.audio-transcript > summary:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: -2px;
+}
+
+
+details.audio-transcript[open] {
+  border: 1px solid var(--accent-navy);
+}
+
+
+details.audio-transcript[open] > summary {
+  background-color: var(--accent-navy);
+  color: var(--light-base-color);
+}
+
+details.audio-transcript[open] > summary::before {
+  border-left-color: var(--light-base-color);
+}
+
+/* Transcript body — the expanded content */
+.transcript-body {
+  padding: 0.75rem 1rem 1rem;
+  border-top: 1px solid var(--accent-navy);
+  background-color: var(--light-base-color);
+}
+
+.transcript-body p {
+  font-family: var(--font-primary);
+  font-size: var(--fs-small);
+  line-height: 1.7;
+  color: var(--light-text-color);
+  margin: 0 0 0.75rem 0;
+}
+
+.transcript-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Dark mode ── */
+body.dark details.audio-transcript {
+  border: none;
+}
+
+body.dark details.audio-transcript[open] {
+  border: 1px solid var(--accent-gold);
+}
+
+body.dark details.audio-transcript > summary {
+  color: var(--accent-gold);
+}
+
+body.dark details.audio-transcript > summary::before {
+  border-left-color: var(--accent-gold);
+}
+
+body.dark details.audio-transcript[open] > summary {
+  background-color: var(--accent-gold);
+  color: var(--dark-base-color);
+}
+
+body.dark details.audio-transcript[open] > summary::before {
+  border-left-color: var(--dark-base-color);
+}
+
+body.dark details.audio-transcript > summary:hover {
+  background-color: var(--accent-gold);
+  color: var(--dark-base-color);
+}
+
+body.dark details.audio-transcript > summary:hover::before {
+  border-left-color: var(--dark-base-color);
+}
+
+body.dark details.audio-transcript[open] .transcript-body {
+  border-top-color: var(--accent-gold);
+}
+
+body.dark details.audio-transcript > summary:focus-visible {
+  outline-color: var(--accent-cream);
+}
+
+body.dark .transcript-body {
+  border-top-color: var(--accent-gold);
+  background-color: var(--dark-base-color);
+}
+
+body.dark .transcript-body p {
+  color: var(--dark-text-color);
+}

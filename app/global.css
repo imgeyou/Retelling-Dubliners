@@ -1,0 +1,42 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: #F3EFE0;
+  font-family: var(--font-lora), Georgia, 'Times New Roman', serif;
+  color: #2A2419;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Design token aliases so any component can use them */
+:root {
+  /* Paper tones */
+  --cream-50:  #FDFBF7;
+  --cream-100: #F8F6F0;
+  --cream-200: #F3EFE0;
+  --cream-300: #EDE8D5;
+
+  /* Sepia accents */
+  --sepia-100: #E8DCC4;
+  --sepia-200: #D4C5A9;
+  --sepia-300: #C0B18E;
+  --sepia-400: #AC9D73;
+  --sepia-600: #847155;
+
+  /* Charcoal text */
+  --charcoal-700: #3D3528;
+  --charcoal-800: #2F2A1E;
+  --charcoal-900: #2A2419;
+
+  /* Typography */
+  --font-display: var(--font-playfair), 'Times New Roman', serif;
+  --font-body:    var(--font-lora), Georgia, serif;
+}

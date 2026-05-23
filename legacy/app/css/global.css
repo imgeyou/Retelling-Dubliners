@@ -1,0 +1,952 @@
+@import "./variable.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+  line-height: var(--lh-body);
+}
+
+/* =============== styling for color ================ */
+
+/* -------- 1. light mode color styles --------- */
+body {
+  background-color: var(--light-base-color);
+  color: var(--light-text-color);
+
+  /* ------ navigation bar styling ------ */
+  header nav ul a {
+    color: var(--light-text-color);
+  }
+  header nav ul a:hover {
+    color: var(--accent-red);
+  }
+
+  /* ------ [learn more btn, save map btn] < index.html, walking-tour.html ------ */
+  .btn-s1 {
+    background-color: var(--pure-black);
+    color: var(--pure-white);
+    box-shadow: inset 0 0 1.6em -0.6em #000000;
+  }
+
+  .btn-s1:hover {
+    color: var(--pure-black);
+  }
+
+  .btn-s1 .icon {
+    background: var(--light-base-color);
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #000000;
+  }
+
+  .btn-s1 .icon svg {
+    color: #000000;
+  }
+
+  .card-reveal {
+    animation: slideUp 0.4s ease forwards;
+}
+
+  /* ------ [learn more btn] < life_of_jj.html ------ */
+  .btn-s2 {
+    background-color: var(--pure-black);
+    color: var(--pure-white);
+  }
+
+  .btn-s2:hover {
+    background-color: var(--accent-red);
+  }
+
+  /* ------ [save map btn] < walking-tour.html ------ */
+  .btn-s3 {
+    background-color: var(--accent-navy);
+    color: var(--light-base-color);
+  }
+
+  .btn-s3:hover {
+    background-color: var(--accent-red);
+  }
+  /* ------ [joyce-link] < index.html */
+  .joyce-link:hover{
+    color:var(--accent-red);
+    transition: filter 0.4s ease;
+  }
+
+  /* ------ [links in gallery-container] < index.html */
+  .gallery-container a:hover {
+    color: var(--accent-red);
+  }
+  .gallery-container p {
+    color: white;
+  }
+  .gallery-container a {
+    color: inherit;
+  }
+  @media (max-width: 768px) {
+    .gallery-container p {
+    color: var(--light-text-color);
+    }
+    section[aria-label="Joyce's Dublin photo gallery"] figure a:hover {
+      color: var(--accent-red)!important;
+    }
+  }
+
+  /* ------ [map overlay] < walking-tour.html ------ */
+  .map-overlay {
+    background-color: #fdfff5e8;
+    box-shadow: -1.5px -1.5px 8px 0 var(--accent-navy);
+  }
+    @media (max-width: 768px) {
+      .map-overlay {
+        background: none;
+      }
+    }
+  /* ------ [a element in Q&A] < walking-tour.html ------ */
+  section[aria-label="Navigating Dublin FAQ"] details a:hover{
+    color: var(--accent-red);
+  }
+  /* ------ [strong in Q&A] < walking-tour.html ------ */
+  section[aria-label="Navigating Dublin FAQ"] strong {
+      color: var(--accent-red);
+  }
+  /* ------ [filter buttons] < location.html ------ */
+  .filter-buttons button {
+    border: 1px solid var(--light-text-color);
+    color: var(--light-text-color);
+  }
+
+  .filter-buttons button.active,
+  .filter-buttons button:hover {
+    background: var(--light-text-color);
+    color: var(--light-base-color);
+    border-color: transparent;
+  }
+
+  .filter-buttons button:first-of-type.active,
+  .filter-buttons button:first-of-type:hover {
+    background: var(--accent-red);
+  }
+
+  /* ------ [location card] < location.html ------ */
+  .filterable-cards article {
+    background-color: var(--light-base-color);
+    /* box-shadow: 0.5px 0.5px 5px #5a687fcc; */
+  }
+
+  .filterable-cards article::after {
+    background-image: url(../../pages/assets/paperTexture.jpg);
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+  .filterable-cards article:hover {
+    box-shadow: 0px 8px 16px #7f6f5acc;
+  }
+
+  .filterable-cards article:hover::after {
+    opacity: 0;
+  }
+
+  .filterable-cards article div:hover h2 {
+    color: var(--accent-red);
+  }
+  .filterable-cards article div:hover p:nth-of-type(2) {
+    color: var(--accent-red);
+  }
+
+  /* ------ [location btn] < location.html ------ */
+  .location-btn {
+    background-color: var(--light-text-color);
+    color: var(--light-base-color);
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .location-btn span {
+    position: relative;
+    z-index: 1;
+    color: var(--light-base-color);
+
+  }
+
+  .location-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--accent-red);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+  }
+
+  .location-btn:hover::before {
+    transform: translateX(0);
+  }
+
+  /* ------ [loadmore btn] < location.html ------ */
+  .loadmore {
+    background-color: var(--accent-navy);
+    color: var(--light-base-color);
+  }
+  .loadmore:hover {
+    background-color: var(--accent-red);
+  }
+
+  /* ------ [past-present image slider] < walking-tour.html------ */
+  .slider-line {
+    background-color: var(--light-text-color);
+  }
+
+  .ph-arrows-out-line-horizontal {
+    color: var(--light-base-color);
+  }
+
+  .slider-btn {
+    background-color: var(--light-text-color);
+    box-shadow: 1px 1px 1px var(--light-text-color);
+  }
+
+  blockquote{
+    border-left: 8px solid var(--accent-navy);
+  }
+
+  /* ------ [filter buttons]: locations.html------ */
+  .filter-buttons button {
+    text-decoration: solid 2px var(--accent-navy);
+  }
+  .filter-buttons button:hover {
+    text-decoration: solid 2px var(--accent-navy);
+  }
+
+  .filter-buttons.active {
+    text-decoration: solid 2px var(--accent-navy);
+  }
+
+  div[aria-label="Location category filter"] article:first-of-type button {
+    border-right: solid var(--light-text-color) 2px;
+  }
+
+  footer {
+    border-top: solid var(--light-text-color) 2px;
+  }
+
+  .footer-credits {
+    color: var(--footer-faded-dark);
+  }
+
+}
+
+/* -------- 2. Dark mode color styles -------- */
+body.dark {
+  background-color: var(--dark-base-color);
+  color: var(--dark-text-color);
+
+  /* ------ navigation bar styling ------ */
+  header nav ul a {
+    color: var(--dark-text-color);
+  }
+
+  header nav ul a:hover {
+    color: var(--accent-gold);
+  }
+
+  /* ------ [learn more btn, save map btn] < index.html, walking-tour.html ------ */
+  .btn-s1 {
+    background-color: var(--pure-white);
+    color: var(--pure-black);
+    box-shadow: inset 0 0 1.6em -0.6em #ffffff;
+  }
+
+  .btn-s1:hover {
+    color: var(--pure-white);
+  }
+
+  .btn-s1 .icon {
+    background: var(--pure-black);
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #ffffff;
+  }
+
+  .btn-s1 .icon svg {
+    color: var(--pure-white);
+  }
+
+  /* ------ [learn more btn] < life_of_jj.html ------ */
+  .btn-s2 {
+    background-color: var(--pure-black);
+    color: var(--pure-white);
+  }
+
+  .btn-s2:hover {
+    color: var(--pure-black);
+    background-color: var(--accent-gold);
+  }
+
+  /* ------  ------ */
+  .btn-s3 {
+    background-color: var(--dark-text-color);
+    color: var(--dark-base-color);
+  }
+
+  .btn-s3:hover {
+    background-color: var(--accent-gold);
+  }
+  /* ------ [joyce-link] < index.html */
+  .joyce-link:hover {
+    color: var(--accent-gold);
+    transition: filter 0.4s ease;
+  }
+
+  /* ------ [links in gallery-container] < index.html */
+  .gallery-container a:hover {
+    color: var(--accent-gold);
+  }
+  .gallery-container p {
+    color: white;
+  }
+  .gallery-container a {
+    color: inherit;
+  }
+  @media (max-width: 768px) {
+    .gallery-container p {
+    color: var(--dark-text-color);
+    }
+    section[aria-label="Joyce's Dublin photo gallery"] figure a:hover {
+      color: var(--accent-gold)!important;
+    }
+  }
+
+  /* ------ [map overlay] < walking-tour.html ------ */
+  .map-overlay {
+    background-color: #1c2f4de3;
+    box-shadow: -1.5px -1.5px 8px 0 var(--accent-navy);
+  }
+@media (max-width: 768px) {
+  .map-overlay {
+    background: none;
+  }
+}
+  /* ------ [a element in Q&A] < walking-tour.html ------ */
+  section[aria-label="Navigating Dublin FAQ"] details a:hover {
+    color: var(--accent-gold);
+  }
+
+  /* ------ [stong in Q&A] < walking-tour.html ------ */
+  section[aria-label="Navigating Dublin FAQ"] strong {
+    color: var(--accent-gold);
+  }
+
+  /* ------ [filter buttons] < location.html ------ */
+  .filter-buttons button {
+    color: var(--dark-text-color);
+    border: 1px solid var(--dark-text-color);
+  }
+
+  .filter-buttons button.active,
+  .filter-buttons button:hover {
+    background: var(--dark-text-color);
+    color: var(--dark-base-color);
+    border-color: transparent;
+  }
+  .filter-buttons button:first-of-type.active,
+  .filter-buttons button:first-of-type:hover {
+    background: var(--accent-gold);
+  }
+  /* ------ [location card] < location.html ------ */
+  .filterable-cards article {
+    background-color: var(--dark-base-color);
+    /* box-shadow: 0.5px 0.5px 5px #fbfeed9d; */
+  }
+  .filterable-cards article::after {
+    mix-blend-mode: multiply;
+    opacity: 1;
+  }
+  .filterable-cards article:hover {
+    box-shadow: 0px 8px 16px #5365979d;
+  }
+  .filterable-cards article:hover::after {
+    opacity: 0;
+  }
+
+  .filterable-cards article div:hover h2 {
+    color: var(--accent-gold);
+  }
+  .filterable-cards article div:hover p:nth-of-type(2) {
+    color: var(--accent-gold);
+  }
+
+  /* ------ [location btn] < location.html ------ */
+  .location-btn {
+    background-color: var(--dark-text-color);
+    color: var(--dark-base-color);
+  }
+
+  .location-btn span {
+    color: var(--dark-base-color);
+  }
+
+  .location-btn::before {
+    background: var(--accent-gold);
+  }
+
+  .location-btn:hover::before {
+    transform: translateX(0);
+  }
+
+  /* ------ [loadmore btn] < location.html ------ */
+  .loadmore {
+    background-color: var(--dark-text-color);
+    color: var(--dark-base-color);
+  }
+  .loadmore:hover {
+    background-color: var(--accent-gold);
+  }
+
+    blockquote{
+    border-left: 8px solid var(--accent-gold);
+  }
+
+  
+  /* ------ [past-present image slider] < walking-tour.html ------ */
+  .slider-line {
+    background-color: var(--dark-text-color);
+  }
+
+  .ph-arrows-out-line-horizontal {
+    color: var(--dark-base-color);
+  }
+
+  .slider-btn {
+    background-color: var(--dark-text-color);
+    box-shadow: 1px 1px 1px var(--dark-text-color);
+  }
+
+  footer {
+    border-top: solid var(--dark-text-color) 2px;
+  }
+
+  .footer-credits {
+    color: var(--dark-text-color);
+  }
+
+    /* ------ mobile menu ------ */
+    .mobile-menu.shown {
+      background-color: var(--dark-base-color);
+    }
+  
+    .mobile-menu ul a {
+      color: var(--dark-text-color);
+    }
+  
+    .mobile-menu ul a:hover {
+      color: var(--accent-gold);
+    }
+  
+    .nav-hamburger svg {
+      fill: var(--dark-text-color);
+    }
+
+    .close-menu svg {
+      fill: var(--dark-text-color);
+    }
+
+    .close-menu:hover svg {
+      fill: var(--accent-gold);
+    }
+}
+
+/* ================== styling for layout ================= */
+body {
+  margin: 0;
+  padding: 2% 8%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-xl);
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction:row;
+  flex-wrap: nowrap;
+}
+
+/* header - navigation bar */
+header nav {
+  align-items: center;
+  display:flex;
+  flex-wrap:nowrap;
+}
+
+/* header - navigation bar - links */
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  font-size: var(--fs-nav);
+  font-weight: var(--fw-semibold);
+  width:fit-content;
+}
+
+header nav ul a {
+  text-decoration: none;
+  text-align: right;
+}
+
+/* logo styles */
+.logo-container {
+  display: block;
+  position: relative;
+  width:4rem;
+}
+
+.logo {
+  height: 4rem;
+  width: auto;
+  display: block;
+}
+
+.logo:last-child {
+  display: none;
+  overflow: hidden;
+}
+
+body.dark .logo:first-child {
+  display: none;
+  overflow: hidden;
+}
+
+body.dark .logo:last-child {
+  display: block;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo-footer {
+    height: 2.5rem; /* smaller than the 4rem header logo */
+}
+
+/* light mode + dark mode toggle */
+.toggle {
+  height: 25px;
+  width: 50px;
+  background-color: var(--light-base-color);
+  border: 2px solid var(--accent-navy);
+  position: relative;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.toggle::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: var(--accent-navy);
+  border-radius: 50%;
+  top: 50%;
+  left: 2px;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+}
+
+.toggle.active::before {
+  background-color: var(--dark-base-color);
+  color: var(--accent-cream);
+  left: calc(100% - 22px);
+}
+
+/* btn styles */
+.btn {
+  display: inline-block;
+  margin: 1.5rem 0;
+  padding: 0.75rem 3.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: var(--fs-button);
+  font-weight: var(--fw-regular);
+  cursor: pointer;
+  border: none;
+  transition: 
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.btn-s1 {
+  display: flex;
+  height: 2.8rem;
+  width:fit-content;
+  margin: 1.5rem 0;
+  border-radius: 0.8rem;
+  border: none;
+  padding-left: 1.5rem;
+  padding-right:5rem;
+  align-items: center;
+  text-decoration: none;
+  font-size: var(--fs-button);
+  font-weight: var(--fw-regular);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.btn-s1 .icon {
+  margin-left: 1.5rem;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2rem;
+  width: 2.2rem;
+  border-radius: 0.5rem;
+  right: 0.3rem;
+  transition: all 0.3s;
+}
+
+.btn-s1:hover .icon {
+  width: calc(100% - 0.6rem);
+}
+
+.btn-s1 .icon svg {
+  width: 1.1rem;
+  transition: transform 0.3s;
+}
+
+.btn-s1:hover .icon svg {
+  transform: translateX(0.1rem);
+}
+
+.btn-s1:active .icon {
+  transform: scale(0.95);
+}
+
+/* Footer */
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 9rem;
+  align-items: stretch;
+  padding: 2rem 0;
+}
+
+/* Footer - left column */
+.footer-col-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+footer small {
+  font-size: var(--fs-small);
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* Footer - navigation bar - links */
+nav[aria-label="Footer navigation"] ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+}
+
+nav[aria-label="Footer navigation"] ul a {
+  text-decoration: none;
+  /* color: var(--light-text-color); */
+  text-align: right;
+}
+
+/* Footer - right column */
+.footer-col-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* margin-right: 2rem; */
+}
+
+.footer-tagline {
+  font-size: var(--fs-h6);
+  font-weight: var(--fw-bold);
+}
+
+.footer-credits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.footer-credits h2 {
+  font-size: var(--fs-tag);
+  font-weight: var(--fw-semibold);
+  margin-bottom: 1rem;
+}
+
+.footer-credits p {
+  font-size: var(--fs-body);
+}
+
+ul[aria-label="Social media links"] {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+}
+
+ul[aria-label="Social media links"] img {
+  width: 1.5rem;
+  height: auto;
+}
+
+/* back to top btn */
+.back-to-top {
+  width: 4rem;
+  height: 4rem;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  pointer-events: none;
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+.back-to-top:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.back-to-top:active {
+  box-shadow: inset 0.2rem 0.2rem 1rem 0 rgba(0, 0, 0, 0.346);
+}
+
+.back-to-top.show {
+  opacity: 0.3;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.back-to-top.show:hover {
+  opacity: 0.7;
+}
+
+/* ------ details open smooth -------- */
+details[open] > *:not(summary) {
+  animation: details-open 0.3s ease;
+}
+
+@keyframes details-open {
+  from {
+    opacity: 0;
+    transform: translateY(-0.4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* mobile vesion elements - hide for default */
+.mobile-menu {
+  display: none;
+  pointer-events: none;
+  position: absolute;
+}
+
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* =============responsive: Smaller Screen ====================*/
+@media (max-width: 1024px) {
+
+  header {
+    gap: 1.25rem;
+  }
+
+  header nav ul {
+    gap: 1.25rem;
+  }
+
+  .btn {
+    padding: 0.75rem 2.25rem;
+  }
+
+  footer {
+    gap: 3rem;
+  }
+
+  .footer-col-right {
+    margin-right: 0;
+  }
+
+  .footer-credits {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  nav[aria-label="Footer navigation"] ul {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+/* =============responsive: Tablet & Mobile ====================*/
+
+/* --------- for nav bar specifically ------------- */
+/* hide the original nav links */
+@media (max-width: 1100px) {
+  header nav ul {
+    display: none;
+    pointer-events: none;
+  } 
+  /* hamburger icon */
+  .nav-hamburger {
+    display: inline-block;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .nav-hamburger svg {
+    width: 3.2rem;
+    height: 3.2rem;
+    border: none;
+  }
+
+  .logo {
+    height: 3.2rem;
+    image-resolution: 1/1;
+  }
+
+  /* mobile menu when shown */
+  .mobile-menu.shown {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--accent-cream);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    pointer-events: auto;
+    z-index: 7;
+    animation: menu-fade-in 0.2s ease;
+  }
+
+  @keyframes menu-fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-0.7rem);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .mobile-menu ul {
+    list-style: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .mobile-menu ul a {
+    font-size: var(--fs-h5);
+    font-weight: var(--fw-semibold);
+    text-decoration: none;
+    color: var(--accent-navy);
+    transition: color 0.2s ease;
+  }
+  .mobile-menu ul a {}
+
+  .mobile-menu ul a:hover {
+    color: var(--accent-red);
+  }
+
+  /* close mobile icon */
+  .close-menu {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    pointer-events: auto;
+    cursor: pointer;
+    padding: 0.25rem;
+  }
+
+  .close-menu svg {
+    width: 3rem;
+    height: 3rem;
+    fill: var(--accent-navy);
+    transition: fill 0.2s ease;
+  }
+
+  .close-menu:hover svg {
+    fill: var(--accent-red);
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+      gap: var(--sp-sm);
+    }
+  
+  .nav-hamburger svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+  }
+
+  .logo {
+    height: 2.5rem;
+  }
+  .btn {
+    width: 100%;
+    padding: 0.9rem 1.25rem;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.5rem 0;
+  }
+
+  .footer-col-left,
+  .footer-col-right {
+    gap: 1.25rem;
+  }
+
+  .footer-col-right {
+    margin-right: 0;
+  }
+
+  .footer-tagline {
+    font-size: var(--fs-body);
+  }
+
+  .footer-credits {
+    grid-template-columns: 1fr;
+  }
+}

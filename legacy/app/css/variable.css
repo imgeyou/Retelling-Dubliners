@@ -1,0 +1,189 @@
+@import './global.css';
+
+:root {
+    /* Light Mode Colors */
+    --light-base-color: #fdfff5;
+    --light-text-color: #37465E;
+    --light-audio-bar: #D3D3C7;
+    
+    /* Dark Mode Colors */
+    --dark-base-color:#37465E;
+    --dark-text-color: #fdfff5;
+    --dark-audio-bar: #D3D3C7;
+
+    /* translucent colors */
+    --footer-faded-dark: #37465Ecc;
+    --footer-faded-light:#F2B769cc;
+    --faded-navy: #5a687fcc;
+
+    /* for highlight & btn variations */
+    --accent-cream: #fdfff5;
+    --accent-navy: #37465E;
+    --accent-red: #942823;
+    --accent-gold: #F2B769;
+    --accent-green: #303E21;
+
+    --pure-black: black;
+    --pure-white: white;
+
+    /* Font */
+    --font-primary: "Epilogue", sans-serif;
+
+    /* Font sizes: dafault */
+    --fs-h1: 6rem;
+    --fs-h2: 4.5rem;
+    --fs-h3: 3.4rem;
+    --fs-h4: 2.5rem;
+    --fs-h5: 1.9rem;
+    --fs-h6: 1.5rem;
+    --fs-body: 1rem;
+    --fs-small: 0.8rem;
+    --fs-button: 1.4rem;
+    --fs-nav: 1.3rem;
+    --fs-tag: 1.4rem;
+
+
+    /* Font weight */
+    --fw-bold: 700;
+    /* headings */
+    --fw-semibold: 600;
+    /* navLink, subheader */
+    --fw-medium: 500;
+    /* */
+    --fw-regular: 400;
+    /* body, btn, tags*/
+
+    /* Line heights */
+    --lh-heading: 1.2;
+    --lh-body: 1.2;
+
+    /* Spacing - subject to change */
+    --sp-xs: 0.25rem;
+    --sp-sm: 0.5rem;
+    --sp-md: 1rem;
+    --sp-lg: 1.5rem;
+    --sp-xl: 2rem;
+    /* for spacing between navLinks, sections, text-columns */
+    --sp-2xl: 3rem;
+    /* for spacing between header and text below */
+    --sp-3xl: 7rem;
+    /* for paragraph padding */
+
+    /* Element Sizes */
+    --slider-size: 3rem;
+}
+/* Small screen (<= 1240px) */
+@media (max-width: 1240px) {
+     :root {
+        /* font sizes */
+        --fs-h1: 5rem;
+        --fs-h2: 4rem;
+        --fs-h3: 2.3rem;
+        --fs-h4: 1.4rem;
+        --fs-h5: 1.2rem;
+        --fs-h6: 1.1rem;
+        --fs-body: 1rem;
+        --fs-small: 0.8rem;
+        --fs-button: 1rem;
+        --fs-nav: 1.2rem;
+        --fs-tag: 1rem;
+    }
+}
+/* Small screen (<= 1024px) */
+@media (max-width: 1024px) {
+    :root {
+        /* font sizes */
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.5rem;
+        --fs-h3: 2.3rem;
+        --fs-h4: 1.4rem;
+        --fs-h5: 1.2rem;
+        --fs-h6: 1.1rem;
+        --fs-body: 1rem;
+        --fs-small: 0.8rem;
+        --fs-button: 1rem;
+        --fs-nav: 1rem;
+        --fs-tag: 1rem;
+    
+    /* Spacing - subject to change */
+    --sp-xs: 0.25rem;
+    --sp-sm: 0.5rem;
+    --sp-md: 1rem;
+    --sp-lg: 1.5rem;
+    --sp-xl: 2rem;
+    /* for spacing between navLinks, sections, text-columns */
+    --sp-2xl: 3rem;
+    /* for spacing between header and text below */
+    --sp-3xl: 7rem;
+    /* for paragraph padding */
+
+    /* Element Sizes */
+    --slider-size: 3rem;
+    }
+}
+
+/* Tablet & Mobile (<= 768px) */
+/* font sizes */
+@media (max-width: 768px) {
+    :root {
+        --fs-h1: 3rem;
+        --fs-h2: 2.2rem;
+        --fs-h3: 2rem;
+        --fs-h4: 1.3rem;
+        --fs-h5: 1.1rem;
+        --fs-h6: 1rem;
+        --fs-body: 0.9rem;
+        --fs-small: 0.7rem;
+        --fs-button: 1rem;
+        --fs-nav: 0.8rem;
+        --fs-tag: 0.8rem;
+    }
+}
+
+/* Mobile (<= 375px) */
+/* font sizes */
+@media (max-width: 375px) {
+    :root {
+        --fs-h1: 2.5rem;
+        --fs-h2: 1.8rem;
+        --fs-h3: 1.8rem;
+        --fs-h4: 1.3rem;
+        --fs-h5: 1.1rem;
+        --fs-h6: 0.9rem;
+        --fs-body: 0.9rem;
+        --fs-small: 0.7rem;
+        --fs-button: 1rem;
+        --fs-nav: 0.8rem;
+        --fs-tag: 0.8rem;
+
+        /* Spacing - subject to change */
+            --sp-xs: 0.2rem;
+            --sp-sm: 0.3rem;
+            --sp-md: 0.6rem;
+            --sp-lg: 1rem;
+            --sp-xl: 1.3rem;
+            /* for spacing between navLinks, sections, text-columns */
+            --sp-2xl: 2.5rem;
+            /* for spacing between header and text below */
+            --sp-3xl: 5.5rem;
+            /* for paragraph padding */
+    }
+}
+
+/* Small Mobile (<= 320px) */
+/* font sizes */
+@media (max-width: 375px) {
+    :root {
+        --fs-h1: 2.3rem;
+        --fs-h2: 1.5rem;
+        --fs-h3: 1.5rem;
+        --fs-h4: 1.2rem;
+        --fs-h5: 1rem;
+        --fs-h6: 0.8rem;
+        --fs-body: 0.8rem;
+        --fs-small: 0.6rem;
+        --fs-button: 1rem;
+        --fs-nav: 0.8rem;
+        --fs-tag: 0.8rem;
+    }
+}
